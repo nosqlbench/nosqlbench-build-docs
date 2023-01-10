@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://previewdocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://previewdocs.nosqlbench.io/abridge-switcher.css?h=9b6aab2dc91d4a7ae069c83a07a6b403bb4e7ed1bd7e76f9b3790eadd0890047" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script defer src="https://previewdocs.nosqlbench.io/search_index.en.js?h=cc9a6f17c325987034bf8f2b4dfa2516f82469d946a2235be940bec38ec77e6f" integrity="sha384-heMCfCqf6OGxClK5FF1vzckK0A3BdH/0GiCttCWOG1ryXIlbXSBAm0QzqTVdijVj"></script>
+  <script defer src="https://previewdocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017de3cc731a77109758d7d13284046b1403b0c26ade193" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://previewdocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Determinism & Variation | NoSQLBench Project</title>
+  <meta name="copyright" content="NoSQLBench Project" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://previewdocs.nosqlbench.io/testing_at_scale/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://previewdocs.nosqlbench.io/testing_at_scale/" />
+  <meta name="twitter:url" content="https://previewdocs.nosqlbench.io/testing_at_scale/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="NoSQLBench Project" />
+  <meta name="twitter:title" content="NoSQLBench Project" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://previewdocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://previewdocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://previewdocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://previewdocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://previewdocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://previewdocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://previewdocs.nosqlbench.io/"><img src="https://previewdocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5" width="32" height="32" />NoSQLBench v5</a></h1></div><div>
+        <ul><li> <h2><a href="https://previewdocs.nosqlbench.io/getting_started/">Getting Started</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main><!-- active_page: testing_at_scale&#x2F;determinism.md -->
+<!-- active_section: testing_at_scale&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+  <!-- <h4> topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;nosqlbench&#x2F;">Introduction</a></div><div class="toc-item"><a href="&#x2F;release_notes&#x2F;">Release Notes</a></div><div class="toc-item"><a href="&#x2F;getting_started&#x2F;">Getting Started</a></div><div class="toc-item"><a href="&#x2F;workloads_101&#x2F;">Workloads 101</a></div><div class="toc-item"><a href="&#x2F;reference&#x2F;">Reference</a></div><div class="toc-item"><a href="&#x2F;scripting&#x2F;">Scenario Scripting</a></div><div class="toc-item"><strong>Testing at Scale</strong></div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;determinism&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;determinism&#x2F;"><strong>Determinism &amp; Variation</strong></a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;vantage-points&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;vantage-points&#x2F;">Vantage Points</a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;scaling-up&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;scaling-up&#x2F;">Scaling Up</a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;client-sizing&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;client-sizing&#x2F;">Client Sizing</a>
+        </div><div class="toc-item"><a href="&#x2F;drivers&#x2F;">Driver Adapters</a></div><div class="toc-item"><a href="&#x2F;bindings&#x2F;">Binding Functions</a></div></div>
+</div>
+
+<article>
+
+<p>This section touches on topics of using randomized data within NoSQLBench tests.</p>
+<h2 id="benefits">Benefits</h2>
+<p>The benefits of using procedural generation for the purposes of load testing is taken as granted in
+this section. For a more thorough discussion on the assumed merits, please see the showcase 
+section for <a href="https://previewdocs.nosqlbench.io/nosqlbench/showcase/#virtual-data-set">Virtual DataSet</a></p>
+<h2 id="basic-theory">Basic Theory</h2>
+<p>In NoSQLBench, the data used for each operation is generated on the fly. However, the data is also
+deterministic by default. That means, for a given activity, any numbered cycle will produce the same
+operation from test to test, so long as the parameters are the same.</p>
+<p>NoSQLBench runs each activity over a specific range of cycles. Each cycle is based on a specific
+number from the cycle range. This cycle number is used as the seed value for that cycle. It
+determines not only which operation is selected, but also what data is generated and bound to that
+operation for execution. The data generation is initialized at the start, and optimized for rapid
+access during steady state operation.</p>
+<p>This is by-design. However, there are ways of selecting how much variation you have from one test
+scenario to another.</p>
+<h2 id="managing-variation">Managing Variation</h2>
+<p>Sometimes you will want to run the same test with the same operations, access patterns, and data.
+For certain types of testing and comparisons, this is the only way to shed a light on a specific
+issue, or variation in performance. The ability to run the same test between different target
+systems is extremely valuable.</p>
+<h3 id="selecting-cycles">Selecting Cycles</h3>
+<p>You can cause an activity to run a different set of operations simply by changing the cycle range
+used in the test.</p>
+<p>For an activity that is configured with <code>cycles=100M</code>, 100 million independent cycles will be used.
+These cycles will be automatically apportioned to the client threads as needed until they are all
+used up.</p>
+<p>If you want to run 100 million different cycles, all you have to do is specify a different set of
+seeds. This is as simple as specifying <code>cycles=100M..200M</code>, as the first example above is only
+short-hand for <code>cycles=0..100M</code>.</p>
+<h3 id="selecting-bindings">Selecting Bindings</h3>
+<p>The built-in workloads come with bindings which support the &quot;rampup&quot; and &quot;main&quot; phases
+appropriately. This means that the cycles for rampup will use a binding that lays data into a
+dataset incrementally, as you would build a log cabin. Each cycle adds to the data. The bindings are
+chosen for this effect so that the rampup phase is incremental with the cycle value.</p>
+<p>The main phase is selected differently. In the main phase, you don't want to address over the data
+in order. To emulate a real workload, you need to select the data pseudo-randomly so that storage
+devices don't get to cheat with read-ahead (more than they would realistically) and so on. That
+means that the main phase bindings are also specifically chosen for the &quot;random&quot; access patterns
+that you might expect in some workloads.</p>
+<p>The distinction between these two types of bindings should tell you something about the binding
+capabilities. You can really do what ever you want as long as you can stitch the right functions
+together to get there. Although the data produced by some of the functions (like <code>Hash()</code> for
+example) look random, it is not. It is, however, effectively random enough for most distributed
+systems performance testing.</p>
+<p>If you need to add randomization to fields, it doesn't hurt to add an additional <code>Hash()</code> to the
+front. Just be advised that the same constructions from one binding recipe to the next will yield
+the same outputs, so season to taste.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Determinism &amp; Variation</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/determinism/#benefits">Benefits</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/determinism/#basic-theory">Basic Theory</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/determinism/#managing-variation">Managing Variation</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/determinism/#selecting-cycles"><small>- Selecting Cycles</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/determinism/#selecting-bindings"><small>- Selecting Bindings</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2023 NoSQLBench Project</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://previewdocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://previewdocs.nosqlbench.io/abridge-switcher.css?h=9b6aab2dc91d4a7ae069c83a07a6b403bb4e7ed1bd7e76f9b3790eadd0890047" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script defer src="https://previewdocs.nosqlbench.io/search_index.en.js?h=cc9a6f17c325987034bf8f2b4dfa2516f82469d946a2235be940bec38ec77e6f" integrity="sha384-heMCfCqf6OGxClK5FF1vzckK0A3BdH/0GiCttCWOG1ryXIlbXSBAm0QzqTVdijVj"></script>
+  <script defer src="https://previewdocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017de3cc731a77109758d7d13284046b1403b0c26ade193" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://previewdocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>CLI Options | NoSQLBench Project</title>
+  <meta name="copyright" content="NoSQLBench Project" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://previewdocs.nosqlbench.io/reference/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://previewdocs.nosqlbench.io/reference/" />
+  <meta name="twitter:url" content="https://previewdocs.nosqlbench.io/reference/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="NoSQLBench Project" />
+  <meta name="twitter:title" content="NoSQLBench Project" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://previewdocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://previewdocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://previewdocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://previewdocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://previewdocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://previewdocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://previewdocs.nosqlbench.io/"><img src="https://previewdocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5" width="32" height="32" />NoSQLBench v5</a></h1></div><div>
+        <ul><li> <h2><a href="https://previewdocs.nosqlbench.io/getting_started/">Getting Started</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main><!-- active_page: reference&#x2F;command_line.md -->
+<!-- active_section: reference&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+  <!-- <h4> topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;nosqlbench&#x2F;">Introduction</a></div><div class="toc-item"><a href="&#x2F;release_notes&#x2F;">Release Notes</a></div><div class="toc-item"><a href="&#x2F;getting_started&#x2F;">Getting Started</a></div><div class="toc-item"><a href="&#x2F;workloads_101&#x2F;">Workloads 101</a></div><div class="toc-item"><strong>Reference</strong></div><!-- subsection_page_path: &#x2F;reference&#x2F;command-line&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;command-line&#x2F;"><strong>CLI Options</strong></a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;cli-scripting&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;cli-scripting&#x2F;">CLI Scripting</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;parameter-types&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;parameter-types&#x2F;">Parameter Types</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;core-activity-parameters&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;core-activity-parameters&#x2F;">Core Activity Parameters</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;core-op-params&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;core-op-params&#x2F;">Core Op Parameters</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;error-handlers&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;error-handlers&#x2F;">Error Handlers</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;timing-terms&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;timing-terms&#x2F;">Timing Terms Explained</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;standard-metrics&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;standard-metrics&#x2F;">Standard Metrics</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;advanced-metrics&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;advanced-metrics&#x2F;">Advanced Metrics Options</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;grafana-metrics&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;grafana-metrics&#x2F;">Built-In Grafana Dashboard</a>
+        </div><!-- subsection_page_path: &#x2F;reference&#x2F;workloads-intro&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;reference&#x2F;workloads-intro&#x2F;">Built-In Workloads</a>
+        </div><div class="toc-item"><a href="&#x2F;scripting&#x2F;">Scenario Scripting</a></div><div class="toc-item"><a href="&#x2F;testing_at_scale&#x2F;">Testing at Scale</a></div><div class="toc-item"><a href="&#x2F;drivers&#x2F;">Driver Adapters</a></div><div class="toc-item"><a href="&#x2F;bindings&#x2F;">Binding Functions</a></div></div>
+</div>
+
+<article>
+
+<p>This is the same documentation you get in markdown format with the
+<code>nb --help</code> command.</p>
+<hr />
+<p>Help ( You're looking at it. )</p>
+<pre class="z-code"><code><span class="z-text z-plain">--help
+</span></code></pre>
+<p>Short options, like <code>-v</code> represent simple options, like verbosity. Using multiples increases the
+level of the option, like <code>-vvv</code>.</p>
+<p>Long options, like <code>--help</code> are top-level options that may only be used once. These modify general
+behavior, or allow you to get more details on how to use nb.</p>
+<p>All other options are either commands, or named arguments to commands. Any single word without
+dashes is a command that will be converted into script form. Any option that includes an equals sign
+is a named argument to the previous command. The following example is a commandline with a command *
+start*, and two named arguments to that command.</p>
+<pre class="z-code"><code><span class="z-text z-plain">nb start driver=diag alias=example
+</span></code></pre>
+<h3 id="discovery-options">Discovery options</h3>
+<p>These options help you learn more about running nb, and about the plugins that are present in your
+particular version.</p>
+<p>Get a list of additional help topics that have more detailed documentation:</p>
+<pre class="z-code"><code><span class="z-text z-plain">nb help topics
+</span></code></pre>
+<p>Provide specific help for the named activity type:</p>
+<pre class="z-code"><code><span class="z-text z-plain">nb help &lt;activity type&gt;
+</span></code></pre>
+<p>List the available drivers:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--list-drivers
+</span></code></pre>
+<p>List the available scenarios:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--list-scenarios
+</span></code></pre>
+<p>List only the available workloads which contain the above scenarios:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--list-workloads
+</span></code></pre>
+<p>Copy a workload or other file to your local directory as a starting point:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--copy &lt;name&gt;
+</span></code></pre>
+<p>Provide the metrics that are available for scripting</p>
+<pre class="z-code"><code><span class="z-text z-plain">--list-metrics &lt;activity type&gt; [ &lt;activity name&gt; ]
+</span></code></pre>
+<h3 id="execution-options">Execution Options</h3>
+<p>This is how you actually tell nb what scenario to run. Each of these commands appends script logic
+to the scenario that will be executed. These are considered as commands, can occur in any order and
+quantity. The only rule is that arguments in the arg=value form will apply to the preceding script
+or activity.</p>
+<p>Add the named script file to the scenario, interpolating named parameters:</p>
+<pre class="z-code"><code><span class="z-text z-plain">script &lt;script file&gt; [arg=value]...
+</span></code></pre>
+<p>Add the named activity to the scenario, interpolating named parameters</p>
+<pre class="z-code"><code><span class="z-text z-plain">activity [arg=value]...
+</span></code></pre>
+<h3 id="general-options">General options</h3>
+<p>These options modify how the scenario is run.</p>
+<p>Specify a directory for scenario log files:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--logs-dir &lt;dirname&gt;
+</span></code></pre>
+<p>Specify a limit on logfiles (old files will be purged):</p>
+<pre class="z-code"><code><span class="z-text z-plain">--logs-max &lt;count&gt;
+</span></code></pre>
+<p>Specify the priority level of file logs:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--logs-level &lt;level&gt;
+</span></code></pre>
+<p>where <code>&lt;level&gt;</code> can be one of OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL</p>
+<p>Specify an override for one or more classes:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--log-level-override com.foobarbaz:DEBUG,com.barfoobaz:TRACE
+</span></code></pre>
+<p>Specify the logging pattern for console and logfile:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--logging-pattern &#39;%date %level [%thread] %logger{10} [%file:%line] %msg%n&#39;
+--logging-pattern &#39;TERSE&#39;
+</span></code></pre>
+<p>Specify the logging pattern for console only:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--console-pattern &#39;%date %level [%thread] %logger{10} [%file:%line] %msg%n&#39;
+--console-pattern &#39;TERSE-ANSI&#39;
+</span></code></pre>
+<p>Specify the logging pattern for logfile only:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--logfile-pattern &#39;%date %level [%thread] %logger{10} [%file:%line] %msg%n&#39;
+--logfile-pattern &#39;VERBOSE&#39;
+
+# See https://logging.apache.org/log4j/2.x/manual/layouts.html#Pattern_Layout
+# These shortcuts are allowed
+TERSE        %8r %-5level [%t] %-12logger{0} %msg%n%throwable
+VERBOSE      %d{DEFAULT}{GMT} [%t] %logger %-5level: %msg%n%throwable
+TERSE-ANSI   %8r %highlight{%-5level} %style{%C{1.} [%t] %-12logger{0}} %msg%n%throwable
+VERBOSE-ANSI %d{DEFAULT}{GMT} [%t] %highlight{%logger %-5level}: %msg%n%throwable
+# ANSI variants are auto promoted for console if --ansi=enable
+# ANSI variants are auto demoted for logfile in any case
+</span></code></pre>
+<p>Explicitly enable or disable ANSI logging support:
+(ANSI support is enabled if the TERM environment variable is defined)</p>
+<pre class="z-code"><code><span class="z-text z-plain">--ansi=enabled
+--ansi=disabled
+</span></code></pre>
+<p>Specify a directory and enable CSV reporting of metrics:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--report-csv-to &lt;dirname&gt;
+</span></code></pre>
+<p>Specify the graphite destination and enable reporting</p>
+<pre class="z-code"><code><span class="z-text z-plain">--report-graphite-to &lt;addr&gt;[:&lt;port&gt;]
+</span></code></pre>
+<p>Specify the interval for graphite or CSV reporting in seconds:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--report-interval 10
+</span></code></pre>
+<p>Specify the metrics name prefix for graphite reporting:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--metrics-prefix &lt;metrics-prefix&gt;
+</span></code></pre>
+<p>Log all HDR histogram data to a file:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--log-histograms histodata.log
+--log-histograms &#39;histodata.log:.*&#39;
+--log-histograms &#39;histodata.log:.*:1m&#39;
+--log-histograms &#39;histodata.log:.*specialmetrics:10s&#39;
+</span></code></pre>
+<p>Log HDR histogram stats to a CSV file:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--log-histostats stats.csv
+--log-histostats &#39;stats.csv:.*&#39;       # same as above
+--log-histostats &#39;stats.csv:.*:1m&#39;    # with 1-minute interval
+--log-histostats &#39;stats.csv:.*specialmetrics:10s&#39;
+</span></code></pre>
+<p>Adjust the HDR histogram precision:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--hdr-digits 3
+</span></code></pre>
+<p>The default is 3 digits, which creates 1000 equal-width histogram buckets for every named metric in
+every reporting interval. For longer running test or for test which require a finer grain of
+precision in metrics, you can set this up to 4 or 5. Note that this only sets the global default.
+Each activity can also override this value with the hdr_digits parameter. Be aware that each
+increase in this number multiples the amount of detail tracked on the client by 10x, so use
+caution.</p>
+<p>Adjust the progress reporting interval:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--progress console:1m
+</span></code></pre>
+<p>or</p>
+<pre class="z-code"><code><span class="z-text z-plain">--progress logonly:5m
+</span></code></pre>
+<p>NOTE: The progress indicator on console is provided by default unless logging levels are turned up
+or there is a script invocation on the command line.</p>
+<p>If you want to add in classic time decaying histogram metrics for your histograms and timers, you
+may do so with this option:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--classic-histograms prefix
+--classic-histograms &#39;prefix:.*&#39;               # same as above
+--classic-histograms &#39;prefix:.*specialmetrics&#39; # subset of names
+</span></code></pre>
+<p>Name the current session, for logfile naming, etc By default, this will be &quot;scenario-TIMESTAMP&quot;, and
+a logfile will be created for this name.</p>
+<pre class="z-code"><code><span class="z-text z-plain">--session-name &lt;name&gt;
+</span></code></pre>
+<p>Enlist nosqlbench to stand up your metrics infrastructure using a local docker runtime:</p>
+<pre class="z-code"><code><span class="z-text z-plain">--docker-metrics
+</span></code></pre>
+<p>When this option is set, nosqlbench will start graphite, prometheus, and grafana automatically on
+your local docker, configure them to work together, and point nosqlbench to send metrics the system
+automatically. It also imports a base dashboard for nosqlbench and configures grafana snapshot
+export to share with a central DataStax grafana instance (grafana can be found on localhost:3000
+with the default credentials admin/admin).</p>
+<h3 id="console-options">Console Options</h3>
+<p>Increase console logging levels: (Default console logging level is <em>warning</em>)</p>
+<pre class="z-code"><code><span class="z-text z-plain">-v         (info)
+-vv        (debug)
+-vvv       (trace)
+
+--progress console:1m (disables itself if -v options are used)
+</span></code></pre>
+<p>These levels affect <em>only</em> the console output level. Other logging level parameters affect logging
+to the scenario log, stored by default in logs/...</p>
+<p>Show version, long form, with artifact coordinates.</p>
+<pre class="z-code"><code><span class="z-text z-plain">--version
+</span></code></pre>
+<h3 id="summary-reporting">Summary Reporting</h3>
+<p>The classic metrics logging format is used to report results into the logfile for every scenario.
+This format is not generally human-friendly, so a better summary report is provided by default to
+the console and/or a specified summary file by default.</p>
+<p>Examples:</p>
+<pre class="z-code"><code><span class="z-text z-plain"># report to console if session ran more than 60 seconds
+--report-summary-to stdout:60
+
+# report to auto-named summary file for every session
+--report-summary-to _LOGS_/_SESSION_.summary
+
+# do both (the default)
+--report-summary-to stdout:60,_LOGS_/_SESSION_.summary
+</span></code></pre>
+<p>Values of <code>stdout</code> or <code>stderr</code> are send summaries directly to the console, and any other pattern is
+taken as a file name.</p>
+<p>You can use <code>_SESSION_</code> and <code>_LOGS_</code> to automatically name the file according to the current session
+name and log directory.</p>
+<p>The reason for the optional timing parameter is to allow for results of short scenario runs to be
+squelched. Metrics for short runs are not generally accurate nor meaningful. Spamming the console
+with boilerplate in such cases is undesirable. If the minimum session length is not specified, it
+is assumed to be 0, meaning that a report will always show on that channel.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>CLI Options</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/reference/command-line/#discovery-options">Discovery options</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/reference/command-line/#execution-options">Execution Options</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/reference/command-line/#general-options">General options</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/reference/command-line/#console-options">Console Options</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/reference/command-line/#summary-reporting">Summary Reporting</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2023 NoSQLBench Project</p>
+    </div>
+  </footer>
+</body>
+</html>

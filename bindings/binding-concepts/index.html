@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://previewdocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://previewdocs.nosqlbench.io/abridge-switcher.css?h=9b6aab2dc91d4a7ae069c83a07a6b403bb4e7ed1bd7e76f9b3790eadd0890047" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script defer src="https://previewdocs.nosqlbench.io/search_index.en.js?h=cc9a6f17c325987034bf8f2b4dfa2516f82469d946a2235be940bec38ec77e6f" integrity="sha384-heMCfCqf6OGxClK5FF1vzckK0A3BdH/0GiCttCWOG1ryXIlbXSBAm0QzqTVdijVj"></script>
+  <script defer src="https://previewdocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017de3cc731a77109758d7d13284046b1403b0c26ade193" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://previewdocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Binding Concepts | NoSQLBench Project</title>
+  <meta name="copyright" content="NoSQLBench Project" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://previewdocs.nosqlbench.io/bindings/binding-concepts/" />
+  <meta name="twitter:url" content="https://previewdocs.nosqlbench.io/bindings/binding-concepts/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Binding Concepts | NoSQLBench Project" />
+  <meta name="twitter:title" content="Binding Concepts | NoSQLBench Project" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://previewdocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://previewdocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://previewdocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://previewdocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://previewdocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://previewdocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://previewdocs.nosqlbench.io/"><img src="https://previewdocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5" width="32" height="32" />NoSQLBench v5</a></h1></div><div>
+        <ul><li> <h2><a href="https://previewdocs.nosqlbench.io/getting_started/">Getting Started</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main><!-- active_page: bindings&#x2F;binding_concepts.md -->
+<!-- active_section: bindings&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+  <!-- <h4> topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;nosqlbench&#x2F;">Introduction</a></div><div class="toc-item"><a href="&#x2F;release_notes&#x2F;">Release Notes</a></div><div class="toc-item"><a href="&#x2F;getting_started&#x2F;">Getting Started</a></div><div class="toc-item"><a href="&#x2F;workloads_101&#x2F;">Workloads 101</a></div><div class="toc-item"><a href="&#x2F;reference&#x2F;">Reference</a></div><div class="toc-item"><a href="&#x2F;scripting&#x2F;">Scenario Scripting</a></div><div class="toc-item"><a href="&#x2F;testing_at_scale&#x2F;">Testing at Scale</a></div><div class="toc-item"><a href="&#x2F;drivers&#x2F;">Driver Adapters</a></div><div class="toc-item"><strong>Binding Functions</strong></div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-experimental&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-experimental&#x2F;">TokenMapFileCycle</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-objects&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-objects&#x2F;">Distance</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-statistics&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-statistics&#x2F;">LongStats</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;binding-concepts&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;binding-concepts&#x2F;"><strong>Binding Concepts</strong></a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;collection-bindings&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;collection-bindings&#x2F;">Collection Bindings</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-datetime&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-datetime&#x2F;">datetime functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-general&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-general&#x2F;">general functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-premade&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-premade&#x2F;">pre-made functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-conversion&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-conversion&#x2F;">conversion functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-distributions&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-distributions&#x2F;">distribution functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-state&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-state&#x2F;">state functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-collections&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-collections&#x2F;">collection functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-diagnostics&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-diagnostics&#x2F;">diagnostic functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-functional&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-functional&#x2F;">flow functions</a>
+        </div><!-- subsection_page_path: &#x2F;bindings&#x2F;funcref-nulls&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;bindings&#x2F;funcref-nulls&#x2F;">null functions</a>
+        </div></div>
+</div>
+
+<article>
+
+<p>NoSQLBench has a built-in library for the flexible management and expressive use of
+procedural generation libraries. This section explains the core concepts
+of this library, known as <em>Virtual Data Set</em>.</p>
+<h2 id="basic-example">Basic Example</h2>
+<p>These functions can be stitched together in small recipes. When you give
+these mapping functions useful names in your workloads, they are called
+bindings.</p>
+<p>Here is an example:</p>
+<pre data-lang="yaml" class="language-yaml z-code"><code class="language-yaml" data-lang="yaml"><span class="z-source z-yaml"><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">bindings</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+ <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">numbers</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">NumberNameToString()</span>
+ <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">names</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">FirstNames()</span>
+</span></code></pre>
+<p>These are two bindings that you can use in your workloads. The names on the left
+are the <em>binding names</em> and the functions on the right are the <em>binding recipes</em>.
+Altogether, we just call them <em>bindings</em>.</p>
+<h2 id="variates-samples">Variates (Samples)</h2>
+<p>A numeric sample that is drawn from a distribution for the purpose
+of simulation or analysis is called a <em>Variate</em>.</p>
+<h2 id="procedural-generation">Procedural Generation</h2>
+<p>Procedural generation is a category of algorithms and techniques which take
+a set or stream of inputs and produce an output in a different form or structure.
+While it may appear that procedural generation actually <em>generates</em> data, no output
+can come from a void. These techniques simply perturb a value in some stateful way,
+or map a coordinate system to another representation. Sometimes, both techniques are
+combined together.</p>
+<h2 id="uniform-variate">Uniform Variate</h2>
+<p>A variate (sample) drawn from a uniform (flat) distribution is what we are used
+to seeing when we ask a system for a &quot;random&quot; value. These are often produced in
+one of two very common forms, either a register full of bits as with most hashing
+functions, or a floating point value between 0.0 and 1.0. (This is called the <em>unit
+interval</em>).</p>
+<p>Uniform variates are not really random. Without careful attention to API usage,
+such random samples are not even unique from session to session. In many systems,
+the programmer has to be very careful to seed the random generator or they will
+get the same sequence of numbers every time they run their program. This turns out
+to be a useful property, and the random number generators that behave this way are
+usually called Pseudo-Random Number Generators, or PRNGs.</p>
+<h2 id="apparently-random-variates">Apparently Random Variates</h2>
+<p>Uniform variates produced by PRNGs are not actually random, even though they may
+pass certain tests for randomness. The streams of values produced are nearly
+always measurably random by some meaningful standard. However, they can be
+used again in exactly the same way with the same initial seed.</p>
+<h2 id="deterministic-variates">Deterministic Variates</h2>
+<p>If you intentionally avoid randomizing the initial seed for a PRNG, for example,
+with the current timestamp, then it gives you a way to replay a sequence.
+You can think of each initial seed as a <em>bank</em> of values which you can go back
+to at any time. However, when using stateful PRNGs as a way to provide these
+variates, your results will be order dependent.</p>
+<h2 id="randomly-accessible-determinism">Randomly Accessible Determinism</h2>
+<p>Instead of using a PRNG, it is possible to use a hash function instead. With a 64-bit
+register, you have 2^64 (2^63 in practice due to available implementations) possible
+values. If your hash function has high dispersion, then you will effectively
+get the same result of apparent randomness as well as deterministic sequences, even
+when you use simple sequences of inputs to your <em>random()</em> function. This allows
+you to access a random value in bucket 57, for example, and go back to it at any
+time and in any order to get the same value again.</p>
+<h2 id="data-mapping-functions">Data Mapping Functions</h2>
+<p>The data mapping functions are the core building block of virtual data set.
+Data mapping functions are generally pure functions. This simply means that
+a generator function will always provide the same result given the same input.
+The parameters that you will see on some binding recipes are not representative
+of volatile state. These parameters are initializer values which are part of a
+function's definition. For example a <code>Mod(5)</code> will always behave like a <code>Mod(5)</code>,
+as a pure function. But a <code>Mod(7)</code> will behave differently than a <code>Mod(5)</code>, although
+each function will always produce its own stable result for a given input.</p>
+<h2 id="combining-rngs-and-data-mapping-functions">Combining RNGs and Data Mapping Functions</h2>
+<p>Because pure functions play such a key part in procedural generation techniques,
+the terms &quot;data mapping function&quot;, &quot;data mapper&quot; and &quot;data mapping library&quot; will
+be more common in the library than &quot;generator&quot;. Conceptually, mapping functions
+to not generate anything. It makes more sense to think of mapping data from one
+domain to another. Even so, the data that is yielded by mapping functions can
+appear quite realistic.</p>
+<p>Because good RNGs do generally contain internal state, they aren't purely
+functional. This means that in some cases -- those in which you need to have
+random access to a virtual data set, hash functions make more sense. This
+toolkit allows you to choose between the two in some cases. However, it
+generally favors using hashing and pure-function approaches where possible. Even
+the statistical curve simulations do this.</p>
+<h2 id="bindings-template">Bindings Template</h2>
+<p>It is often useful to have a template that describes a set of generator
+functions that can be reused across many threads or other application scopes. A
+bindings template is a way to capture the requested generator functions for
+re-use, with actual scope instantiation of the generator functions controlled by
+the usage point. For example, in a JEE app, you may have a bindings template in
+the application scope, and a set of actual bindings within each request (thread
+scope).</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Binding Concepts</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#basic-example">Basic Example</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#variates-samples">Variates (Samples)</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#procedural-generation">Procedural Generation</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#uniform-variate">Uniform Variate</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#apparently-random-variates">Apparently Random Variates</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#deterministic-variates">Deterministic Variates</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#randomly-accessible-determinism">Randomly Accessible Determinism</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#data-mapping-functions">Data Mapping Functions</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#combining-rngs-and-data-mapping-functions">Combining RNGs and Data Mapping Functions</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/bindings/binding-concepts/#bindings-template">Bindings Template</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2023 NoSQLBench Project</p>
+    </div>
+  </footer>
+</body>
+</html>

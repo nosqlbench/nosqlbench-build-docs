@@ -1,0 +1,4 @@
+Sitemap: https://previewdocs.nosqlbench.io/sitemap.xml
+User-Agent: *
+Allow: /
+Host: https://previewdocs.nosqlbench.io

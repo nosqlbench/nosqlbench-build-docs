@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://previewdocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://previewdocs.nosqlbench.io/abridge-switcher.css?h=9b6aab2dc91d4a7ae069c83a07a6b403bb4e7ed1bd7e76f9b3790eadd0890047" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script defer src="https://previewdocs.nosqlbench.io/search_index.en.js?h=cc9a6f17c325987034bf8f2b4dfa2516f82469d946a2235be940bec38ec77e6f" integrity="sha384-heMCfCqf6OGxClK5FF1vzckK0A3BdH/0GiCttCWOG1ryXIlbXSBAm0QzqTVdijVj"></script>
+  <script defer src="https://previewdocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017de3cc731a77109758d7d13284046b1403b0c26ade193" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://previewdocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Scaling Up | NoSQLBench Project</title>
+  <meta name="copyright" content="NoSQLBench Project" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/" />
+  <meta name="twitter:url" content="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Scaling Up | NoSQLBench Project" />
+  <meta name="twitter:title" content="Scaling Up | NoSQLBench Project" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://previewdocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://previewdocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://previewdocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://previewdocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://previewdocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://previewdocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://previewdocs.nosqlbench.io/"><img src="https://previewdocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5" width="32" height="32" />NoSQLBench v5</a></h1></div><div>
+        <ul><li> <h2><a href="https://previewdocs.nosqlbench.io/getting_started/">Getting Started</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main><!-- active_page: testing_at_scale&#x2F;scaling_up.md -->
+<!-- active_section: testing_at_scale&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+  <!-- <h4> topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;nosqlbench&#x2F;">Introduction</a></div><div class="toc-item"><a href="&#x2F;release_notes&#x2F;">Release Notes</a></div><div class="toc-item"><a href="&#x2F;getting_started&#x2F;">Getting Started</a></div><div class="toc-item"><a href="&#x2F;workloads_101&#x2F;">Workloads 101</a></div><div class="toc-item"><a href="&#x2F;reference&#x2F;">Reference</a></div><div class="toc-item"><a href="&#x2F;scripting&#x2F;">Scenario Scripting</a></div><div class="toc-item"><strong>Testing at Scale</strong></div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;determinism&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;determinism&#x2F;">Determinism &amp; Variation</a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;vantage-points&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;vantage-points&#x2F;">Vantage Points</a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;scaling-up&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;scaling-up&#x2F;"><strong>Scaling Up</strong></a>
+        </div><!-- subsection_page_path: &#x2F;testing_at_scale&#x2F;client-sizing&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;testing_at_scale&#x2F;client-sizing&#x2F;">Client Sizing</a>
+        </div><div class="toc-item"><a href="&#x2F;drivers&#x2F;">Driver Adapters</a></div><div class="toc-item"><a href="&#x2F;bindings&#x2F;">Binding Functions</a></div></div>
+</div>
+
+<article>
+
+<p>This is a simple high-level overview of <em>a</em> scale-up testing method, for those who are new to it 
+and need a basic blueprint.</p>
+<p>Testing for scale is often a complicated business. Often, users think that it is too expensive 
+because a test at scale requires many systems. This is a not often the case. You can establish 
+the relationships between testing resources and results on any scale. Further, you can establish 
+the character of scalability at small scales at first and then go from there. This is often the 
+best approach in terms of incremental results.</p>
+<h2 id="start-small">Start Small</h2>
+<p>When testing for scale, it is useful to establish your testing method at some arbitrarily small
+size of system and go from there. This allows you to prove out your testing apparatus and target 
+system configuration in an affordable and easier-to-manage way. While a small system may not 
+show you the <em>scaled up</em> performance that you want to measure, it gives you the first reference
+point you need in order to verify <em>how</em> a system scales. </p>
+<h2 id="select-key-metrics">Select Key Metrics</h2>
+<p>You can only establish the character of scaling by plotting multiple points between an 
+independent and a dependent variable. At the highest level, the independent variable is 
+&quot;hardware&quot; from a system scaling perspective, and &quot;investment&quot; from an TCO perspective. Most 
+users will need to focus on how much hardware is needed to meet a given performance requirement, 
+SLA, or throughput (or both). You must know the fundamental questions you are asking for the 
+test to be framed and represented properly. </p>
+<p>Metrics which are most often used include:</p>
+<ul>
+<li>response time, one of (or all of)
+<ul>
+<li>p99 response time (historically called <em>latency</em>, but see the section on 
+<a href="https://previewdocs.nosqlbench.io/reference/timing-terms/">Timing Terms</a>)</li>
+<li>read-specific p99 response time, as read patterns in systems are often much more indicative 
+of overally scaling character</li>
+</ul>
+</li>
+<li>Dataset Size</li>
+<li>Saturating throughput</li>
+<li>p99 response time at some nominal throughput</li>
+<li>data density</li>
+</ul>
+<h2 id="nominal-vs-saturating-throughput">Nominal vs. Saturating throughput</h2>
+<p>Operational systems are not run in production at 100% utilization. As an <em>operational system</em>, 
+properly managed, they will be deployed to scale over the demand with some added headroom. This 
+headroom is crucial to allow for self-healing or administrative events at the control plane layer
+while maintaining the workload at some acceptable level (throughput and latency).</p>
+<p>Realistic measurement of a production-like system in  depends on knowing both what throughput that 
+system is capable of and how it responds at a realistic loading level. Running a system in 
+production at 10% utilization is not cost-effective. Conversely, running a system at 99% 
+utilization is not effective for maintaining availability through variable load, hardware 
+failures, or administrative actions. So how do you find the level of throughput to test at?</p>
+<p>A basic recipe consists of:</p>
+<ol>
+<li>Run the workload at a reasonable concurrency and no rate throttling and measure the 
+<em>saturating</em> throughput.</li>
+<li>Select a proportional loading level which represents what you would do in production. For 
+example, for a headroom of 30%, you might select a loading level of 70%</li>
+<li>Run your main workload at the proportional rate using client-side rate-limiting, and take 
+your response time measurements from this run.</li>
+</ol>
+<h2 id="scale-up">Scale Up</h2>
+<p>Once you have established your metrics at nominal throughput on your baseline system, you are 
+ready to scale up your test. For the scaling mode that you are testing, change an independent 
+variable (add a node, add cores, or whatever constitutes a <em>resource</em> in your target system).</p>
+<p>Repeat the test flow above with a different set of parameters. Once you get two sets of results, 
+you have enough to start characterizing scalability.</p>
+<p>In general, distributed systems which are designed to scale focus on maintaining a given 
+response time character when the proportion of resources is congruent to the rate of requests.
+Other scaling modes are available, but details vary by system, so be clear about what you are 
+testing and why.</p>
+<h2 id="explain-your-results">Explain Your Results</h2>
+<p>It is crucial that you frame the fundamental premise of your test in any results. </p>
+<p>This includes key details, like:</p>
+<ul>
+<li>What questions you aim to answer - What is the purpose of the test?</li>
+<li>A high-level outline of the testing method or workflow used.</li>
+<li>Details on how metrics are measured
+(see <a href="https://previewdocs.nosqlbench.io/testing_at_scale/vantage-points/">Vantage Points</a>)</li>
+<li>The basic formulae (like the nominal vs saturating rates above)</li>
+<li>a direct and uncomplicated visual about the fundamental relationship between 
+the test parameters</li>
+<li>Full details of the system and workload used for testing. Even if you don't provide this 
+up-front it has to be readily available when asked for any result to be taken seriously.</li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Scaling Up</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/#start-small">Start Small</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/#select-key-metrics">Select Key Metrics</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/#nominal-vs-saturating-throughput">Nominal vs. Saturating throughput</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/#scale-up">Scale Up</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/testing_at_scale/scaling-up/#explain-your-results">Explain Your Results</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2023 NoSQLBench Project</p>
+    </div>
+  </footer>
+</body>
+</html>

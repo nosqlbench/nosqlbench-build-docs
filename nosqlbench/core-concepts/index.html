@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://previewdocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://previewdocs.nosqlbench.io/abridge-switcher.css?h=9b6aab2dc91d4a7ae069c83a07a6b403bb4e7ed1bd7e76f9b3790eadd0890047" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script defer src="https://previewdocs.nosqlbench.io/search_index.en.js?h=cc9a6f17c325987034bf8f2b4dfa2516f82469d946a2235be940bec38ec77e6f" integrity="sha384-heMCfCqf6OGxClK5FF1vzckK0A3BdH/0GiCttCWOG1ryXIlbXSBAm0QzqTVdijVj"></script>
+  <script defer src="https://previewdocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017de3cc731a77109758d7d13284046b1403b0c26ade193" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://previewdocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Core Concepts | NoSQLBench Project</title>
+  <meta name="copyright" content="NoSQLBench Project" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/" />
+  <meta name="twitter:url" content="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Core Concepts | NoSQLBench Project" />
+  <meta name="twitter:title" content="Core Concepts | NoSQLBench Project" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://previewdocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://previewdocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://previewdocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://previewdocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://previewdocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://previewdocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://previewdocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://previewdocs.nosqlbench.io/"><img src="https://previewdocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5" width="32" height="32" />NoSQLBench v5</a></h1></div><div>
+        <ul><li> <h2><a href="https://previewdocs.nosqlbench.io/getting_started/">Getting Started</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main><!-- active_page: nosqlbench&#x2F;core_concepts.md -->
+<!-- active_section: nosqlbench&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+  <!-- <h4> topics</h4>--><div class="toc-sticky"><div class="toc-item"><strong>Introduction</strong></div><!-- subsection_page_path: &#x2F;nosqlbench&#x2F;introduction&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;nosqlbench&#x2F;introduction&#x2F;">NoSQLBench</a>
+        </div><!-- subsection_page_path: &#x2F;nosqlbench&#x2F;core-concepts&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;nosqlbench&#x2F;core-concepts&#x2F;"><strong>Core Concepts</strong></a>
+        </div><!-- subsection_page_path: &#x2F;nosqlbench&#x2F;showcase&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;nosqlbench&#x2F;showcase&#x2F;">Showcase</a>
+        </div><!-- subsection_page_path: &#x2F;nosqlbench&#x2F;community&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;nosqlbench&#x2F;community&#x2F;">Community</a>
+        </div><!-- subsection_page_path: &#x2F;nosqlbench&#x2F;principles&#x2F; -->
+        <div class="toc-item-child">
+          <a href="&#x2F;nosqlbench&#x2F;principles&#x2F;">Design Principles</a>
+        </div><div class="toc-item"><a href="&#x2F;release_notes&#x2F;">Release Notes</a></div><div class="toc-item"><a href="&#x2F;getting_started&#x2F;">Getting Started</a></div><div class="toc-item"><a href="&#x2F;workloads_101&#x2F;">Workloads 101</a></div><div class="toc-item"><a href="&#x2F;reference&#x2F;">Reference</a></div><div class="toc-item"><a href="&#x2F;scripting&#x2F;">Scenario Scripting</a></div><div class="toc-item"><a href="&#x2F;testing_at_scale&#x2F;">Testing at Scale</a></div><div class="toc-item"><a href="&#x2F;drivers&#x2F;">Driver Adapters</a></div><div class="toc-item"><a href="&#x2F;bindings&#x2F;">Binding Functions</a></div></div>
+</div>
+
+<article>
+
+<p>NoSQLBench is built on top of core concepts that have been scrutinized, replaced, refined, and
+hardened through several years of use by a diverse set of users.</p>
+<p>This level of refinement is important when trying to find a way to express common patterns in what
+is often a highly fragmented practice. Testing is hard. Scale testing is hard. Distributed testing
+is hard. Combined, the challenge of executing realistic tests is often quite daunting to all but
+seasoned test engineers. To make this worse, existing tools have only skirmished with this problem
+enough to make dents, but none has tackled full-on the lack of conceptual building blocks.</p>
+<p>This has to change. We need a set of testing concepts that can span across workloads and system
+types, and machinery to put these concepts to use. This is why it is important to focus on finding a
+useful and robust set of concepts to use as the foundation for the rest of the toolkit to be built
+on. Finding these building blocks is often one of the most difficult challenges in systems design.
+Once you find and validate a useful set of concepts, everything else gets easier.</p>
+<p>We feel that the success that we've already had using NoSQLBench has been strongly tied to the core
+concepts. Some concepts used in NoSQLBench are shared below for illustration, but this is by no
+means an exhaustive list.</p>
+<h3 id="the-cycle">The Cycle</h3>
+<p>Cycles in NoSQLBench are whole numbers on a number line. Each operation in a NoSQLBench scenario is
+derived from a single cycle. It's a long value, and a seed. The cycle determines not only which
+operation is selected for execution, but also what data will be attached to it.</p>
+<p>Cycles are specified as a <em>closed-open</em> <code>[min,max)</code> interval, just as slices in some languages. That
+is, the min value is included in the range, but the max value is not. This means that you can stack
+slices using common numeric reference points without overlaps or gaps. It means you can have exact
+awareness of what data is in your dataset, even incrementally.</p>
+<p>You can think of a cycle as a single-valued coordinate system for data that lives adjacent to that
+number on the number line. In this way, virtual dataset functions are ways of converting coordinates
+into data.</p>
+<p>In NoSQLBench, the cycle range determines both the total size of a workload and the specific set of
+operations which will be performed. Using the same cycle range is the same as specifying the same
+exact operations. This means that your tests can be completely deterministic (pseudo-random) and
+repeatable even when they appear random or are shaped by density curves.</p>
+<h3 id="the-activity">The Activity</h3>
+<p>An activity is a multi-threaded flywheel of statements in some sequence and ratio. Each activity
+runs over the numbers in a cycle range. An activity is specified as a series of op templates in some
+ratio and order. When an activity runs, it executes an efficient loop over specific operations with
+its own thread pool.</p>
+<h3 id="the-op-template">The Op Template</h3>
+<p>Each possible operation in an activity is provided by the user in a YAML or data structure driven
+template. The op templates are used to create efficient op dispensers in the runtime according to
+the mapping rules for a given driver.</p>
+<h3 id="the-driver-adapter">The Driver Adapter</h3>
+<p>A driver adapter is a high level driver for a protocol which interfaces a native driver to the
+runtime machinery of NoSQLBench. It is like a statement-aware cartridge that knows how to take a
+basic op template and turn it into an operation for an activity to execute for a given cycle.</p>
+<h3 id="the-scenario">The Scenario</h3>
+<p>The scenario is a runtime session that holds activities while they run. A NoSQLBench scenario is
+responsible for aggregating global runtime settings, metrics reporting channels, log files, and so
+on. All activities run within a scenario, under the control of the scenario script.</p>
+<h3 id="the-scenario-script">The Scenario Script</h3>
+<p>Each scenario is governed by a script that runs single-threaded, asynchronously from activities, but
+in control of activities. If needed, the scenario script is automatically created for the user, and
+the user never knows it is there. If the user has advanced testing requirements, then they may take
+advantage of the scripting capability at such time. When the script exits, <em>AND</em> all activities are
+complete, then the scenario is complete. Shortcut forms of scripting are provided on the command
+line to address common variations.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Core Concepts</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-cycle">The Cycle</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-activity">The Activity</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-op-template">The Op Template</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-driver-adapter">The Driver Adapter</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-scenario">The Scenario</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://previewdocs.nosqlbench.io/nosqlbench/core-concepts/#the-scenario-script">The Scenario Script</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2023 NoSQLBench Project</p>
+    </div>
+  </footer>
+</body>
+</html>
