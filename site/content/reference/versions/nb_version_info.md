@@ -7,7 +7,7 @@ weight: 170324057
 The version of NB5 which provided some of the docs content is:
 
 ```
-version=5.17.4-SNAPSHOT
+version=5.17.5-SNAPSHOT
 groupId=io.nosqlbench
 artifactId=nbr
 ```
