@@ -1,6 +1,6 @@
 ---
-weight: 144740440
 title: Op Templates
+weight: 144740440
 ---
 # Op Templates
 
@@ -44,7 +44,8 @@ op: select * from bar.table;
     },
     "tags": {
       "name": "block0__stmt1",
-      "block": "block0"
+      "block": "block0",
+      "op": "stmt1"
     }
   }
 ]
@@ -82,7 +83,8 @@ ops:
     },
     "tags": {
       "name": "block0__stmt1",
-      "block": "block0"
+      "block": "block0",
+      "op": "stmt1"
     }
   }
 ]
@@ -125,7 +127,8 @@ ops:
     },
     "tags": {
       "name": "block0__op1",
-      "block": "block0"
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -167,7 +170,8 @@ ops:
     },
     "tags": {
       "name": "block0__op1",
-      "block": "block0"
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -205,7 +209,8 @@ ops:
     },
     "tags": {
       "name": "block0__op1",
-      "block": "block0"
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -246,7 +251,8 @@ ops:
     },
     "tags": {
       "name": "block0__op1",
-      "block": "block0"
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -296,7 +302,7 @@ ops:
         "prepared": false
       },
       "tags": {
-        "block": "schema"
+        "block":"schema"
       }
     }
   }
@@ -321,9 +327,9 @@ ops:
       "prepared": false
     },
     "tags": {
-      "block": "schema",
+      "block": "block0",
       "name": "block0__special-op-name",
-      "block": "block0"
+      "op": "special-op-name"
     }
   }
 ]
@@ -420,10 +426,10 @@ blocks:
       "prepared": false
     },
     "tags": {
-      "block": "schema",
+      "block": "block_named_fred",
       "docleveltag": "is-tagging-everything",
       "name": "block_named_fred__special-op-name",
-      "block": "block_named_fred"
+      "op": "special-op-name"
     }
   }
 ]

@@ -1,6 +1,6 @@
 ---
-weight: 144740440
 title: Op Template Variations
+weight: 144740440
 ---
 
 # Op Templates Variations
@@ -49,7 +49,8 @@ ops:
     },
     "tags": {
       "block": "block0",
-      "name": "block0__special-op-name"
+      "name": "block0__special-op-name",
+      "op": "special-op-name"
     }
   }
 ]
@@ -101,7 +102,8 @@ ops:
     },
     "tags": {
       "block": "block0",
-      "name": "block0__op1"
+      "name": "block0__op1",
+      "op": "op1"
     }
   }
 ]
@@ -147,7 +149,8 @@ ops:
     },
     "tags": {
       "block": "block0",
-      "name": "block0__op1"
+      "name": "block0__op1",
+      "op": "op1"
     }
   }
 ]
@@ -194,12 +197,13 @@ ops:
       "field1": "select * from ks1.tb1;",
       "field2": "field 2 value"
     },
-    params: {
+    "params": {
       "paramname1": "paramvalue1"
     },
     "tags": {
       "block": "block0",
-      "name": "block0__op1"
+      "name": "block0__op1",
+      "op": "op1"
     }
   }
 ]
@@ -251,7 +255,8 @@ ops:
     },
     "tags": {
       "block": "block0",
-      "name": "block0__op1"
+      "name": "block0__op1",
+      "op": "op1"
     }
   }
 ]
@@ -308,7 +313,8 @@ ops:
     },
     "tags": {
       "block": "block0",
-      "name": "block0__op1"
+      "name": "block0__op1",
+      "op": "op1"
     }
   }
 ]
@@ -347,7 +353,8 @@ ops: "my test op"
     },
     "tags": {
       "name": "block0__stmt1",
-      "block": "block0"
+      "block": "block0",
+      "op": "stmt1"
     },
     "op": {
       "stmt": "my test op"
@@ -396,7 +403,8 @@ blocks:
     },
     "tags": {
       "name": "block1__stmt1",
-      "block": "block1"
+      "block": "block1",
+      "op": "stmt1"
     },
     "op": {
       "stmt": "my test op"
@@ -452,7 +460,8 @@ blocks:
     },
     "tags": {
       "name": "block1__op1",
-      "block": "block1"
+      "block": "block1",
+      "op": "op1"
     },
     "op": {
       "stmt": "my test op"
@@ -513,7 +522,8 @@ blocks:
   {
     "tags": {
       "name": "block1__op1",
-      "block": "block1"
+      "block": "block1",
+      "op": "op1"
     },
     "op": {
       "stmt": "my test op",
@@ -575,7 +585,8 @@ blocks:
   {
     "tags": {
       "name": "block1__op1",
-      "block": "block1"
+      "block": "block1",
+      "op": "op1"
     },
     "op": {
       "stmt": "my test op"
@@ -585,10 +596,12 @@ blocks:
   {
     "tags": {
       "name": "block1__params",
-      "block": "block1"
+      "block": "block1",
+      "op": "params"
     },
     "op": {
       "pname": "pvalue"
+
     },
     "name": "block1__params"
   }
