@@ -117,6 +117,12 @@ Construct an arbitrarily large float vector with hashes. The initial value is as
 
 - `long -> HashedFloatVectors(Object: sizer) -> float[]`
 
+## HdfDatasetToStrings
+
+This function reads a dataset from an HDF5 file. The dataset itself is not read into memory, only the metadata (the "dataset" Java Object). The lambda function reads a single vector from the dataset, based on the long input value.
+
+- `long -> HdfDatasetToStrings(String: filename, String: datasetName) -> String`
+
 ## HdfFileToFloatArray
 
 This function reads a vector dataset from an HDF5 file. The dataset itself is not read into memory, only the metadata (the "dataset" Java Object). The lambda function reads a single vector from the dataset, based on the long input value. As currently written this class will only work for datasets with 2 dimensions where the 1st dimension specifies the number of vectors and the 2nd dimension specifies the number of elements in each vector. Only datatypes short, int, and float are supported at this time.
