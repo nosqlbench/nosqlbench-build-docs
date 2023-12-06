@@ -1,6 +1,6 @@
 ---
-title: DoubleArrayCache
 weight: 52584703
+title: DoubleArrayCache
 ---
 ## DoubleArrayCache
 
@@ -117,11 +117,43 @@ Construct an arbitrarily large float vector with hashes. The initial value is as
 
 - `long -> HashedFloatVectors(Object: sizer) -> float[]`
 
+## HdfDatasetToCqlPredicates
+
+Binding function that accepts a long input value for the cycle and returns a string consisting of the CQL predicate parsed from a single record in an HDF5 dataset
+
+- `long -> HdfDatasetToCqlPredicates(String: filename, String: datasetname, String: parsername) -> String`
+  - *notes:* Create a new binding function that accepts a long input value for the cycle and returns a string
+@param filename
+@param datasetname
+@param parsername
+
+
+- `long -> HdfDatasetToCqlPredicates(String: filename, String: datasetname) -> String`
+
+## HdfDatasetToString
+
+This function reads a vector dataset from an HDF5 file. The entire dataset is parsed into a single String Object with the discreet values separated by the user supplied separator character. It is intended for use only with small datasets where the entire dataset can be read into memory and there is no need to read individual vectors from the dataset. The lambda function simply returns the String representation of the dataset.
+
+- `long -> HdfDatasetToString(String: filename, String: dataset, String: separator) -> String`
+  - *notes:* Create a new binding function that accepts a long input value for the cycle and returns a string representation
+of the specified dataset
+@param filename
+@param dataset
+@param separator
+
+
+- `long -> HdfDatasetToString(String: filename, String: dataset) -> String`
+
 ## HdfDatasetToStrings
 
-This function reads a dataset from an HDF5 file. The dataset itself is not read into memory, only the metadata (the "dataset" Java Object). The lambda function reads a single vector from the dataset, based on the long input value.
+This function reads a dataset of any supported type from an HDF5 file. The dataset itself is not read into memory, only the metadata (the "dataset" Java Object). The lambda function reads a single vector from the dataset, based on the long input value.
 
 - `long -> HdfDatasetToStrings(String: filename, String: datasetName) -> String`
+
+## HdfDatasetsToString
+
+
+- `long -> HdfDatasetsToString(String: filename, String: DSNameLeft, String: DSNameRight, String: intraSeparator, String: interSeparator) -> String`
 
 ## HdfFileToFloatArray
 
