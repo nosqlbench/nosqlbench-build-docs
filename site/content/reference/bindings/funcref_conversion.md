@@ -485,6 +485,12 @@ Create a double by converting values. This function works in the following modes
 
 - `long -> ToDouble(Object: func) -> double`
 
+## ToDoubleList
+
+Convert an incoming double array to a List of Double
+
+- `double[] -> ToDoubleList() -> List<Double>`
+
 ## ToFloat
 
 Convert the input value into a float. Create a float by converting values. This function works in the following modes:
@@ -506,6 +512,12 @@ Convert the input value into a float. Create a float by converting values. This 
 - `String -> ToFloat() -> Float`
 
 - `Short -> ToFloat() -> Float`
+
+## ToFloatList
+
+Convert an incoming float array to a List of Float
+
+- `float[] -> ToFloatList() -> List<Float>`
 
 ## ToHexString
 
