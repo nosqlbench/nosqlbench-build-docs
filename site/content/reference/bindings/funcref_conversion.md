@@ -1,6 +1,6 @@
 ---
-weight: 30
 title: conversion functions
+weight: 30
 ---
 
 Conversion functions simply allow values of one type
@@ -315,9 +315,9 @@ is not supported for String or Double input forms.
   - *example:* `ToBigDecimal()`
   - *Convert all double values to BigDecimal values with no limits (using MathContext.UNLIMITED)*
 
-- `double -> ToBigDecimal(String: context) -> java.math.BigDecimal`
+- `double -> ToBigDecimal(String: mathCtx) -> java.math.BigDecimal`
   - *notes:* Convert all input values to BigDecimal values with a specific MathContext.
-The value for context can be one of UNLIMITED,
+The value for mathCtx can be one of UNLIMITED,
 DECIMAL32, DECIMAL64, DECIMAL128, or any valid configuration supported by
 {@link MathContext#MathContext(String)}, such as {@code "precision=32 roundingMode=CEILING"}.
 In the latter form, roundingMode can be any valid value for {@link RoundingMode}, like
@@ -389,7 +389,7 @@ UP, DOWN, CEILING, FLOOR, HALF_UP, HALF_DOWN, HALF_EVEN, or UNNECESSARY.
 - `String -> ToBigDecimal() -> java.math.BigDecimal`
   - *example:* `Convert strings to BigDecimal according to default precision (unlimited) and rounding (HALF_UP)`
 
-- `String -> ToBigDecimal(String: context) -> java.math.BigDecimal`
+- `String -> ToBigDecimal(String: mathCtx) -> java.math.BigDecimal`
   - *notes:* Convert all input values to BigDecimal values with a specific MathContext. This form is only
 supported for scale=0, meaning whole numbers. The value for context can be one of UNLIMITED,
 DECIMAL32, DECIMAL64, DECIMAL128, or any valid configuration supported by
