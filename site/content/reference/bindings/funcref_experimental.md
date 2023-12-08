@@ -1,7 +1,39 @@
 ---
-title: DoubleArrayCache
-weight: 52584703
+weight: 239483129
+title: DNN_euclidean_neighbors
 ---
+## DNN_euclidean_neighbors
+
+Compute the indices of the neighbors of a given v using DNN mapping. To avoid ambiguity on equidistant neighbors, odd neighborhood sizes are preferred.
+
+- `int -> DNN_euclidean_neighbors(int: k, int: N, int: D) -> int[]`
+  - *notes:* @param k
+    The size of neighborhood
+@param N
+    The number of total vectors, necessary for boundary conditions of defined vector
+@param D
+    Number of dimensions in each vector
+
+
+## DNN_euclidean_v
+
+
+- `long -> DNN_euclidean_v(int: D, long: N) -> float[]`
+
+- `long -> DNN_euclidean_v(int: D, long: N, double: scale) -> float[]`
+
+## DNN_euclidean_v_series
+
+
+- `long -> DNN_euclidean_v_series(int: dimensions, long: population, int: k) -> float[][]`
+
+## DNN_euclidean_v_wrap
+
+
+- `long -> DNN_euclidean_v_wrap(int: D, long: N, double: scale) -> float[]`
+
+- `long -> DNN_euclidean_v_wrap(int: D, long: N) -> float[]`
+
 ## DoubleArrayCache
 
 Precompute the interior double\[\] values to use as a LUT.
