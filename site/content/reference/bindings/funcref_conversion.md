@@ -483,6 +483,8 @@ Create a double by converting values. This function works in the following modes
 * If you pass a function that produces a numeric type, then the result of this function is evaluated for the input cycle and converted to a double.
 * If you pass any numeric value which is not a function, then this value is converted and returned for every cycle as a fixed value.
 
+- `long -> ToDouble() -> double`
+
 - `long -> ToDouble(Object: func) -> double`
 
 ## ToDoubleList
