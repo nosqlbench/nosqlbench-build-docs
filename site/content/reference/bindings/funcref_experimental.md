@@ -1,6 +1,6 @@
 ---
-title: DNN_euclidean_neighbors
 weight: 239483129
+title: DNN_euclidean_neighbors
 ---
 ## DNN_euclidean_neighbors
 
