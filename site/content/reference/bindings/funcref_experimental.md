@@ -1,7 +1,19 @@
 ---
-weight: 239483129
-title: DNN_euclidean_neighbors
+title: DNN_angular1_v
+weight: 154485593
 ---
+## DNN_angular1_v
+
+
+- `long -> DNN_angular1_v(int: D, long: N, long: M) -> float[]`
+  - *notes:* @param D
+    Dimensions in each vector
+@param N
+    The number of vectors in the training set
+@param M
+    The modulo which is used to construct equivalence classes
+
+
 ## DNN_euclidean_neighbors
 
 Compute the indices of the neighbors of a given v using DNN mapping. To avoid ambiguity on equidistant neighbors, odd neighborhood sizes are preferred.
