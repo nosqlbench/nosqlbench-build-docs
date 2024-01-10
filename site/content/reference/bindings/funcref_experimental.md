@@ -1,6 +1,6 @@
 ---
-weight: 154485593
 title: DNN_angular1_v
+weight: 154485593
 ---
 ## DNN_angular1_v
 
