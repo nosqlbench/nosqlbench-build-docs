@@ -41,6 +41,7 @@ Compute the indices of the neighbors of a given v using DNN mapping. To avoid am
 
 ## DNN_euclidean_v_wrap
 
+This represents an enumerated population of vectors of some dimension, where any ordinal values which address outside of that enumeration simply wrap with modulo.
 
 - `long -> DNN_euclidean_v_wrap(int: D, long: N, double: scale) -> float[]`
 
