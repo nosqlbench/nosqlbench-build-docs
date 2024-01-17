@@ -1,6 +1,6 @@
 ---
-weight: 10014
 title: Sin
+weight: 10014
 ---
 ## Sin
 
