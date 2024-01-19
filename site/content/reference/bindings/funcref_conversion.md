@@ -631,7 +631,7 @@ Convert the input value to a short.
 
 ## ToString
 
-Converts the input to the most obvious string representation with String.valueOf(...). Forms which accept a function will evaluate that function first and then apply String.valueOf() to the result.
+Convert CharBuffer to String Converts the input to the most obvious string representation with String.valueOf(...). Forms which accept a function will evaluate that function first and then apply String.valueOf() to the result.
 
 - `Float -> ToString() -> String`
 
@@ -662,6 +662,8 @@ Converts the input to the most obvious string representation with String.valueOf
 - `double -> ToString(function.DoubleFunction<Double>: df) -> String`
 
 - `double -> ToString(function.Function<Double,Double>: df) -> String`
+
+- `java.nio.CharBuffer -> ToString() -> String`
 
 - `int -> ToString() -> String`
 
