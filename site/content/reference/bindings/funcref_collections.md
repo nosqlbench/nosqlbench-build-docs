@@ -172,11 +172,21 @@ Create a List from a long input based on a set of provided functions. As a 'Size
 
 ## ListSizedStepped
 
-Create a List from a long input based on a set of provided functions. As a 'Sized' function, the first argument is a function which determines the size of the resulting list. Additional functions provided are used to generate the elements to add to the collection. If the size is larger than the number of provided functions, the last provided function is used repeatedly as needed. As a 'Stepped' function, the input value is incremented before being used by each element function.
+Create a List from a long input based on a set of provided functions.
+
+
+As a 'Sized' function, the first argument is a function which determines the size of the resulting list.
+Additional functions provided are used to generate the elements to add to the collection. If the size
+is larger than the number of provided functions, the last provided function is used repeatedly as needed.
+
+
+As a 'Stepped' function, the input value is incremented before being used by each element function.
 
 - `long -> ListSizedStepped(Object: sizeFunc, Object[]...: funcs) -> List<Object>`
-  - *example:* `ListFunctions(NumberNameToString(),NumberNameToString())`
-  - *Create a list of ['one','one']*
+  - *example:* `ListSizedStepped(2,NumberNameToString(),NumberNameToString())`
+  - *Create a list of elements like ['zero','one']*
+  - *example:* `ListSizedStepped(2,HashRange(1f,10f))`
+  - *Create a list of elements like [3.8738558, 7.139979]*
 
 ## ListStepped
 
