@@ -1,7 +1,21 @@
 ---
-title: DNN_angular1_v
 weight: 154485593
+title: DNN_angular1_neighbors
 ---
+## DNN_angular1_neighbors
+
+Compute the indices of the neighbors of a given v using DNN mapping. To avoid ambiguity on equidistant neighbors, odd neighborhood sizes are preferred.
+
+- `int -> DNN_angular1_neighbors(int: k, int: N, int: modulus) -> int[]`
+  - *notes:* @param k
+    The size of neighborhood
+@param N
+    The number of total vectors, necessary for boundary conditions of defined vector
+@param module
+    The modulus used during training of angular1 data; this corresponds to how periodically we cycle back
+    to vectors with the same angle (hence have angular distance zero between them)
+
+
 ## DNN_angular1_v
 
 
