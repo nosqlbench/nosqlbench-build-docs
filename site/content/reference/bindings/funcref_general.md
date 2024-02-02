@@ -1,6 +1,6 @@
 ---
-weight: 20
 title: general functions
+weight: 20
 ---
 
 These functions have no particular category, so they ended up here by default.
@@ -192,6 +192,87 @@ Convert a numeric value into a code according to ASCII printable characters. Thi
   - *two bytes of hexadecimal*
   - *example:* `Combinations('A-9')`
   - *upper case alphanumeric*
+
+## Concat
+
+This is the core implementation of the Concat style of String
+binding. It is the newer and recommended version of {@link Template}.
+
+Users should use one of these wrappers:
+
+* {@link ConcatCycle} - all inputs are the cycle value
+* {@link ConcatHashed} - all inputs are a hash of (cycle+step)
+* {@link ConcatStepped} - all inputs are (cycle+step)
+* {@link ConcatFixed} - all inputs are always the same value
+* {@link ConcatChained} - all inputs are chained hashes of the previous one
+
+<br />
+
+
+*** ** * ** ***
+
+This implementation is available for specialized use when needed, but the
+above versions are much more self-explanatory and easy to use.
+
+As with previous implementations, the basic input which is fed to the functions
+is the sum of the input cycle and the step, where the step is simply the index of
+the insertion point within the template string. These start at 0, so a template string
+which contains "{}-{}" will have two steps, 0, and 1. For cycle 35, the first
+function will take input 35, and the second 36. This can create some local neighborhood
+similarity in test data, so other forms are provided which can hash the values for
+an added degree of (effective) randomness and one that chains these so that each
+set of values from a Concat binding are quite distinct from each other.
+
+
+*** ** * ** ***
+
+Binding functions used to populate each step of the template may have their own bounds
+of output values like {@link Combinations}. These are easy to use internally since they
+work well with the hashing. However, some other functions may operate over the whole space
+of long values, and come with no built-in cardinality constraints. It is recommended to
+use those with built-in constraints when you want to render a discrete population of values.
+
+- `long -> Concat(String: template, Object[]...: functions) -> String`
+
+- `long -> Concat(function.LongBinaryOperator: cycleStepMapper, String: template, Object[]...: functions) -> String`
+
+## ConcatChained
+
+This is a variant of Concat which chains the hash values
+from step to step so that each of the provided functions will
+yield unrelated values. The first input value to a function
+is a hash of the cycle input value, the next is a hash of the
+first input value, and so on.
+
+- `long -> ConcatChained(String: template, Object[]...: functions) -> String`
+
+## ConcatCycle
+
+This is a variant of Concat which always uses the input cycle value
+as the input for all the functions provided.
+
+- `long -> ConcatCycle(String: template, Object[]...: functions) -> String`
+
+## ConcatFixed
+
+This is a variant of Concat which always uses the same value
+as input for the functions provided.
+
+- `long -> ConcatFixed(long: value, String: template, Object[]...: functions) -> String`
+
+## ConcatHashed
+
+This is a variant of Concat which always hashes the cycle+step value
+for each function provided.
+
+- `long -> ConcatHashed(String: template, Object[]...: functions) -> String`
+
+## ConcatStepped
+
+This is a variant of Concat which uses the cycle+step sum for each
+of the functions provided.
+
+- `long -> ConcatStepped(String: template, Object[]...: functions) -> String`
 
 ## CycleRange
 
