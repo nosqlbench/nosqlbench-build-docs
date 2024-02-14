@@ -1,6 +1,6 @@
 ---
-title: pinecone driver adapter
 weight: 167333531
+title: pinecone driver adapter
 ---
 # pinecone driver adapter
 The pinecone driver adapter is a nb adapter for the pinecone driver, an open source Java driver for connecting to and
