@@ -321,6 +321,31 @@ Read each line in each matching file in a directory structure, providing one lin
   - *example:* `DirectoryLines('/var/tmp/bardata', '.*')`
   - *load every line from every file in /var/tmp/bardata*
 
+## DirectoryLinesStable
+
+Read each line in each matching file in a directory structure, providing one
+line for each time this function is called. The files are sorted at the time
+the function is initialized, and each line is read in order.
+
+This function accepts long input values, but they are used as ints, modulo the total number of lines known.
+This is due to historic limitations in the Java file APIs and file size support.
+
+This is a variant of {@link DirectoryLines}. This version keeps a map of files and their respective cardinality,
+computed at initialization time. The content is assumed to be static during the lifetime of this function.
+
+
+The value returned for a given cycle is stable, so long as the underlying data is stable.
+
+*** ** * ** ***
+
+*This caches all
+data at initialization time. If you need to buffer the data in stream mode, use {@link DirectoryLines} instead,
+which is not order-stable.*
+
+- `long -> DirectoryLinesStable(String: basepath, String: namePattern) -> String`
+  - *example:* `DirectoryLines('/var/tmp/bardata', '.*')`
+  - *load every line from every file in /var/tmp/bardata*
+
 ## Discard
 
 This function takes a long input and ignores it. It returns a generic object which is meant to be used as input to other function which don't need a specific input.
