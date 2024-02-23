@@ -1,6 +1,6 @@
 ---
-title: AMQP
 weight: 275768
+title: AMQP
 ---
 - [1. Overview](#1-overview)
 - [2. NB AMQP Usage](#2-nb-amqp-usage)
