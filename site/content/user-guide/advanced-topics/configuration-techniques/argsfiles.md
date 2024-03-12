@@ -40,7 +40,6 @@ pinning options are used.
 
 An args file simply contains an argument on each line, like this:
 
-    --docker-metrics
     --annotate all
     --grafana-baseurl http://localhost:3000/
 
@@ -53,7 +52,7 @@ Lines that start with `#` are ignored, but should be preserved between changes.
 
 It is possible to pin an option to the default args file by use of the `--pin` meta-option. This
 option will take the following command line argument and add it to the currently active args file.
-That means, if you use `--pin --docker-metrics`, then `--docker-metrics` is added to the args file.
+That means, if you use `--pin --annotate all`, then `--annotate all` is added to the args file.
 If there is an exact duplicate of the same option and value, then it is skipped, but if the option
 name is the same with a different value, then it is added at the end. This allows for options which
 may be called multiple times normally.
@@ -88,7 +87,7 @@ in `--unpin --log-histograms 'histodata.log:.*:1m'`
 
 To simply set global defaults, you can run nosqlbench with a command line like this:
 
-    ./nb --pin --docker-metrics-at metricsnode --pin --annotate all
+    ./nb --pin --annotate all
 
 # Compatibility
 

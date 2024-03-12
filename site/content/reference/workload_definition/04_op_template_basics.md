@@ -38,13 +38,14 @@ op: select * from bar.table;
 
 [
   {
-    "name": "block0__stmt1",
+    "name": "stmt1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__stmt1",
-      "block": "block0"
+      "name": "stmt1",
+      "block": "block0",
+      "op": "stmt1"
     }
   }
 ]
@@ -76,13 +77,14 @@ ops:
 
 [
   {
-    "name": "block0__stmt1",
+    "name": "stmt1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__stmt1",
-      "block": "block0"
+      "name": "stmt1",
+      "block": "block0",
+      "op": "stmt1"
     }
   }
 ]
@@ -119,13 +121,14 @@ ops:
 
 [
   {
-    "name": "block0__op1",
+    "name": "op1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -161,13 +164,14 @@ ops:
 
 [
   {
-    "name": "block0__op1",
+    "name": "op1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -199,13 +203,14 @@ ops:
 
 [
   {
-    "name": "block0__op1",
+    "name": "op1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -240,13 +245,14 @@ ops:
 
 [
   {
-    "name": "block0__op1",
+    "name": "op1",
     "op": {
       "stmt": "select * from bar.table;"
     },
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     }
   }
 ]
@@ -296,7 +302,7 @@ ops:
         "prepared": false
       },
       "tags": {
-        "block": "schema"
+        "block":"schema"
       }
     }
   }
@@ -313,7 +319,7 @@ ops:
       "binding1": "NumberNameToString();"
     },
     "description": "This is just an example operation",
-    "name": "block0__special-op-name",
+    "name": "special-op-name",
     "op": {
       "stmt": "select * from ks1.tb1;"
     },
@@ -321,9 +327,9 @@ ops:
       "prepared": false
     },
     "tags": {
-      "block": "schema",
-      "name": "block0__special-op-name",
-      "block": "block0"
+      "block": "block0",
+      "name": "special-op-name",
+      "op": "special-op-name"
     }
   }
 ]
@@ -412,7 +418,7 @@ blocks:
     "bindings": {
       "binding1": "NumberNameToString();"
     },
-    "name": "block_named_fred__special-op-name",
+    "name": "special-op-name",
     "op": {
       "stmt": "select * from ks1.tb1;"
     },
@@ -420,10 +426,10 @@ blocks:
       "prepared": false
     },
     "tags": {
-      "block": "schema",
+      "block": "block_named_fred",
       "docleveltag": "is-tagging-everything",
-      "name": "block_named_fred__special-op-name",
-      "block": "block_named_fred"
+      "name": "special-op-name",
+      "op": "special-op-name"
     }
   }
 ]

@@ -43,13 +43,14 @@ ops: "cycle number '{{NumberNameToString}}'"
 [
   {
     "tags": {
-      "name": "block0__stmt1",
-      "block": "block0"
+      "name": "stmt1",
+      "block": "block0",
+      "op": "stmt1"
     },
     "op": {
       "stmt": "cycle number '{{NumberNameToString}}'"
     },
-    "name": "block0__stmt1"
+    "name": "stmt1"
   }
 ]
 ```
@@ -86,23 +87,25 @@ ops:
 [
   {
     "tags": {
-      "name": "block0__stmt1",
-      "block": "block0"
+      "name": "stmt1",
+      "block": "block0",
+      "op": "stmt1"
     },
     "op": {
       "stmt": "even cycle '{{NumberNameToString}}'"
     },
-    "name": "block0__stmt1"
+    "name": "stmt1"
   },
   {
     "tags": {
-      "name": "block0__stmt2",
-      "block": "block0"
+      "name": "stmt2",
+      "block": "block0",
+      "op": "stmt2"
     },
     "op": {
       "stmt": "odd  cycle '{{NumberNameToString}}'"
     },
-    "name": "block0__stmt2"
+    "name": "stmt2"
   }
 ]
 ```
@@ -139,23 +142,25 @@ ops:
 [
   {
     "tags": {
-      "name": "block0__myop1",
-      "block": "block0"
+      "name": "myop1",
+      "block": "block0",
+      "op": "myop1"
     },
     "op": {
       "stmt": "even cycle '{{NumberNameToString}}'"
     },
-    "name": "block0__myop1"
+    "name": "myop1"
   },
   {
     "tags": {
-      "name": "block0__myop2",
-      "block": "block0"
+      "name": "myop2",
+      "block": "block0",
+      "op": "myop2"
     },
     "op": {
       "stmt": "odd  cycle '{{NumberNameToString}}'"
     },
-    "name": "block0__myop2"
+    "name": "myop2"
   }
 ]
 ```
@@ -197,14 +202,15 @@ ops:
 [
   {
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     },
     "op": {
       "opfield1": "opvalue1",
       "opfield2": "opvalue2"
     },
-    "name": "block0__op1"
+    "name": "op1"
   }
 ]
 ```
@@ -248,8 +254,9 @@ ops:
 [
   {
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     },
     "op": {
       "stmt": [
@@ -257,7 +264,7 @@ ops:
         "opvalue2"
       ]
     },
-    "name": "block0__op1"
+    "name": "op1"
   }
 ]
 ```
@@ -307,8 +314,9 @@ ops:
 [
   {
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     },
     "op": {
       "index_map": {
@@ -320,7 +328,7 @@ ops:
         "by_session_len/@1h"
       ]
     },
-    "name": "block0__op1"
+    "name": "op1"
   }
 ]
 
@@ -380,8 +388,9 @@ ops:
       "user_index": "Mod(1000L); ToString();"
     },
     "tags": {
-      "name": "block0__op1",
-      "block": "block0"
+      "name": "op1",
+      "block": "block0",
+      "op": "op1"
     },
     "op": {
       "index_map": {
@@ -393,7 +402,7 @@ ops:
         "by_session_len/@1h"
       ]
     },
-    "name": "block0__op1"
+    "name": "op1"
   }
 ]
 ```

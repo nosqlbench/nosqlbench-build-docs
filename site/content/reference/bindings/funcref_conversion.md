@@ -315,9 +315,9 @@ is not supported for String or Double input forms.
   - *example:* `ToBigDecimal()`
   - *Convert all double values to BigDecimal values with no limits (using MathContext.UNLIMITED)*
 
-- `double -> ToBigDecimal(String: context) -> java.math.BigDecimal`
+- `double -> ToBigDecimal(String: mathCtx) -> java.math.BigDecimal`
   - *notes:* Convert all input values to BigDecimal values with a specific MathContext.
-The value for context can be one of UNLIMITED,
+The value for mathCtx can be one of UNLIMITED,
 DECIMAL32, DECIMAL64, DECIMAL128, or any valid configuration supported by
 {@link MathContext#MathContext(String)}, such as {@code "precision=32 roundingMode=CEILING"}.
 In the latter form, roundingMode can be any valid value for {@link RoundingMode}, like
@@ -389,7 +389,7 @@ UP, DOWN, CEILING, FLOOR, HALF_UP, HALF_DOWN, HALF_EVEN, or UNNECESSARY.
 - `String -> ToBigDecimal() -> java.math.BigDecimal`
   - *example:* `Convert strings to BigDecimal according to default precision (unlimited) and rounding (HALF_UP)`
 
-- `String -> ToBigDecimal(String: context) -> java.math.BigDecimal`
+- `String -> ToBigDecimal(String: mathCtx) -> java.math.BigDecimal`
   - *notes:* Convert all input values to BigDecimal values with a specific MathContext. This form is only
 supported for scale=0, meaning whole numbers. The value for context can be one of UNLIMITED,
 DECIMAL32, DECIMAL64, DECIMAL128, or any valid configuration supported by
@@ -483,7 +483,15 @@ Create a double by converting values. This function works in the following modes
 * If you pass a function that produces a numeric type, then the result of this function is evaluated for the input cycle and converted to a double.
 * If you pass any numeric value which is not a function, then this value is converted and returned for every cycle as a fixed value.
 
+- `long -> ToDouble() -> double`
+
 - `long -> ToDouble(Object: func) -> double`
+
+## ToDoubleList
+
+Convert an incoming double array to a List of Double
+
+- `double[] -> ToDoubleList() -> List<Double>`
 
 ## ToFloat
 
@@ -506,6 +514,12 @@ Convert the input value into a float. Create a float by converting values. This 
 - `String -> ToFloat() -> Float`
 
 - `Short -> ToFloat() -> Float`
+
+## ToFloatList
+
+Convert an incoming float array to a List of Float
+
+- `float[] -> ToFloatList() -> List<Float>`
 
 ## ToHexString
 
@@ -617,7 +631,7 @@ Convert the input value to a short.
 
 ## ToString
 
-Converts the input to the most obvious string representation with String.valueOf(...). Forms which accept a function will evaluate that function first and then apply String.valueOf() to the result.
+Convert CharBuffer to String Converts the input to the most obvious string representation with String.valueOf(...). Forms which accept a function will evaluate that function first and then apply String.valueOf() to the result.
 
 - `Float -> ToString() -> String`
 
@@ -648,6 +662,8 @@ Converts the input to the most obvious string representation with String.valueOf
 - `double -> ToString(function.DoubleFunction<Double>: df) -> String`
 
 - `double -> ToString(function.Function<Double,Double>: df) -> String`
+
+- `java.nio.CharBuffer -> ToString() -> String`
 
 - `int -> ToString() -> String`
 
