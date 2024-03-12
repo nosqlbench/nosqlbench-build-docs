@@ -3,8 +3,7 @@ title: "Labeling Results"
 weight: 25
 ---
 
-👉 NOTE: This is a very new facility within NoSQLBench which has been added to tame the parameter 
-space of more advanced testing methods. It will be changing as needed until it stable and reliable.
+👉 This provides an intro and overview of the built-in labeling system in NoSQLBench 5.21.
 
 ## What are Labels? 
 
@@ -15,7 +14,7 @@ Labels are innate, self-consistent, and easily leveraged to apply appropriate me
 results so that they are well-defined and easily repurposed in other systems.
 
 For example, when you name your activity, you are setting a label, even if you didn't know it 
-already. You are setting a label of `activity=myactivityname`. This build on top of the _name 
+already. You are setting a label of `activity=myactivityname`. This builds on top of the _name 
 everything_ strategy so that everything from your session down to your op level has a name and 
 accompanying label. This system is implemented efficiently as well, with all labeling 
 mechanisms being applied explicitly during initialization phases, rather than lazily during an 
@@ -23,62 +22,95 @@ activity.
 
 Labels are defensive in nature. If you try to define another value for a label which has already 
 been provided for a given runtime scope, an error will be thrown. This ensures that labeling 
-semantics are protected and that users are informed when there would be a labeling conflict, and 
-likely a structural or logical error in their test setup.
+semantics are protected and that users are informed when there would be a labeling conflict. This
+helps avoid structural or logical errors in their test setup.
 
-Labels represent a implied hierarchic structure, and this is how they are assembled. However, 
-when presented, they are simply a map. They are retained in the ordered map form where possible 
-for the sake of easy configuration and usage.
+Labels represent a implied hierarchic structure, and this is how they are assembled. The 
+tree-like structure of components in the runtime allows for labels to be established from 
+the trunk to the branches, with each label attaching to a specific component in the tree.
+However, when presented for a given component, they are simply a map, including all labels which
+are _inherited_ from the parent components above. They are retained in the ordered map form 
+where possible for the sake of easy configuration and usage.
 
 ## Label Sources
 
-Labels can come from multiple sources on top of those already provided.
+Labels are assigned from multiple sources.
 
 ### Automatic Labels
 
-The labels which are part of the runtime scaffolding of NoSQLBench are provided for you 
-automatically. These are represented in a nesting structure here to show which context the 
-values are expected to be present and also where they will be more variant.
-annotations at the workload level, but you can expect each label set to include details on all 
-of its surrounding runtime context. 
+Labels which are part of the runtime scaffolding of NoSQLBench are provided for you, as 
+_automatic labels_. The examples below show standard labels, and an implied nesting of values.
+Nesting relationships here imply runtime component relationships and lifecycles. For example,
+you may expect multiple distinct session labels per node label by default, but session 
+uniqueness is only guaranteed within that node label scope.
 
-Automatic labels with examples:
+Examples:
 
-* `appname:nosqlbench` (always provided)
-  * `node:1.2.3.4` The ip address of the first publicly-routable interface. When combined with
-    the session identifier, this tuple is usually sufficient as a proxy for a GUID. If your
-    needs for session identification are finer-grained, then generate a GUID and provide it
-    with `--add-labels` for each run.
-    * `session:nEXHI88` An identifier for each session, basically each time you run 
-      NoSQLBench. This identifier is a compactified version of the millisecond epoch timestamp.
-      * `workload:myworkload`  The name of your workload template if you are using named scenarios.
-        * `scenario:myscenario` The name of the scenario if using named scenarios, otherwise the 
-          same as session.
-          * `activity:myactivity` The name of your activity.
-            * `op:anopname` The name of your operation, only provided for metrics which are tied to 
+* `jobname:nosqlbench` The top level name of the metrics bucket for downstream systems. This 
+  label is always set, but you can override it as explained below, although generally, it should 
+  not be changed.
+  * `instance:default` The sub-bucket used for downstream systems. This should be set when you want
+    to isolate your results from others, particularly when doing specialized testing which 
+    should not co-mingle results with others.
+    * `node:1.2.3.4` The ip address of the first publicly-routable interface. When combined with
+      the session identifier, this tuple is usually sufficient as a proxy for a GUID. If your
+      needs for session identification are finer-grained, then generate a GUID and provide it
+      with `--add-labels` for each run.
+      * `session:nEXHI88` An identifier for each session, basically each time you run 
+        NoSQLBench. This identifier is a compact version of the millisecond epoch timestamp.
+        As a user, you can override this value if you need to change from "multiple sessions per 
+        node", to "multiple nodes per session" for the purposes of coherent metrics aggregation.
+        * `container:smoketest` The name of the container within which any commands are run. 
+          Every command in nb runs within a container. For named scenarios, the container name 
+          is taken automatically as the step name.
+        * `workload:myworkload` __IFF using named scenarios__, the name of your workload template.
+        * `scenario:myscenario` __IFF using named scenarios__, the name of the scenario.
+        * `step:rampup` __IFF using named scenarios__, the step name.
+          * `activity:rampup` The name of your activity, derived by default from the step name 
+            for named scenarios, or set directly with the alias activity param. 
+            * [`op:anopname`] __ONLY for op-specific metrics, as opposed to activity or session 
+              level metrics__. The name of your operation, only provided for metrics which are 
+              tied to
               a specific op template, such as when using the op field `instrument:true`.
               * `name:metricname` provided directly for each metric which is registered at runtime.
 
+Notice that some automatic labels are not always included, such as `workload`, `scenario`, and 
+`step`. This is because these labels are only meaningful in the case that you are using named 
+scenarios. It is strongly recommended that in any downstream views you use and require these labels,
+and encourage your users to use named scenarios as a rule. Ad-hoc activity construction often 
+leads to inconsistency and ambiguity in testing flows, and named scenarios provide a good 
+template format to avoid this.
+
+Metrics, annotations, and logging details can be emitted for any level of labeling, but the 
+labels up to and including `session` should be considered the minimum set.
+
 ### User-Provided
+
+Some top-level 
 
 Users can inject additional labels in different places:
 
-* Session labels are added with the `--add-labels ...` option.
+* Session labels are added with the `--add-labels ...` option. Multiple of these can be provided 
+  in the form of `--add-labels name:value,...`.
 * Activity labels are added with the `labels` activity parameter.
 * Op template labels are added with the core `labels` op field. 
 * Additional labels are added with scripting extensions supporting labels.
 
 ## Label Structure
 
-The example label set above would be created at runtime as a (ordered when possible) map:
+For an op-specific metrics, the example label set above would be created at runtime as a simple map
+(shown as JSON for illustration purposes):
 ```json
 {
-  "appname": "nosqlbench",
+  "jobname": "nosqlbench",
+  "instance": "default",
   "node": "1.2.3.4",
-  "session":"nEXHI88",
-  "workload":"myworkload",
-  "scenario":"myscenario",
-  "activity": "myactivity",
+  "session": "nEXHI88",
+  "container": "smoketest",
+  "workload": "myworkload",
+  "scenario": "myscenario",
+  "step": "rampup",
+  "activity": "rampup",
   "op": "anopname",
   "name": "metricname"
 }
@@ -88,14 +120,14 @@ It would be rendered (serialized) in whatever form is idiomatic where it is used
 
 **examples for metric family name and label set in openmetrics**
 ```
-metricname{appname="nosqlbench",node="1.2.3.4",session="nEXHI88",workload="myworkload",scenario="myscenario",activity="myactivity",op="anopname"}
+metricname{jobname="nosqlbench",node="1.2.3.4",session="nEXHI88",container="smoketest",workload="myworkload",scenario="myscenario",step="rampup",activity="rampup",op="anopname"}
 ```
 OR
 ```
-{__name__="metricname",appname="nosqlbench",node="1.2.3.4",session="nEXHI88",workload="myworkload",scenario="myscenario",activity="myactivity",op="anopname"}
+{__name__="metricname",jobname="nosqlbench",node="1.2.3.4",session="nEXHI88",container="smoketest",workload="myworkload",scenario="myscenario",step="rampup",activity="rampup",op="anopname"}
 ```
 
-**example labels as tags in a grafana annotations API call**
+**example labels as tags in a grafana annotations API call for an activity:**
 ```json
 {
   "dashboardUID":"...",
@@ -103,13 +135,15 @@ OR
   "time":12345,
   "timeEnd":678910,
   "tags":[
-    "appname:nosqlbench",
+    "jobname:nosqlbench",
+    "instance:default",
     "node:1.2.3.4",
     "session:nEXHI88",
+    "container:smoketest",
     "workload:myworkload",
     "scenario:myscenario",
-    "activity:myactivity",
-    "op:anopname"
+    "step:rampup",
+    "activity:rampup"
   ],
   "text":"Annotation Description"
 }
@@ -119,16 +153,15 @@ OR
 
 ### Metrics
 
-All metrics are labeled according to the label set provided. This supports
-metric systems which use the
-[Open Metrics](https://github.com/OpenObservability/OpenMetrics/blob/main/specification/OpenMetrics.md)
+All metrics are labeled according to the label set provided. This supports metric systems which use the [Open Metrics](https://github.com/OpenObservability/OpenMetrics/blob/main/specification/OpenMetrics.md)
 exposition format. The recently added push reporter builds this format out of the labels provided
 where metrics are instanced.
 
-For the current (and soon to be deprecated) graphite support, the underlying labeling system 
-retains control of naming semantics, and graphite names are expanded from a naming template 
-using the extant labels. However, the uniqueness of these names still governs metrics instancing,
-and this will be resolved shortly. 
+As of 5.21 and newer versions, graphite support is deprecated. This is a necessary change 
+because of the limitations in the graphite metrics naming scheme which directly conflict with 
+modern and more manageable practices for metrics warehousing. Dimensional metrics labels are 
+simply more robust, more expressive, and a more correct way of describing the source of 
+telemetry and logging data.
 
 ### Annotations
 
@@ -270,4 +303,40 @@ labeling context. For example, requiring an `activity` label at the top level do
 for the session annotation, nor does requiring and `activity` label when the `scenario` label is 
 not present. There are some simple forms which can support these coherently and these will be 
 added shortly. 
+
+### sketch on conditional validation
+
+```
++appname,+instance:\w+,+session,+node,activity->k,activity->dataset,activity->dimensions
+```
+1. appname is a required label name
+2. instance is a required label name and its value must match regex pattern `\w+`, word chars only
+3. session is a required label
+4. node is a required label
+5. given activity is present as a label name, then k must also be present
+6. given activity is present as a label name, then dataset must also be present
+7. given activity is present as a label name, then dimension must also be present
+
+if a then b
+a -> b
+if b then c
+b -> c
+if a then b and c
+a -> b -> c
+A, thus b! and c!
+
+A! ->b ->c
+a->b->c
++a->b->c
+
+## Special cases
+
+* assertions:
+* conjunctions like tag filtering: none(), any(), all()
+* 
+* require a named label
+* require a named label with a specific value
+* require a named label with a pattern
+* require a pattern matching label name with a pattern matching value pattern
+* conditional
 
