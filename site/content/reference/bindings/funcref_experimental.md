@@ -11,21 +11,9 @@ Compute the indices of the neighbors of a given v using DNN mapping. To avoid am
     The size of neighborhood
 @param N
     The number of total vectors, necessary for boundary conditions of defined vector
-@param module
+@param modulus
     The modulus used during training of angular1 data; this corresponds to how periodically we cycle back
     to vectors with the same angle (hence have angular distance zero between them)
-
-
-## DNN_angular1_v
-
-
-- `long -> DNN_angular1_v(int: D, long: N, long: M) -> float[]`
-  - *notes:* @param D
-    Dimensions in each vector
-@param N
-    The number of vectors in the training set
-@param M
-    The modulo which is used to construct equivalence classes
 
 
 ## DNN_euclidean_neighbors
@@ -61,17 +49,29 @@ This represents an enumerated population of vectors of some dimension, where any
 
 - `long -> DNN_euclidean_v_wrap(int: D, long: N) -> float[]`
 
+## DnnAngular1V
+
+
+- `long -> DnnAngular1V(int: D, long: N, long: M) -> float[]`
+  - *notes:* @param D
+    Dimensions in each vector
+@param N
+    The number of vectors in the training set
+@param M
+    The modulo which is used to construct equivalence classes
+
+
 ## DoubleArrayCache
 
 Precompute the interior double\[\] values to use as a LUT.
 
-- `long -> DoubleArrayCache(io.nosqlbench.virtdata.library.basics.shared.vectors.primitive.VectorSequence: function) -> double[]`
+- `long -> DoubleArrayCache(io.nosqlbench.virtdata.lib.vectors.primitive.VectorSequence: function) -> double[]`
 
 ## DoubleCache
 
 Precompute the interior double\[\] values to use as a LUT.
 
-- `long -> DoubleCache(io.nosqlbench.virtdata.library.basics.shared.vectors.primitive.DoubleSequence: sequence) -> double`
+- `long -> DoubleCache(io.nosqlbench.virtdata.lib.vectors.primitive.DoubleSequence: sequence) -> double`
 
 ## DoubleVectorPadLeft
 
