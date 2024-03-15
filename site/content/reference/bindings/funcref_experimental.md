@@ -269,6 +269,17 @@ This implementation is specific to returning a List of Longs
 
 - `long -> HdfFileToLongList(String: filename, String: datasetName) -> List<Long>`
 
+## HdfPredicatesToCql
+
+Binding function that accepts a long input value for the cycle and returns a string consisting of the CQL predicate parsed from a single record in an HDF5 dataset
+
+- `long -> HdfPredicatesToCql(String: filename, String: datasetName, String: serDesType) -> String`
+  - *notes:* Create a new binding function that accepts a long input value for the cycle and returns a string
+@param filename The HDF5 file to read the predicate dataset from
+@param datasetName The name of the dataset internal to the HDF5 file
+@param serDesType The type of serialization/deserialization to use for the predicate
+
+
 ## NormalizeCqlVector
 
 Normalize a vector in List form, calling the appropriate conversion function depending on the component (Class) type of the incoming List values.
