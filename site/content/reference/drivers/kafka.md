@@ -1,6 +1,6 @@
 ---
-weight: 180150
 title: Kafka
+weight: 180150
 ---
 - [1. Overview](#1-overview)
     - [1.1. Example NB Yaml](#11-example-nb-yaml)
