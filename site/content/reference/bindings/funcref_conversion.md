@@ -274,12 +274,6 @@ Return a boolean value as the result of modulo division with the specified divis
 
 - `long -> ModuloToShort(long: modulo) -> Short`
 
-## SnappyComp
-
-Compress the input using snappy compression
-
-- `String -> SnappyComp() -> java.nio.ByteBuffer`
-
 ## StringDateWrapper
 
 This function wraps an epoch time in milliseconds into a String as specified in the format. The valid formatters are documented at @see [DateTimeFormat API Docs](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html)
@@ -469,12 +463,6 @@ Convert the input value to a {@code ByteBuffer}
 Convert the input string to a character buffer
 
 - `String -> ToCharBuffer() -> java.nio.CharBuffer`
-
-## ToCqlDurationNanos
-
-Convert the input value into a {@link CqlDuration} by reading the input as total nanoseconds, assuming 30-month days.
-
-- `long -> ToCqlDurationNanos() -> com.datastax.oss.driver.api.core.data.CqlDuration`
 
 ## ToDouble
 
