@@ -1,6 +1,6 @@
 ---
-weight: 223382040
 title: milvus driver adapter
+weight: 223382040
 ---
 # milvus driver adapter
 
