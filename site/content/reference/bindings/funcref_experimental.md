@@ -1,6 +1,6 @@
 ---
-title: DNN_angular1_neighbors
 weight: 154485593
+title: DNN_angular1_neighbors
 ---
 ## DNN_angular1_neighbors
 
