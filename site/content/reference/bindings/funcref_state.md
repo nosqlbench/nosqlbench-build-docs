@@ -1,6 +1,6 @@
 ---
-weight: 30
 title: state functions
+weight: 30
 ---
 
 Functions in the state category allow you to do things with side-effects in the function flow. Specifically, they allow
@@ -150,6 +150,22 @@ Load a named value from the per-thread state map. The previous input value will 
 - `Object -> Load(function.Function<Object,Object>: nameFunc, Object: defaultValue) -> Object`
   - *example:* `Load(NumberNameToString(),'testvalue')`
   - *for the current thread, load an Object value from the named variable, where the variable name is returned by the provided function, or thedefault value if the variable is not yet defined.*
+
+## LoadCqlVector
+
+
+- `Object -> LoadCqlVector(String: name) -> com.datastax.oss.driver.api.core.data.CqlVector`
+  - *example:* `LoadDouble('foo')`
+  - *for the current thread, load a double value from the named variable.*
+
+- `Object -> LoadCqlVector(String: name, int: len) -> com.datastax.oss.driver.api.core.data.CqlVector`
+  - *example:* `LoadDouble('foo',23D)`
+  - *for the current thread, load a double value from the named variable,or the default value if the named variable is not defined.*
+
+## LoadCqlVectorFromArray
+
+
+- `long -> LoadCqlVectorFromArray(String: name, int: len, int: batchsize) -> com.datastax.oss.driver.api.core.data.CqlVector`
 
 ## LoadDouble
 
