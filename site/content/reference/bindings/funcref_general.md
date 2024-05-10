@@ -1,6 +1,6 @@
 ---
-weight: 20
 title: general functions
+weight: 20
 ---
 
 These functions have no particular category, so they ended up here by default.
@@ -56,6 +56,12 @@ Adds a pseudo-random value within the specified range to the input.
 Create an alpha-numeric string of the specified length, character-by-character.
 
 - `long -> AlphaNumericString(int: length) -> String`
+  - *example:* `AlphaNumericString(10)`
+  - *Create a 10-character alpha-numeric string*
+  - *example:* `AlphaNumericString(HashRange(10, 20))`
+  - *Create an alpha-numeric string with a length between 10 and 20 characters*
+
+- `long -> AlphaNumericString(Object: lengthfunc) -> String`
 
 ## ByteBufferSizedHashed
 
