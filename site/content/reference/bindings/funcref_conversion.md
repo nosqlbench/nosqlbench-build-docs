@@ -1,6 +1,6 @@
 ---
-title: conversion functions
 weight: 30
+title: conversion functions
 ---
 
 Conversion functions simply allow values of one type
@@ -23,6 +23,11 @@ Create a ByteBuffer from a long input based on a provided size function. As a 'S
 Convert the contents of the input ByteBuffer to a String as hexadecimal. This function is retained to avoid breaking previous workload definitions, but you should use {@link ToHexString} instead.
 
 - `java.nio.ByteBuffer -> ByteBufferToHex() -> String`
+
+## CSVToCqlFloatVector
+
+
+- `String -> CSVToCqlFloatVector() -> com.datastax.oss.driver.api.core.data.CqlVector<Float>`
 
 ## Combiner
 
@@ -204,6 +209,26 @@ Apply the Java String.format method to an incoming object. @see [Java 8 String.f
 - `Object -> Format(String: format) -> String`
   - *example:* `Format('Y')`
   - *Yield the formatted year from a Java date object.*
+
+## FromCSVToBoxedDoubleArray
+
+
+- `String -> FromCSVToBoxedDoubleArray() -> Double[]`
+
+## FromCSVToBoxedFloatArray
+
+
+- `String -> FromCSVToBoxedFloatArray() -> Float[]`
+
+## FromCSVToPrimitiveDoubleArray
+
+
+- `String -> FromCSVToPrimitiveDoubleArray() -> double[]`
+
+## FromCSVToPrimitiveFloatArray
+
+
+- `String -> FromCSVToPrimitiveFloatArray() -> float[]`
 
 ## HTMLEntityDecode
 
