@@ -1,6 +1,6 @@
 ---
-title: Sin
 weight: 10014
+title: Sin
 ---
 ## Sin
 
