@@ -1,6 +1,6 @@
 ---
-title: DNN_angular1_neighbors
 weight: 154485593
+title: DNN_angular1_neighbors
 ---
 ## DNN_angular1_neighbors
 
@@ -324,6 +324,58 @@ Repeat the incoming list into a new list, filling it to the given size.
 
   - *example:* `RepeatList(50)`
   - *repeat the incoming values into a new List of size 50*
+
+## SequenceOf
+
+SequenceOf bindings allow you to specify an order and count of a set of values which will then be repeated in that order. SequenceOf bindings allow you to specify an order and count of a set of values which will then be repeated in that order.
+
+- `long -> SequenceOf(int: ignored, String: spec) -> int`
+  - *notes:* <p>
+This function produces values from a lookup table for direct control of numerical sequences.
+The sequence spec is a string containing the sequence values and their occurences, defaulting to 1 each.
+Example: "1:6 2 3 4 5", which means "1 at a relative frequency of 6 and 2, 3, 4, and 5 at a relative frequency
+of 1 each. This will yield pattern "1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 1, 1, 1, 1, 1, 1, 2, 3, 4, 5, ..."
+</p>
+
+<p>
+Each implementation of {@link SequenceOf} must include a type sigil as the first parameter to disambiguate
+it from the others.
+</p>
+
+@param ignored
+    any long value, discarded after signature matching. The exampleValue is thrown away, but is necessary for
+    matching the right version of SequenceOf.
+@param spec
+    A string of numbers separated by spaces, semicolons, or commas. This is the sequence spec..
+
+  - *example:* `SequenceOf(1L,'3:3 2:2 1:1')`
+  - *Generate sequence 3,3,3,2,2,1*
+  - *example:* `SequenceOf(1L,'1000:99 1000000:1')`
+  - *Generate sequence 1000 (99 times) and then 1000000 (1 time)*
+
+- `long -> SequenceOf(long: ignored, String: spec) -> long`
+  - *notes:* <p>
+This function produces values from a lookup table for direct control of numerical sequences.
+The sequence spec is a string containing the sequence values and their occurences, defaulting to 1 each.
+Example: "1:6 2 3 4 5", which means "1 at a relative frequency of 6 and 2, 3, 4, and 5 at a relative frequency
+of 1 each. This will yield pattern "1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 1, 1, 1, 1, 1, 1, 2, 3, 4, 5, ..."
+</p>
+
+<p>
+Each implementation of {@link SequenceOf} must include a type sigil as the first parameter to disambiguate
+it from the others.
+</p>
+
+@param ignored
+    any long value, discarded after signature matching. The exampleValue is thrown away, but is necessary for
+    matching the right version of SequenceOf.
+@param spec
+    A string of numbers separated by spaces, semicolons, or commas. This is the sequence spec..
+
+  - *example:* `SequenceOf(1L,'3:3 2:2 1:1')`
+  - *Generate sequence 3,3,3,2,2,1*
+  - *example:* `SequenceOf(1L,'1000:99 1000000:1')`
+  - *Generate sequence 1000 (99 times) and then 1000000 (1 time)*
 
 ## ToCqlVector
 

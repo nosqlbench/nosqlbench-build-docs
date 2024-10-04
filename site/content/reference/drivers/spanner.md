@@ -1,6 +1,6 @@
 ---
-title: Google Spanner driver adapter
 weight: 52668530
+title: Google Spanner driver adapter
 ---
 # Google Spanner driver adapter
 The Google Cloud Spanner driver adapter is a NoSQLBench adapter for the `gcp_spanner` driver, a Java driver

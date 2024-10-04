@@ -1,6 +1,6 @@
 ---
-title: general functions
 weight: 20
+title: general functions
 ---
 
 These functions have no particular category, so they ended up here by default.
@@ -102,7 +102,7 @@ When you have CSV data which is not organized around the specific identifier tha
 
 ### Map vs Hash mode
 
-As with some of the other statistical functions, you can use this one to pick through the sample values by using the *map* mode. This is distinct from the default *hash* mode. When map mode is used, the values will appear monotonically as you scan through the unit interval of all long values. Specifically, 0L represents 0.0d in the unit interval on input, and Long.MAX_VALUE represents 1.0 on the unit interval.) This mode is only recommended for advanced scenarios and should otherwise be avoided. You will know if you need this mode.
+As with some of the other statistical functions, you can use this one to pick through the sample values by using the *map* mode. This is distinct from the default *hash* mode. When map mode is used, the values will appear monotonically as you scan through the unit interval of all long values. Specifically, 0L represents 0.0d in the unit interval on input, and Long.MAX_VALUE represents 1.0 on the unit interval.) This mode is only recommended for advanced scenarios and should otherwise be avoided. You will know if you need this mode. For alias sampling, the values may not always occur in the order specified due to the alias table construction. However, the values will be clustered in the order they appear in that table.
 
 - `long -> CSVSampler(String: labelColumn, String: weightColumn, String[]...: data) -> String`
   - *notes:* Build an efficient O(1) sampler for the given column values with respect to the weights,
@@ -469,7 +469,9 @@ This uses the Murmur3F (64-bit optimized) version of Murmur3, not as a checksum,
 
 ## HashInterval
 
-Return a value within a range, pseudo-randomly, using interval semantics, where the range of values return does not include the last value. This function behaves exactly like HashRange except for the exclusion of the last value. This allows you to stack intervals using known reference points without duplicating or skipping any given value. You can specify hash intervals as small as a single-element range, like (5,6), or as wide as the relevant data type allows.
+Create a double value from a hashed long, over the valid range of long inputs. This version provides a strict unit interval value, not a unit range value. That is, it can yield any value between 0.0 and 1.0, EXCEPT 1.0. Return a value within a range, pseudo-randomly, using interval semantics, where the range of values return does not include the last value. This function behaves exactly like HashRange except for the exclusion of the last value. This allows you to stack intervals using known reference points without duplicating or skipping any given value. You can specify hash intervals as small as a single-element range, like (5,6), or as wide as the relevant data type allows.
+
+- `long -> HashInterval(double: min, double: max) -> double`
 
 - `int -> HashInterval(int: width) -> int`
   - *notes:* Create a hash interval based on a minimum value of 0 and a specified width.
@@ -833,6 +835,12 @@ Replace all occurrences of the regular expression with the replacement string. N
 - `String -> ReplaceRegex(String: regex, String: replacement) -> String`
   - *example:* `ReplaceRegex('[one]','two')`
   - *Replace all occurrences of 'o' or 'n' or 'e' with 'two'*
+
+## ScaledDouble
+
+Return the double value closest to the fraction (input) / (Long.MAX_VALUE). This is essentially a scaling function from Long to Double over the range of positive longs to the double unit interval, so \[0.0d - 1.0d)
+
+- `long -> ScaledDouble() -> double`
 
 ## Shuffle
 

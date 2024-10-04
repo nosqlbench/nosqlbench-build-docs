@@ -1,6 +1,6 @@
 ---
-title: qdrant driver adapter
 weight: 231699418
+title: qdrant driver adapter
 ---
 # qdrant driver adapter
 

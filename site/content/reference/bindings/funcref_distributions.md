@@ -1,6 +1,6 @@
 ---
-title: distribution functions
 weight: 30
+title: distribution functions
 ---
 
 All of the distributions that are provided in the Apache Commons Math
@@ -172,6 +172,47 @@ Creates a probability density given the values and optional weights provided, in
   - *a fair 6-sided die*
   - *example:* `Enumerated('1:2.0 2 3 4 5:0.5 6:0.5')`
   - *an unfair fair 6-sided die, where ones are twice as likely, and fives and sixes are half as likely*
+
+## EnumeratedInts
+
+Create a sampler based on enumeration of integer values an sample over them using the EnumeratedInts distribution curve provided by Apache Commons Math. This version will roughly produce the distribution, but since it also relies on interpolation by default, non-step values may appear at low frequencies. If this is a desired effect, then this function is suitable. For example: consider this result:
+
+```
+{@code
+ nb5 run driver=stdout op="{{EnumeratedInts('10:10 20:20 30:30 40:40')}}\n" cycles=10000 | sort -n | uniq -c
+      1 STDOUT0 (pending,current,complete)=(0,0,10000) 100.00% (last report)
+      1 9
+   1036 10
+      2 11
+      2 13
+      1 14
+      3 15
+      2 16
+      1 18
+      1 19
+   1937 20
+      1 21
+      1 23
+      1 24
+      1 25
+      1 28
+      1 29
+   3077 30
+      1 31
+      1 33
+      1 34
+      2 35
+      1 37
+      1 39
+   3924 40
+}
+```
+
+The values here which are not multiples of 10 are not specified, yet the appear. For some testing, this is helpful as a fuzzer, but for more precise step-value sampling, see {@link AliasSampler}
+
+- `long -> EnumeratedInts(String: data, String[]...: mods) -> int`
+
+- `int -> EnumeratedInts(String: data, String[]...: mods) -> int`
 
 ## Exponential
 
@@ -354,6 +395,11 @@ Creates a probability density given the values and optional weights provided, in
 Allows for easy branching over multiple functions with specific weights.
 
 - `long -> WeightedFuncs(Object[]...: weightsAndFuncs) -> Object`
+
+## WeightedInts
+
+
+- `io.nosqlbench.virtdata.library.basics.core.stathelpers.AliasSamplerDoubleInt -> WeightedInts(String: spec, String[]...: modifiers) -> function.LongToIntFunction`
 
 ## Zipf
 
