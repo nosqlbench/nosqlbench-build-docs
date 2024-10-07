@@ -1,6 +1,6 @@
 ---
-title: Google Spanner driver adapter
 weight: 52668530
+title: Google Spanner driver adapter
 ---
 # Google Spanner driver adapter
 The Google Cloud Spanner driver adapter is a NoSQLBench adapter for the `gcp_spanner` driver, a Java driver
@@ -24,11 +24,12 @@ to the adapter at runtime.
 
 The Google Cloud Spanner adapter supports the following operations:
 
-* `create_database_ddl` - Data Definition Language operations such as creating and dropping databases.
+* `create_database_ddl` - Data Definition Language operation for creating a database.
 * `update_database_ddl` - Data Definition Language operations such as creating and dropping tables, indexes, etc.
 * `execute_dml` - Data Manipulation Language operations. Read only operations are supported at this time, including queries
 and vector queries.
 * `insert` - Insert a single record, vector or non-vector, of data into the database.
+* `drop_database_ddl` - Data Definition Language operation for dropping a database.
 
 ## Examples
 
