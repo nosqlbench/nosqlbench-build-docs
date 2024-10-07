@@ -1,6 +1,6 @@
 ---
-weight: 4026030
 title: Weaviate driver adapter
+weight: 4026030
 ---
 # Weaviate driver adapter
 
