@@ -1,6 +1,7 @@
 ---
 title: Kafka
 weight: 180150
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-kafka/src/main/resources/kafka.md
 ---
 - [1. Overview](#1-overview)
     - [1.1. Example NB Yaml](#11-example-nb-yaml)

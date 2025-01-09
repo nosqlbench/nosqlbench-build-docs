@@ -1,6 +1,7 @@
 ---
 title: tcpclient
 weight: 100124107
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-tcp/src/main/resources/tcpclient.md
 ---
 # tcpclient
 

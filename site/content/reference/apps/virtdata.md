@@ -1,8 +1,9 @@
 ---
-title: virdata
+title: virtdata
 weight: 225811593
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-virtdata/virtdata-api/src/main/resources/virtdata.md
 ---
-# virdata
+# virtdata
 
 NB5 contains a bundled virtdata app which lets you verify bindings from the command line.
 It is useful for sanity checking values as well as getting a concurrent performance baseline for

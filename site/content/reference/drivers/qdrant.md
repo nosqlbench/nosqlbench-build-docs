@@ -1,7 +1,9 @@
 ---
 title: qdrant driver adapter
 weight: 231699418
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-qdrant/src/main/resources/qdrant.md
 ---
+
 # qdrant driver adapter
 
 The qdrant driver adapter is a nb adapter for the qdrant driver, an open source Java driver for connecting to and

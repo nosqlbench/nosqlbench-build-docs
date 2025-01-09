@@ -1,6 +1,7 @@
 ---
 title: dynamodb
 weight: 171833391
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-dynamodb/src/main/resources/dynamodb.md
 ---
 # dynamodb
 

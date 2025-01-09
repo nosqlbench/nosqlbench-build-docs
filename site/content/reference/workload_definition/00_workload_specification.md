@@ -1,6 +1,7 @@
 ---
 title: Workload Specification
 weight: 171554638
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-apis/adapters-api/src/main/java/workload_definition/00_workload_specification.md
 ---
 # Workload Specification
 

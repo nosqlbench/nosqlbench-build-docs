@@ -1,6 +1,7 @@
 ---
 title: tcpserver
 weight: 204138875
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-tcp/src/main/resources/tcpserver.md
 ---
 # tcpserver
 

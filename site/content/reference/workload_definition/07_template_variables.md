@@ -1,6 +1,7 @@
 ---
 title: Template Variables
 weight: 5299611
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-apis/adapters-api/src/main/java/workload_definition/07_template_variables.md
 ---
 # Template Variables
 

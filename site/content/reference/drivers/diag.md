@@ -1,6 +1,7 @@
 ---
 title: diag
 weight: 106667
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-diag/src/main/resources/diag.md
 ---
 # diag
 
