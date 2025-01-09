@@ -1,6 +1,7 @@
 ---
 title: cqld4
 weight: 1889486
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-cqld4/src/main/resources/cqld4.md
 ---
 # cqld4
 

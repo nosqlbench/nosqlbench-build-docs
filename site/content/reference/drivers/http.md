@@ -1,6 +1,7 @@
 ---
 title: http
 weight: 277985
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-http/src/main/resources/http.md
 ---
 # http
 

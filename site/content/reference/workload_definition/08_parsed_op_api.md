@@ -1,6 +1,7 @@
 ---
 title: ParsedOp API
 weight: 37800907
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-apis/adapters-api/src/main/java/workload_definition/08_parsed_op_api.md
 ---
 # ParsedOp API
 

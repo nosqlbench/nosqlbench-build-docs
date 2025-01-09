@@ -1,6 +1,7 @@
 ---
 title: stdout
 weight: 235135268
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-stdout/src/main/resources/stdout.md
 ---
 # stdout
 

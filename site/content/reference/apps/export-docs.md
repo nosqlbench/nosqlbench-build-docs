@@ -1,7 +1,9 @@
 ---
 title: export-docs
 weight: 233772542
+source: https://github.com/nosqlbench/nosqlbench/blob/main/./nbr/src/main/resources/export-docs.md
 ---
+
 # export-docs
 
 This is the built-in app that allows NB5 to export docs for integration into other systems.

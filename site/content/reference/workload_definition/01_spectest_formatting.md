@@ -1,6 +1,7 @@
 ---
 title: SpecTest Formatting
 weight: 56247312
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-apis/adapters-api/src/main/java/workload_definition/01_spectest_formatting.md
 ---
 # SpecTest Formatting
 

@@ -1,6 +1,7 @@
 ---
 title: S4J
 weight: 7206
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-s4j/src/main/resources/s4j.md
 ---
 - [1. Overview](#1-overview)
 - [2. Execute NB S4J Workload](#2-execute-nb-s4j-workload)

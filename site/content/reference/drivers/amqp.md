@@ -1,6 +1,7 @@
 ---
 title: AMQP
 weight: 275768
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-amqp/src/main/resources/amqp.md
 ---
 - [1. Overview](#1-overview)
 - [2. NB AMQP Usage](#2-nb-amqp-usage)

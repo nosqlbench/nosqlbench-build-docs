@@ -1,6 +1,7 @@
 ---
 title: neo4j driver adapter
 weight: 16075045
+source: https://github.com/nosqlbench/nosqlbench/blob/main/nb-adapters/adapter-neo4j/src/main/resources/neo4j.md
 ---
 # neo4j driver adapter
 
