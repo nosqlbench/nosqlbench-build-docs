@@ -1,6 +1,6 @@
 +++
 title = "Blogs Published"
-date = 2023-03-28
+# date = 2023-03-28
 year = 2023
 page_template = "blogposts.html"
 

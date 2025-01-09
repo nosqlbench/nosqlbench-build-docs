@@ -459,7 +459,7 @@ Refer to [overview-images](https://raw.githubusercontent.com/Jieiku/abridge/mast
 +++
 title = "Image Shortcodes"
 description = "Images can be embedded directly using markdown `![Ferris](ferris.svg)`, but using a shortcode prevents CLS by explicitly setting the width and height."
-date = 2021-05-19
+#date = 2021-05-19
 
 [taxonomies]
 categories = ["Features"]
