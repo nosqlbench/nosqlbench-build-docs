@@ -9,7 +9,7 @@ jobs:
 
   build-site:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref != 'refs/heads/master'
     steps:
 
       - name: 'Checkout'
@@ -20,7 +20,7 @@ jobs:
           echo "builddocs.nosqlbench.io" > site/static/CNAME
 
       - name: 'Build and Deploy Static Site'
-        uses: shalzz/zola-deploy-action@0.19.2
+        uses: shalzz/zola-deploy-action@master
         env:
           BUILD_DIR: ./site
           GITHUB_TOKEN: ${{ secrets.NBDROID_TOKEN }}
