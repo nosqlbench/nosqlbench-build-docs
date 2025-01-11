@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Parameter Spaces | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Parameter Spaces | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Parameter Spaces | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;user-guide&#x2F;">User Guide► </a></span><span><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;">Advanced Topics► </a></span><span title="Concepts and Methods for advanced performance analysis"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;"><strong>Performance Factoring▼</strong> </a></span><span title="[current page]"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F;"><strong>Parameter Spaces 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces.md -->
+<!-- active_section: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;_index.md -->
+
+
+<!-- lower_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+<!-- >upper_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Performance Factoring</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;advanced-topics&#x2F;"title="detailed explanation of all available configuration methods in nb5">Advanced Topics</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;">Labeling Results</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;">Labeling Controls</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;timing-terms&#x2F;">Timing Terms Explained</a></div><div class="toc-item"title="Detailed examples of different ways to configure nb5"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;configuration-techniques&#x2F;">►Config Methods</a></div><div class="toc-item"title="NoSQLBench comes with a fully scriptable runtime for advanced testing scenarios"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;scenario-scripting&#x2F;">►Scenario Scripting</a></div><div class="toc-item"title="Concepts and Methods for advanced performance analysis"><strong>▼Performance Factoring</strong></div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F;">Framing</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F;">Concepts</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F;">Key Workflows</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F;"><strong>Parameter Spaces</strong></a>
+    </div><div class="toc-item"title="A deeper dive into frequent topics of discussion around scale testing."><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;testing-at-scale&#x2F;">►Testing at Scale</a></div></div>
+</div>
+
+<article>
+
+  <p>The ultimate goal of a performance factoring effort is to establish a reliable model of how design
+choices determine system behavior.</p>
+<p><em>Design Choices</em> includes any choice a system designer can make that effects system behavior,
+including hardware selection, network topology, data models and schema, configuration items,
+service provisioning levels, and so on. The set of valid choices constitutes the valid
+<a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Parameter_space">Parameter Space</a>.</p>
+<p><em>System Behavior</em> includes functional and operational aspects -- What a system does logically as
+well as how it performs mechanically, including how resilient it is to unexpected events like hardware
+failure. The result of a study provides a set of values describing these results, organized into
+a set of data which</p>
+<h1 id="parameters">Parameters</h1>
+<p>In empirical terms, this means we are trying to map independent parameters to dependent results in a
+durable way. From a data science perspective, this simply means we're trying to create a model
+describing how a subset of parameters (those things in our control) are related to others (those
+things we presume to be consequent).</p>
+<p>👉 An idealized parameter is represented as a variable which can hold a scalar value, or one which
+can be assigned a single value from a range of valid values.</p>
+<p>👉 An idealized parameter space is an n-dimensional Euclidean space, where each dimension is
+represented as an idealized parameter, and each point in the space is represented by a set of
+parameter values, where a specific result or set of result data can be found.</p>
+<h2 id="parameter-selection">Parameter Selection</h2>
+<p>Parameters are generally selected which are expected to have the highest impact on results, from
+prior knowledge of the problem domain. Intuition of which parameters matter most and how they
+manifest in results is often described as <em>Mechanical Sympathy</em> in distributed systems practice.</p>
+<p>However, once there are more than 2 parameters in play, even the best mechanical sympathy starts
+to falter, particularly when non-linear relationships are present. It is only through empirical
+analysis methods that we can understand these results in practice. To put this in perspective,
+it is a challenge to merely <em>visualize</em> in a lucid way what a 4-dimensional manifold looks like at
+the extrema, much less predict it reliably.</p>
+<p>So how do we ultimately arrive at a set of meaningful parameters? Without going through a full
+PCA analysis phase, we can use our intuition to get started. However, we don't simply create a
+long list of parameters, for reasons will soon be obvious.</p>
+<h2 id="parameter-ranges">Parameter Ranges</h2>
+<p>Each parameter has a domain of valid values which can be defined. In the least helpful case, that
+domain is any valid number. In a more helpful case, we know which values are of practical import.</p>
+<p>However, the parameter range might be selected for different reasons based on the anticipated
+effects of changing the values. Consider this schematic of a single parameter's range:</p>
+<pre class="z-code"><code><span class="z-text z-plain">┌────────────────────────────────┐
+</span><span class="z-text z-plain">│ valid values                   │ ◀ [0,+Inf]
+</span><span class="z-text z-plain">│ ┌────────────────────────────┐ │            ╮
+</span><span class="z-text z-plain">│ │ impractical values         │ │ ◀ [4,1024] │ 
+</span><span class="z-text z-plain">│ │ ┌────────────────────────┐ │ │          ╮ ├─▶ Marginal
+</span><span class="z-text z-plain">│ │ │ practical values       │ │ │ ◀ [4,32] │ │   Domain of
+</span><span class="z-text z-plain">│ │ │ ┌────────────────────┐ │ │ │          │ ╯   Interest
+</span><span class="z-text z-plain">│ │ │ │ common values      │ │ │ │ ◀ [8,24] ├─▶ Regular
+</span><span class="z-text z-plain">│ │ │ │ ┌────────────────┐ │ │ │ │          │ Domain of
+</span><span class="z-text z-plain">│ │ │ │ │ default values │ │ │ │ │ ◀ 16     │ Interest 
+</span><span class="z-text z-plain">│ │ │ │ └────────────────┘ │ │ │ │          ╯
+</span><span class="z-text z-plain">│ │ │ └────────────────────┘ │ │ │
+</span><span class="z-text z-plain">│ │ └────────────────────────┘ │ │
+</span><span class="z-text z-plain">│ └────────────────────────────┘ │
+</span><span class="z-text z-plain">└────────────────────────────────┘
+</span></code></pre>
+<p>It could be said that we really only care about values which are <em>practical</em> in a real sense.
+This will often be the case, as we may know from mechanical sympathy that the values outside of
+this range are simply untenable for a clearly defined reason. In other cases, we may actually care
+more about the contrast between what has historically been considered practical vs impractical given
+new scenarios or information. This happens frequently with systems of scale as fundamental behavior
+shift over time in response to subsystem optimization and new features. It is useful to think
+of each parameter in this way to choose useful starting values.</p>
+<p>Further, the effect a parameter has in isolation may be counter-balanced by the extrema of
+another parameter's effect. For example, if you have two parameters which have a super-linear
+impact to a result, with one positively correlated and the other negatively correlated, then
+understanding the practical values at these extremes can still be quite useful. It will not
+always be obvious when you should extend the range of a parameter under test, but it can be
+explored by looking at 3 or more controlled results for that parameter.</p>
+<p>Since each study takes resources and time, choosing wisely the initial book-end values for each of our
+parameters is essential.</p>
+<h1 id="comparability">Comparability</h1>
+<p>The phrase "all else being equal" is extremely important in how we conceptualize tests as
+parameters. Every detail about a specific system is presumed to be significant to the
+results. There is not a trivial way to establish only a subset of a few important details in such a
+way that we can forget the rest. Because of this, it is essential that testing systems be deployed
+in way that preserves architectural congruence by default for everything except for the parameters
+which are the focus of a given study.</p>
+<p>In other words, deploying systems for performance test is something best done by reliable and
+automatic mechanisms. This is especially true for those studies which are comparative in nature.
+In practice, this is often done by selecting a baseline reference system that will be reused or
+deployed in cookie-cutter fashion for all tests. This includes all provisioning details.</p>
+<p><strong>Everything else which is not kept the same between performance studies is, by definition, a
+parameter of the test.</strong> This is a key principle in empirical testing which should not be
+overlooked.</p>
+<h2 id="hidden-parameters">Hidden Parameters</h2>
+<p>Often, it is presumed what is changed for testing, and the study is framed in this way as "how
+does the average field size affect the p99 latency?". However, it is also very common for
+systems to be deployed with whatever the <em>current system defaults</em> are when a subsequent
+comparative test is needed weeks or months later. Thus, it is imperative to select a reference
+system which is likely to be reproducible at that time with little complication. If this isn't
+possible, then whatever has changed between system vintages become hidden parameters to your
+study. This is one of the most common reasons that empirical studies lose comparability over
+time.</p>
+<h1 id="visual-examples">Visual Examples</h1>
+<p>This section presents some visual examples of parameter spaces, with some accompanying
+mathematical expressions to illustrate parameter space growth.</p>
+<h2 id="one-parameter-one-value">One Parameter, One Value</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../single_param.png" alt="one param one value" /></p>
+<p>👉 Each box represents a distinct combination of values for all included parameters. In this case,
+it reduced down to a single value for a single parameter.</p>
+<h2 id="one-parameter-controlled-study">One Parameter, Controlled Study</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../hidden_params.png" alt="all else equal" /></p>
+<p>The dotted line indicates that there are a myriad of other factors which are in play for every
+performance study. These are generally hidden from view but they are always part of the test.</p>
+<p>Every one which is not part of our study should be controlled (kept the same between
+studies). They need to be kept stable by using automatic and reliable test setup (deployment,
+configuration, data staging, ...) mechanisms.</p>
+<h2 id="one-parameter-two-values">One Parameter, Two Values</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../1param_2values.png" alt="1 param 2 values" /></p>
+<p>👉 Each parameter is represented as a schematic axis as in a Euclidean coordinate system. All
+lines oriented in the same direction should be considered part of the same axis.</p>
+<p>As will be the case for every other example in this section, <strong>an edge connecting two nodes in the
+graph represents a change in a single parameter value</strong>.</p>
+<h2 id="one-parameter-three-values">One Parameter, Three Values</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../1param_3values.png" alt="" /></p>
+<h2 id="two-parameters-two-values-each">Two Parameters, Two Values Each</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../2params_2values.png" alt="2 params 2 values" /></p>
+<h2 id="three-parameters-two-values-each">Three Parameters, Two Values Each</h2>
+<p><img src="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/./../3params_2values.png" alt="" /></p>
+<h2 id="three-parameters-three-values-each">Three Parameters, Three Values Each</h2>
+  
+    <div id="rel-3params_3values_contrast"><b>rel-3params_3values_contrast on hover</b></div>
+    <div id="rel-3params_3values_contrastimage" title="rel-3params_3values_contrast"> </div>
+
+<style>  
+      #rel-3params_3values_contrastimage {
+        background-image: url('../3params_3values.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 0;
+        padding-top: 16.666666666666664%;
+
+      }
+      #rel-3params_3values_contrastimage:hover {
+        background-image: url('../3params_3values_contrast.png');
+      }
+</style>
+<h2 id="four-parameters-two-values-each-version-1">Four Parameters, Two Values Each (version 1)</h2>
+<p>  
+    <div id="rel-4params_2values_tesseract1"><b>rel-4params_2values_tesseract1 on hover</b></div>
+    <div id="rel-4params_2values_tesseract1image" title="rel-4params_2values_tesseract1"> </div>
+
+<style>  
+      #rel-4params_2values_tesseract1image {
+        background-image: url('../4params_2values_tesseract2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 0;
+        padding-top: 16.666666666666664%;
+
+      }
+      #rel-4params_2values_tesseract1image:hover {
+        background-image: url('../4params_2values_tesseract1.png');
+      }
+</style>
+
+  
+    <div id="rel-4params_2values_tesseract2"><b>rel-4params_2values_tesseract2 on hover</b></div>
+    <div id="rel-4params_2values_tesseract2image" title="rel-4params_2values_tesseract2"> </div>
+
+<style>  
+      #rel-4params_2values_tesseract2image {
+        background-image: url('../4params_2values_tesseract1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25%;
+        height: 0;
+        padding-top: 16.666666666666664%;
+
+      }
+      #rel-4params_2values_tesseract2image:hover {
+        background-image: url('../4params_2values_tesseract2.png');
+      }
+</style>
+</p>
+<h2 id="four-parameters-two-values-each-version-2">Four Parameters, Two Values Each (version 2)</h2>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Parameter Spaces</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#parameters">Parameters</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#parameter-selection"><small>- Parameter Selection</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#parameter-ranges"><small>- Parameter Ranges</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#comparability">Comparability</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#hidden-parameters"><small>- Hidden Parameters</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#visual-examples">Visual Examples</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#one-parameter-one-value"><small>- One Parameter, One Value</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#one-parameter-controlled-study"><small>- One Parameter, Controlled Study</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#one-parameter-two-values"><small>- One Parameter, Two Values</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#one-parameter-three-values"><small>- One Parameter, Three Values</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#two-parameters-two-values-each"><small>- Two Parameters, Two Values Each</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#three-parameters-two-values-each"><small>- Three Parameters, Two Values Each</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#three-parameters-three-values-each"><small>- Three Parameters, Three Values Each</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#four-parameters-two-values-each-version-1"><small>- Four Parameters, Two Values Each (version 1)</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/parameter-spaces/#four-parameters-two-values-each-version-2"><small>- Four Parameters, Two Values Each (version 2)</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

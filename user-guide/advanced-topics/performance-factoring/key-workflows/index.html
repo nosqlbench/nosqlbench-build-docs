@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Key Workflows | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Key Workflows | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Key Workflows | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;user-guide&#x2F;">User Guide► </a></span><span><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;">Advanced Topics► </a></span><span title="Concepts and Methods for advanced performance analysis"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;"><strong>Performance Factoring▼</strong> </a></span><span title="[current page]"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F;"><strong>Key Workflows 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows.md -->
+<!-- active_section: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;_index.md -->
+
+
+<!-- lower_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+<!-- >upper_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Performance Factoring</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;advanced-topics&#x2F;"title="detailed explanation of all available configuration methods in nb5">Advanced Topics</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;">Labeling Results</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;">Labeling Controls</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;timing-terms&#x2F;">Timing Terms Explained</a></div><div class="toc-item"title="Detailed examples of different ways to configure nb5"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;configuration-techniques&#x2F;">►Config Methods</a></div><div class="toc-item"title="NoSQLBench comes with a fully scriptable runtime for advanced testing scenarios"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;scenario-scripting&#x2F;">►Scenario Scripting</a></div><div class="toc-item"title="Concepts and Methods for advanced performance analysis"><strong>▼Performance Factoring</strong></div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F;">Framing</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F;">Concepts</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F;"><strong>Key Workflows</strong></a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F;">Parameter Spaces</a>
+    </div><div class="toc-item"title="A deeper dive into frequent topics of discussion around scale testing."><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;testing-at-scale&#x2F;">►Testing at Scale</a></div></div>
+</div>
+
+<article>
+
+  <p>There are a few workflows which we see routinely in performance testing. These workflows capture,
+or at least describe the steps in a complete analysis method, and are the basis for extant analysis
+method
+scripts in NoSQLBench. This section describes some of these, the steps involved, and the purposes of
+each step.</p>
+<p>On the surface, many of these techniques may appear to be pretty basic. Descriptions like "find
+the highest throughput" are an egregious misnomer for what is required to do this type of work
+accurately and precisely. This is important for everyone to understand who depends on the
+results of performance testing. Over-simplifying or rushing past these details can effectively
+invalidate the results to the point of being less useful than guesswork, particularly if the
+stakeholders presume a degree of methodical approach or empiricism which is not present.</p>
+<h1 id="system-preparation">System Preparation</h1>
+<ol>
+<li>Deploy Testing apparatus, infrastructure, and target systems.</li>
+<li>Document deployment details, including steps needed to redeploy the same type of system with
+the same provisioning levels, settings, topology, etc.</li>
+</ol>
+<p>Once a system is deployed for testing, all the essential details of the system which define
+the test scenario should be captured.</p>
+<p>Empirically, this is every detail of the system, but
+practically speaking this is often not possible or convenient for these details to be capture.
+A key strategy is to use well-defined reference points, like a system image, default
+configuration, hardware profile, etc., and then document only deltas from this initial state.
+This also emphasizes the value of testing system as shipped or configured by default, since this
+is also a meaningful reference point for any other analysis.</p>
+<h1 id="measure-saturating-throughput">Measure Saturating Throughput</h1>
+<p>To balance and inform how performance data is interpreted, it is crucial to consider the
+throughput and response (AKA latency) in contrast and in combination. In order to do this well,
+it is essential to determine the maximum rate at which a system can process requests for the
+workload under study. This is what <em>measuring saturating throughput</em> is all about.</p>
+<p>The saturating throughput for a composed system may be limited by any component, including
+clients, infrastructure, servers or endpoints, proxy layers, storage subsystems, etc.
+By definition, it <em>is</em> dependent on each and every part of the composed system. However, it is
+almost always more dependent on one component than others. This is often called a <em>bottleneck.</em>
+When a given component is disproportionately utilized over others, the system is may not be considered
+well-balanced. When this component hits full saturation, limiting the throughput of the composed
+system, then it is called a bottleneck. It is not always easy to define what constitutes a
+meaningful bottleneck when resource utilization is relatively even. Over-tuning for full
+saturation over</p>
+<p>It is essential to understand the general state of balance of a system at saturation. If
+optimizing for throughput, then key metrics should include any skews in workload distribution
+over nodes, resources, or services. As well, within vertical resource profiles, such as within a
+node, serious imbalances may invalidate the purposes of a test. This all depends on the specific
+reason for running the test.</p>
+<p>Yet, it is possible, in a well-balanced system, that many components are <em>highly</em> saturated
+together. In many cases, this a desired state of balance. In a well-balanced system,
+appreciable speed-ups require creating more headroom (scaling up capacity) in all the components
+or subsystems. Once this is achieved in vertical resource profiles, simpler scale-out
+strategies become available, wherein you know each unit of capacity is representative of a unit of
+consumption for the given workload.</p>
+<p>In practice, valid results are only possible when the target being tested is the limiting
+factor. Further, as the testing apparatus sees higher utilization (client-side or
+infrastructure) , the fidelity of results decreases. The relationship between client saturation
+and measurement accuracy is not well-defined, but is nearly always a non-linear relationship.
+For example running the client system at 60% utilization will certainly increase the measured
+latency of the composed system over the same test rate on a client which would only be 40%
+utilized. It is important to remember that whey you are running a test, there is no way to
+<em>only test the server</em>. However, you can shift the measurements to be more descriptive of the
+test target by ensuring that the whole system is over-provisioned in the testing apparatus as a
+rule.</p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>Prepare target system, infrastructure, and client systems.</li>
+<li>Instrument client system for basic metrics capture, including throughput and discrete latency
+histograms. (Avoid time-decaying or other leavening effects.)
+<ol>
+<li>(Advanced) Instrument each key subsystem, messaging layer, system boundary, and resource
+pool in the entire composed system.</li>
+<li>(Advanced) Baseline key subsystems for capacity using automated benchmarking tools.</li>
+<li>(Advanced) Verify or record performance congruity and coherence across tested systems.</li>
+</ol>
+</li>
+<li>Configure workload at sufficient concurrency. Minimum concurrency should keep all
+messaging paths primed at all times (transport, buffering requests, processing elements), with
+minimal over-commit. A good rule of thumb is to set concurrency to 2X estimated operational
+parallelism.</li>
+<li>Method 1 - Run the workload at the full capacity of the client, adjusting the concurrency to
+find the local maxima in throughput. Adjust settings as need to optimize throughput until
+further improvement is minimal.</li>
+<li>Method 2 - Run the workload with a rate limiter on the client side as the limiting factor.
+Adjust the rate limit to find the local maxima in throughput. Adjust setting as needed to
+optimize throughput until further improvement is minimal.</li>
+<li>Method 3 - Use an automated and iterative analysis method like findmax in order to
+streamline the testing time, and codify the analysis method for reproducible and specific
+results.</li>
+<li>Method 4 - Use an automated and iterative analysis method like optimo in order to genearlize
+over an n-dimensional parameter space which includes concurrency and other dynamic settings.</li>
+<li>Record the <strong>result: maximum throughput and the settings required to achieve it</strong>.</li>
+<li>(Advanced) Record the response curve of the system across key throughput stages.</li>
+</ol>
+<h1 id="measure-ideal-latency">Measure Ideal Latency</h1>
+<p>Determine the latency of an operation under the best possible circumstances, i.e. all JIT,
+cache-warming is done, indexes and compaction state are optimal, and so on.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Key Workflows</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/#system-preparation">System Preparation</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/#measure-saturating-throughput">Measure Saturating Throughput</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/#steps"><small>- Steps</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/key-workflows/#measure-ideal-latency">Measure Ideal Latency</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

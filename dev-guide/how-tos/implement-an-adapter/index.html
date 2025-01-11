@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Implement an Adapter | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Implement an Adapter | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Implement an Adapter | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;dev-guide&#x2F;">Dev Guide► </a></span><span title="How to contribute in different ways, step-by-step"><a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;"><strong>Dev How-Tos▼</strong> </a></span><span title="[current page]"><a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;implement-an-adapter&#x2F;"><strong>Implement an Adapter 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: dev-guide&#x2F;how-tos&#x2F;implement-an-adapter.md -->
+<!-- active_section: dev-guide&#x2F;how-tos&#x2F;_index.md -->
+
+
+<!-- lower_root: dev-guide&#x2F;_index.md -->
+<!-- >upper_root: dev-guide&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Dev How-Tos</h4>--><div class="toc-sticky"><div class="toc-item"title="How to get started"><a href="&#x2F;dev-guide&#x2F;contributing&#x2F;">►Contributing</a></div><div class="toc-item"title="Standards to which the NB5 project aspires"><a href="&#x2F;dev-guide&#x2F;project-standards&#x2F;">►Project Standards</a></div><div class="toc-item"title="How to contribute in different ways, step-by-step"><strong>▼Dev How-Tos</strong></div><!-- subsection_page_path: &#x2F;dev-guide&#x2F;how-tos&#x2F;auto-apply-license-intellij&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;auto-apply-license-intellij&#x2F;">Auto Apply License in IntelliJ</a>
+    </div><!-- subsection_page_path: &#x2F;dev-guide&#x2F;how-tos&#x2F;make-a-pull-request&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;make-a-pull-request&#x2F;">Make a Pull Request</a>
+    </div><!-- subsection_page_path: &#x2F;dev-guide&#x2F;how-tos&#x2F;implement-an-adapter&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;implement-an-adapter&#x2F;"><strong>Implement an Adapter</strong></a>
+    </div><!-- subsection_page_path: &#x2F;dev-guide&#x2F;how-tos&#x2F;recompile-less&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;dev-guide&#x2F;how-tos&#x2F;recompile-less&#x2F;">Recompile Less</a>
+    </div></div>
+</div>
+
+<article>
+
+  <p>NoSQLBench is composed of a sound architectural underpinning that makes the process of implementing new adapters as seamless and quick as possible. NoSQLBench provides a hierarchy of classes which can be extended and interfaces to be implemented, in order to avoid having to re-implement the application infrastructure and in so doing reduces both the complexity and demands on time involved in implementing a new adapter type. However, it is necessary to understand this existing architecture in order to effectively use the provided building blocks. The following is intended as a guide to developing new adapters to extend the functionality of NoSQLBench.</p>
+<h1 id="prerequisites-and-assumptions">Prerequisites and Assumptions</h1>
+<ul>
+<li>It is assumed that the developer(s) have familiarized themselves with the  <a rel="noopener" target="_blank" href="https://docs.nosqlbench.io/introduction/core-concepts/">NoSqlBench core concepts</a> provided in the NoSQLBench documentation.</li>
+<li>The ability to code in Java is required. NoSQLBench makes extensive use of lambda functionality. It is a requirement to understand and be comfortable using these principles to develop an adapter.</li>
+<li>This guide is not specific to any particular client. It is assumed that the developer(s) have familiarity with the client they are developing an adapter for.</li>
+</ul>
+<h1 id="internal-dependencies">Internal Dependencies</h1>
+<p>The NoSQLBench project as a whole is composed of numerous modules and packages. For the purpose of customer adapter implementation there are only two required; adapters-api and nb-annotations.</p>
+<pre class="z-code"><code><span class="z-text z-plain">&lt;dependency&gt;
+</span><span class="z-text z-plain">	&lt;groupId&gt;io.nosqlbench&lt;/groupId&gt;
+</span><span class="z-text z-plain"> 	&lt;artifactId&gt;adapters-api&lt;/artifactId&gt;
+</span><span class="z-text z-plain"> 	&lt;version&gt;${revision}&lt;/version&gt;
+</span><span class="z-text z-plain"> 	&lt;scope&gt;compile&lt;/scope&gt;
+</span><span class="z-text z-plain">&lt;/dependency&gt;
+</span><span class="z-text z-plain">	
+</span><span class="z-text z-plain">&lt;dependency&gt;
+</span><span class="z-text z-plain">    &lt;groupId&gt;io.nosqlbench&lt;/groupId&gt;
+</span><span class="z-text z-plain">    &lt;artifactId&gt;nb-annotations&lt;/artifactId&gt;
+</span><span class="z-text z-plain">    &lt;version&gt;${revision}&lt;/version&gt;
+</span><span class="z-text z-plain">    &lt;scope&gt;compile&lt;/scope&gt;
+</span><span class="z-text z-plain">&lt;/dependency&gt;
+</span></code></pre>
+<p>The adapters-api and nb-annotations  modules contain all of the base classes, interfaces and annotations required to implement a new adapter and flesh out its functionality.</p>
+<ul>
+<li>Adapters - Every new adapter will, of course, include an Adapter class. This class will be a descendent of the <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/uniform/BaseDriverAdapter.java#L34">BaseDriverAdapter</a> class found here. NoSQLBench uses the Java Service Provider Interface(SPI) to define service providers. If you don’t know what that is, don't worry about it now. The tl;dr is that extending the BaseDriverAdapter and annotating your driver adapter class with the Service annotation will result in that class being added to META-INF/services under the specified class name, making it available as a service provider. NoSQLBench takes care of all the rest!</li>
+<li>Ops - NoSQLBench is built around the ability to define operations (“Ops”) in a generic fashion (the op template) and translate them into actions. All of the basic plumbing for this is handled in the adapters-api module, from the yaml file loader to the definition of the various types of ops available to implement. Along with the Op types the adapters-api package defines the base classes and interfaces for Op Dispensers, which do the work of creating the Op, and the Op Mappers, which map the appropriate functionality based on the Op type presented. We’re going to get into the details of the available implementations in the next section.</li>
+</ul>
+<h1 id="your-first-adapter">Your First Adapter</h1>
+<ol>
+<li>
+<p>Familiarize yourself with the native driver. You will need to know exactly what functionality you want to test and what the APIs for that functionality look like so you can plan for what your Op classes need to be able to do.</p>
+</li>
+<li>
+<p>Create a new module in the root of the project using standard naming:</p>
+<ul>
+<li>adapter-<em>&lt;typeName&gt;</em> where the chosen selector that will be used with driver=<em>&lt;typeName&gt;</em>, e.g. adapter-jdbc, adapter-pinecone, etc.</li>
+<li>package naming should follow io.nosqlbench.adapter.<em>&lt;typeName&gt;</em></li>
+<li>A quick way to create module is to copy an existing adapter's pom.xml into a new directory as pod.xml, modify the naming elements, and then rename pod.xml to pom.xml</li>
+<li>In most cases the only dependencies you should need are adapters-api and nb-annotations (as discussed in the previous section), as well as the api library published for the native driver you are adapting. If you find that you need to pull in additional dependencies, first verify whether they are included in another module already within the nb project to simplify the process.</li>
+<li>Initially, do not add the module to the root pom.xml under modules. You can still build it and test it without requiring it to build for the main module to build. Once it is ready to be included under the main build, then you add it to the modules list. At that time, add it to the list of driver dependencies for the nb5 module, and it will be included in the runtime.</li>
+</ul>
+</li>
+<li>
+<p>Implement your first Op.</p>
+<ul>
+<li>Implement a POJO which implements one of the Op interfaces and represents a value type for a specific operation.</li>
+<li>It is recommended to use <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/uniform/flowtypes/RunnableOp.java#L20">RunnableOp</a> by default. This means you only need to provide a run method to define whatever action this operation encapsulates. The op class itself should be extremely lightweight, as the logic for constructing the operation will take place in the dispenser.</li>
+<li>As a value type it must be repeatable.</li>
+<li>It should capture the details of a single operation for diagnostics and debugging purposes. In database terminology, for example, this might be “insert”, or “delete”, or “update”.</li>
+</ul>
+</li>
+<li>
+<p>Implement a minimal Adapter Space.</p>
+<ul>
+<li>Stub a POJO which can hold instances of your native driver. This is your context, or adapter space.</li>
+<li>This class should contain any logic needed to establish connectivity as well as any type of initialization required for the native driver.</li>
+<li>The constructor of the adapter space should take a String and an <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/nb-api/src/main/java/io/nosqlbench/api/config/standard/NBConfiguration.java#L26">NBConfiguration</a> instance as its parameters. Any variables needed to initialize the environment should be accessible to the adapter space through the NBConfiguration instance. The adapter space class must define what these variables are by implementing the static getConfigModel() method. See <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapter-tcp/src/main/java/io/nosqlbench/adapter/tcpserver/TcpServerAdapterSpace.java#L43">existing adapter space implementations</a> for details on this.</li>
+</ul>
+</li>
+<li>
+<p>Implement the DriverAdapter.</p>
+<ul>
+<li>This class must extend the <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/uniform/BaseDriverAdapter.java#L34">BaseDriverAdapter</a> class. As the BaseDriverAdapter class is a templated type, this implementation should use the 2 classes previously created, i.e.<br />
+<code>MyDriverAdapter extends BaseDriverAdapter&lt;MyOp, MyAdapterSpace&gt;</code></li>
+<li>Add the @Service annotation that makes it available for runtime service looking and late binding.<br />
+<code>@Service(value = DriverAdapter.class, selector = "nativedrivertype")</code></li>
+<li>Minimally this class must implement 2 methods, both of which should specify that they are overriding the base class
+<ul>
+<li>getOpMapper - this method will return the OpMapper specific to the types of Op classes that will be created for this driver. As we have not yet implemented this class, for now it can be stubbed to simply return null. The signature should look like<br />
+<code>public OpMapper&lt;MyOp&gt; getOpMapper()</code></li>
+<li>getSpaceInitializer - this method accepts an <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/nb-api/src/main/java/io/nosqlbench/api/config/standard/NBConfiguration.java#L26">NBConfiguration</a> instance as an argument and will return a function that can be used to instantiate the previously defined adapter space. In its simplest form it will simply pass the configuration along to the constructor for the adapter space. The signature should look like<br />
+<code>public Function&lt;String, ? extends MyAdapterSpace&gt; getSpaceInitializer(NBConfiguration cfg)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Implement an OpDispenser for this Op type.</p>
+<ul>
+<li>This must extend <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/BaseOpDispenser.java#L43">BaseOpDispenser</a>, which is a templated class. The definition might look like this:<br />
+<code>public class MyOpDispenser extends BaseOpDispenser&lt;MyOp, MyAdapterSpace&gt;</code></li>
+<li>The constructor must accept at least a DriverAdapter and an Op of the specified type, and it must call the super constructor, which requires the DriverAdapter and Op to be provided.</li>
+<li>The constructor for this class will need at least the function for retrieving the relevant Adapter Space to facilitate the creation of the Op to be dispensed, and a ParsedOp object which is the operation as derived from the source yaml/JSON file to be converted to the appropriate op type by the dispenser.</li>
+<li>The OpDispenser must also override the apply method defined in the BaseOpDispenser. For each test cycle this apply method will be called, and the OpDispenser will need to return the created Op for that cycle. The typical pattern used in the implementation of the OpDispenser is that at the time of construction it defines a LongFunction to create the Op that is dispensed when the apply method is called. The apply method itself is minimal and applies the input value (the cycle) to this function and dispenses the Op returned.</li>
+<li>This is another place where it should be noted that in an adapter of any complexity there will usually be multiple Op types, each of which will have its own OpDispenser class responsible for dispensing only that type of Op. Don’t implement a hierarchy of Op types and dispense them through a single OpDispenser via dynamic binding.</li>
+</ul>
+</li>
+<li>
+<p>Implement an OpMapper to create the OpDispenser</p>
+<ul>
+<li>The OpMapper has a very simple job in the case of having only a single OpDispenser type, it creates the OpDispenser. In more complicated use cases the OpMapper receives an Op and interrogates it to determine the appropriate OpDispenser to create. More on this below.</li>
+<li>Your class should implement the <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/OpMapper.java#L27">OpMapper</a><T> interface, with the templated type once again being your Op. It then needs to override the apply(ParsedOp) method to return the OpDispenser. The signature should look something like this:<br />
+<code>public OpDispenser&lt;? extends MyOp&gt; apply(ParsedOp op)</code></li>
+<li>At this point you can treat the apply method largely as a pass-through and simply return a new OpDispenser instance (although take a look at the existing implementations, you will probably want to emulate the use of the space cache to pass the dispenser the space object as well).</li>
+<li>The constructor for this class doesn’t have any hard requirements, but if you look at the existing implementations you will notice most of them include as an argument a new class we haven’t talked about yet, the <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/uniform/DriverSpaceCache.java#L25">DriverSpaceCache</a>. Not to worry, this is simply a cache to hold your associated context, the details of which are handled once again by the NoSQLBench plumbing. In the next step we will look at how this is used in the Adapter class.</li>
+</ul>
+</li>
+<li>
+<p>Wire your classes together and get it to compile cleanly.</p>
+<ul>
+<li>Go back to the Adapter type created in step 5. Now you’re going to fill in that getOpMapper method. If your code looks like the majority of implementations the method body will look like this:</li>
+</ul>
+<pre class="z-code"><code><span class="z-text z-plain">DriverSpaceCache&lt;? extends MyAdapterSpace&gt; spaceCache = getSpaceCache();   
+</span><span class="z-text z-plain">NBConfiguration config = getConfiguration();    
+</span><span class="z-text z-plain">return new MyOpMapper(this, config, spaceCache); 
+</span></code></pre>
+<ul>
+<li>As pointed out earlier this “just works” because NoSQLBench already provides the plumbing behind these calls. The <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/blob/208296f68f97e06a194e2155229c0a0f3c69059b/adapters-api/src/main/java/io/nosqlbench/engine/api/activityimpl/uniform/BaseDriverAdapter.java#L34">BaseDriverAdapter</a> handles the necessary initialization and storage of the appropriate type of space cache and NB configuration, and these can simply be passed in to the constructor for your OpMapper class!</li>
+<li>You should now have:
+<ul>
+<li>An op class that implements the RunnableOp interface and defines a run method that does something specific to the native driver you are working with.</li>
+<li>An adapter space class that encapsulates the context of the native driver and implements any logic necessary for initialization.</li>
+<li>A driver adapter class that contains the logic to instantiate both the op mapper class and the adapter space class.</li>
+<li>An op dispenser class that both contains the logic to construct instances of your op type from a ParsedOp object and implements the apply method to return new instances of your op type.</li>
+<li>An op mapper class, as returned by the driver adapter, that implements the apply method to accept a ParsedOp instance and return an instance of the previously defined op dispenser class.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="further-reading">Further Reading</h1>
+<h2 id="use-cases-with-multiple-op-types">Use Cases With Multiple Op Types</h2>
+<p>In most sophisticated use cases a single op type will not be sufficient. As in the canonical example of a database where a user may want to perform a number of different operations such as inserting new records, reading existing records, updating, deleting, etc. In these cases it is necessary to define more than a single Op class, defining a separate class for each of these operations. In these cases there should be a separate OpDispenser class defined for each Op type as well, with the OpMapper class creating the OpDispenser type appropriate for the operation being performed.</p>
+<p>The Op classes should remain as compact as possible, implementing only the basic functionality they are ascribed. The OpDispenser classes remain similar in structure, with each creating a function specific to the Op type it is associated with, to be called by the apply method at the time when the Op needs to be created. The difference in implementation is largely confined to how the OpDispenser class interacts with the ParsedOp object it receives in its constructor. The ParsedOp represents a single operation as defined by the source configuration yaml file passed at runtime. The yaml might contain any arbitrary number of different ops, each of which will be interpreted and result in a ParsedOp to be passed to the Mapper and Dispenser at runtime. Each dispenser can query the ParsedOp for the existence of the fields it expects to find defined for instantiation of the Op type it is responsible for, and define the creation functionality based on what it finds to be present.</p>
+<p>In the cases where multiple Op types are defined an OpType enum class should also be provided. This allows the OpMapper class to use the TypeAndTarget functionality provided by the ParsedOp API. getTypeAndTarget is a method exposed by the ParsedOp API which allows the caller to pass in as arguments the class of the enum, the expected class the resulting function should return, the type name and the value name and in return receive a TypeAndTarget Object containing the enum type identification and a target function that will return the value associated with the type. This target function can be thought of as providing the “key” for the Op type in question. For example in the pinecone adapter every operation needs to specify the database index the operation will run against. This is represented in the op definition as:</p>
+<pre class="z-code"><code><span class="z-text z-plain">type: [query,delete,update…]
+</span><span class="z-text z-plain">index: &lt;database index&gt;. 
+</span></code></pre>
+<p>And the call to TypeAndTarget is:</p>
+<pre class="z-code"><code><span class="z-text z-plain">op.getTypeAndTarget(PineconeOpTypes.class, String.class, &quot;type&quot;, &quot;index&quot;). 
+</span></code></pre>
+<p>With this definition the target function will return the value of the database index for the given Op.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Implement an Adapter</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/#prerequisites-and-assumptions">Prerequisites and Assumptions</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/#internal-dependencies">Internal Dependencies</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/#your-first-adapter">Your First Adapter</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/#further-reading">Further Reading</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/dev-guide/how-tos/implement-an-adapter/#use-cases-with-multiple-op-types"><small>- Use Cases With Multiple Op Types</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

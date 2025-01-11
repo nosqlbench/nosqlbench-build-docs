@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Concepts | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="Basic concepts for performance characterization" />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/" />
+  <meta property="og:description" content="Basic concepts for performance characterization" />
+  <meta name="twitter:description" content="Basic concepts for performance characterization" />
+  <meta property="og:title" content="Concepts | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Concepts | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;user-guide&#x2F;">User Guide► </a></span><span><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;">Advanced Topics► </a></span><span title="Concepts and Methods for advanced performance analysis"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;"><strong>Performance Factoring▼</strong> </a></span><span title="Basic concepts for performance characterization"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F;"><strong>Concepts 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts.md -->
+<!-- active_section: user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;_index.md -->
+
+
+<!-- lower_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+<!-- >upper_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Performance Factoring</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;advanced-topics&#x2F;"title="detailed explanation of all available configuration methods in nb5">Advanced Topics</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;">Labeling Results</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;">Labeling Controls</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;timing-terms&#x2F;">Timing Terms Explained</a></div><div class="toc-item"title="Detailed examples of different ways to configure nb5"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;configuration-techniques&#x2F;">►Config Methods</a></div><div class="toc-item"title="NoSQLBench comes with a fully scriptable runtime for advanced testing scenarios"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;scenario-scripting&#x2F;">►Scenario Scripting</a></div><div class="toc-item"title="Concepts and Methods for advanced performance analysis"><strong>▼Performance Factoring</strong></div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;framing&#x2F;">Framing</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;concepts&#x2F;"><strong>Concepts</strong></a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;key-workflows&#x2F;">Key Workflows</a>
+    </div><!-- subsection_page_path: &#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;parameter-spaces&#x2F;">Parameter Spaces</a>
+    </div><div class="toc-item"title="A deeper dive into frequent topics of discussion around scale testing."><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;testing-at-scale&#x2F;">►Testing at Scale</a></div></div>
+</div>
+
+<article>
+
+  <h1 id="key-terms">Key Terms</h1>
+<h2 id="operational-systems">Operational Systems</h2>
+<p>When a system has no headroom, it is unable to be responsive during hardware or infrastructure
+outages, load spikes, changes in system topology, capacity scaling activities, other
+administrative activities like external backups.</p>
+<p>User-facing systems are more often operational systems, which require a degree of built-in
+headroom in order to absorb load spikes or events described above. These systems are designed
+and tuned more for operational responsiveness and resiliency under load and workload changes.
+They are also combined with other less-operational designs as a fronting layer to absorb and
+manage around limitations in classic system designs.</p>
+<p>Measuring the capacity of operational system without putting its operational headroom and
+responsiveness in focus is usually meaningless. We often measure the capacity of such systems as
+a <em>reference point</em> within which other, more realistic measurements may be taken.</p>
+<h2 id="saturating-throughput">Saturating Throughput</h2>
+<p>The throughput at which a system is fully utilizing its most critical resource and can go no
+faster. This is a measure of how much work a system is capable of. When a system is saturated,
+you will see the highest response times. This is typically measured in ops per second, sometimes
+abbreviated as "ops/s", "Kops/s", or just simply "Kops".</p>
+<h2 id="operational-headroom">Operational Headroom</h2>
+<p>At saturating throughput, a system has no operational headroom. Operational headroom is the
+fraction of system capacity (throughput) which remains in reserve to handle load spikes,
+topology changes, hardware failures, external backup loads, and so on.</p>
+<h2 id="nominal-throughput">Nominal Throughput</h2>
+<p>A production-like workload in an operational system is one which takes into account the
+operational headroom that it would normally be run with in production. This is absolutely
+essential in how findings are presented so that users and operators make safe choices about
+system sizing, tuning, and so on. Case in point: If you ran a cluster at 100% of its saturating
+capacity, it would not be able to absorb a node outage without affecting the load. The load
+(user-facing workload, ostensibly) would be compromised in some way, from a lowered aggregate
+capacity, which would also likely result in significantly higher response times. Systems which
+are affected by over-saturation in this way are often much more severely affected than new
+operators would expect, due to the combination of service time and capacity effects stacking in
+an unhealthy way. This is easy to demonstrate in practice, and made more lucid through the lens
+of <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Little%27s_law">Little's law</a>.</p>
+<p>Thus, a key insight about operational systems is that they need to be deployed and tested
+with <em>operational headroom</em> as explained above. A typical approach for testing a distributed
+system with built-in fault management capabilities would be to characterize its saturation
+throughput and then factor in headroom depending on the topology of the system. For a 5 node
+cluster, 70% throughput is</p>
+<h2 id="end-to-end-testing">End-to-End Testing</h2>
+<p>To accurately gauge how a system performs (operationally) or behaves (functionally), you can
+either test it piece-wise -- subsystem by subsystem, or you can test it fully assembled in an
+integrated fashion. An end-to-end test takes this further to include the composed system from
+the end-user, access pathways and infrastructure, and all internal services or endpoints that
+the system under test may depend on. End-to-end testing comes with a few key trade-offs:</p>
+<ol>
+<li>End-to-end testing provides the most coverage of any type of test. As such, it is often one
+of the first ways an operational system is tested in order to determine whether the system as
+a whole is operating and functioning correctly.</li>
+<li>End-to-end testing does not provide a destructured of the system. It doesn't focus the
+user's on the  element which may be causing a test failure. Further analysis is required to
+figure out why errors occur.
+<ul>
+<li>In the very best system designs, failure modes manifest with specific reasons
+for why an error occurred, and specific details about where in the system it occurred. This
+does not carry over to performance testing very well.</li>
+<li>Further, many systems intentionally obscure internal details for reasons of security or
+decoupling user experience from system details. This is common with cloud services for example.</li>
+</ul>
+</li>
+<li>End-to-end testing is a form of integration testing, where potentially large deployments or
+configurations are required in order to facilitate testing activities. This leaves a larger
+surface area for misconfiguration which is incongruent with prod or customer specific details.
+Where these deployment manifests may diverge from actual customer systems, results may be
+invalid, in the form of false-positives or false-negatives.</li>
+<li>Testing end-to-end on real systems is feasible with the right supporting test apparatus and
+path addressing methods, such as multi-tenant features of a system. However,
+doing this reliably and accurately requires the provisioning and auditing logic for testing
+systems to be one and the same as what customers or operators use in order to ensure that
+there is no difference between what is tested and what is intended to be tested.</li>
+<li>Physical topology and logical pathing are not always visible or explicitly addressable from
+the testing apparatus, meaning that testing a whole system across all flows may be impossible
+without special routing or flagging logic in testing operations. If these are not
+in-built mechanisms in the user-facing functionality, then it creates a side-path which
+breaks system coverage guarantees. This makes some end-to-end test scenarios probabilistic,
+in that physical traversal paths may only be hit a fraction of the time.</li>
+</ol>
+<h2 id="scaling-math">Scaling Math</h2>
+<p>In distributed systems testing, a common misconception is that you have to test your production
+loads at the same level as you would run them in production. This flies in the face of the
+design principles of linearly scalable systems. What is more important is that the effects of
+proportionality and congruence hold, in a durable way, so that observations on smaller systems
+can be used to make reliable predictions of larger systems. The methods used to do this are
+often described as <em>scaling math</em> in the NoSQLBench user community.</p>
+<p>For example, suppose you have a workload that supports a line of business, a peak capacity
+requirement. With a provable presumption of linear scalability over nodes, you can do a test with 5
+nodes which will provide the baselines measurements needed to project node requirements for any
+given throughput. This example doesn't include the latency, but it can be extended to that once the
+throughput requirements are understood.</p>
+<p>In fact, the principles and specific mechanisms of scale should be the key focus of any such
+studies. Once these are established as trust-worthy, further predictions or analysis become much
+easier.</p>
+<p>Detailed examples with latency factors included will be given elsewhere.</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Concepts</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#key-terms">Key Terms</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#operational-systems"><small>- Operational Systems</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#saturating-throughput"><small>- Saturating Throughput</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#operational-headroom"><small>- Operational Headroom</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#nominal-throughput"><small>- Nominal Throughput</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#end-to-end-testing"><small>- End-to-End Testing</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/performance-factoring/concepts/#scaling-math"><small>- Scaling Math</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>
