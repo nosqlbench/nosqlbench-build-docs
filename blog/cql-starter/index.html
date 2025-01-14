@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>CQL Starter | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/blog/cql-starter/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/blog/cql-starter/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/blog/cql-starter/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;blog&#x2F;">NoSQLBench Blogs► </a></span><span title="NoSQLBench cql-starter scenario."><a href="&#x2F;blog&#x2F;cql-starter&#x2F;"><strong>CQL-Starter▼</strong> </a></span><span title="[current page]"><a href="&#x2F;blog&#x2F;cql-starter&#x2F;quickstart-cql&#x2F;"><strong>CQL Starter 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: blog&#x2F;cql-starter&#x2F;quickstart-cql.md -->
+<!-- active_section: blog&#x2F;cql-starter&#x2F;_index.md -->
+
+
+<!-- lower_root: _index.md -->
+<!-- >upper_root: _index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>CQL-Starter</h4>--><div class="toc-sticky"><div class="toc-item"title="Release Notes for each major and some minor releases"><a href="&#x2F;release-notes&#x2F;">►Release Notes</a></div><div class="toc-item"title="An introduction to what makes NoSQLBench Unique"><a href="&#x2F;introduction&#x2F;">►Introduction</a></div><div class="toc-item"title="Getting Started with NoSQLBench"><a href="&#x2F;getting-started&#x2F;">►Getting Started</a></div><div class="toc-item"title="You can build workloads to simulate real-world data and access patterns."><a href="&#x2F;workloads-101&#x2F;">►Workloads 101</a></div><div class="toc-item"title="Detailed documentation on all options and features of NoSQLBench"><a href="&#x2F;user-guide&#x2F;">►User Guide</a></div><div class="toc-item"title="The NB5 Developer Guide"><a href="&#x2F;dev-guide&#x2F;">►Dev Guide</a></div><div class="toc-item"title="Detailed reference on drivers, formats, bindings, from auto-imported docs"><a href="&#x2F;reference&#x2F;">►Reference Section</a></div></div>
+</div>
+
+<article>
+
+  <h1 id="cql-starter">CQL-Starter</h1>
+<img width="768" height="461" title="cql" border=3 alt="cql-starter" src="cqlstarter-blog-studio-cql.png">
+<p>Author: Jeff Banks (DataStax)</p>
+<p>&nbsp;</p>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the NoSQLBench Quick Byte, the first session in a “Getting Started” series for
+NoSQLBench. This session introduces a new Cassandra Query Language (CQL) starter workload now
+available in version 5 of NoSQLBench.</p>
+<ul>
+<li>If you haven't heard of NoSQLBench, checkout our <a href="https://builddocs.nosqlbench.io/introduction/">introduction material</a></li>
+<li>If you already have a foundation with NoSQLBench and would like to understand what's included
+in the most recent version, checkout the <a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/releases/latest">release notes</a>.</li>
+</ul>
+<p>This session illustrates use of CQL, using NoSQLBench v5, along with a Docker deployment of
+Apache Cassandra 4.1 using its latest image.</p>
+<p>Let’s get rolling …</p>
+<h2 id="setup">Setup</h2>
+<p>This session was tested with:</p>
+<ul>
+<li>Ubuntu (v20.4)</li>
+<li>Docker (v20.10.18)</li>
+<li>NoSQLBench (v5.17.2)</li>
+<li>Apache Cassandra (v4.1)</li>
+</ul>
+<h4 id="install-docker">Install Docker</h4>
+<p>Ensure Docker is installed on your operating system. You can download it from
+<a rel="noopener" target="_blank" href="https://www.docker.com/">here</a></p>
+<h4 id="get-nb5">Get NB5</h4>
+<p>Obtain official NB5 release, if you don't already have it, from
+<a rel="noopener" target="_blank" href="https://github.com/nosqlbench/nosqlbench/releases/latest">latest nb5 release</a>,
+and then <code>chmod +x nb5</code>.</p>
+<p>See <a href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/getting-started/00-get-nosqlbench.md">get nosqlbench</a> for other download options.</p>
+<p>You should be able to see your version installed using:</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 --version
+</span></code></pre>
+<h4 id="run-cassandra">Run Cassandra</h4>
+<p>Run the latest Cassandra 4.* docker.</p>
+<pre class="z-code"><code><span class="z-text z-plain">docker run --name cass4 -p 9042:9042 -d cassandra
+</span></code></pre>
+<p>If you have issues, more details can be found at
+<a rel="noopener" target="_blank" href="https://hub.docker.com/_/cassandra">Apache Cassandra on docker hub</a>.</p>
+<p>Verify Cassandra is started from logs:</p>
+<pre class="z-code"><code><span class="z-text z-plain">docker container logs cass4
+</span></code></pre>
+<h1 id="running-the-scenario">Running the scenario</h1>
+<p>Now, we are ready to run the cql-starter NoSQLBench scenario.</p>
+<h4 id="locate-nb5">Locate NB5</h4>
+<p>Navigate via your local command line to where the nb5 binary was previously downloaded.</p>
+<h4 id="verify">Verify</h4>
+<p>Ensure that issuing the following command identifies the workload used for this session.</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 --list-workloads | grep cql-starter
+</span></code></pre>
+<p>Example output:</p>
+<pre class="z-code"><code><span class="z-text z-plain">/activities/baselines/cql-starter.yaml
+</span></code></pre>
+<h4 id="optional-step">Optional step</h4>
+<p>An alternative is to copy the workload configuration listed below to your own local file in a
+folder of your choosing. You can name it whatever you like, as you will specify the absolute
+file path directly when issuing the scenario command.</p>
+<h2 id="cql-workload-template">CQL workload template</h2>
+<p>This YAML file is designed as a basic foundation for continuing to learn NoSQLBench
+capabilities as well as a starting point for customizing for your own testing needs.</p>
+<p>You will notice that the number of cycles are minimal to support local testing to ensure that
+your configuration is constructed properly.  When customizing these for real-world tests, the
+values can be set to millions or more!  That is where the full power of NoSQLBench shines to
+generate critical metrics for analysis to make a system more robust.</p>
+<pre data-lang="yaml" class="language-yaml z-code"><code class="language-yaml" data-lang="yaml"><span class="z-source z-yaml">
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">description</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-folded z-yaml">&gt;</span><span class="z-constant z-numeric z-integer z-decimal z-indentation-indicator z-yaml">2</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"> A cql-starter workload.
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"> * Cassandra: 3.x, 4.x.
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"> * DataStax Enterprise: 6.8.x.
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"> * DataStax Astra.
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">scenarios</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">default</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:schema threads==1 cycles==UNDEF</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:rampup cycles===TEMPLATE(rampup-cycles,1) threads=auto</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">main</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:&quot;main.*&quot; cycles===TEMPLATE(main-cycles,10) threads=auto</span>
+</span><span class="z-source z-yaml">   <span class="z-comment z-line z-number-sign z-yaml"><span class="z-punctuation z-definition z-comment z-line z-number-sign z-yaml">#</span> rampdown: run driver=cql tags==block:rampdown threads==1 cycles==UNDEF
+</span></span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">astra</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:schema-astra threads==1 cycles==UNDEF</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:rampup cycles===TEMPLATE(rampup-cycles,10) threads=auto</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">main</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:&quot;main.*&quot; cycles===TEMPLATE(main-cycles,10) threads=auto</span>
+</span><span class="z-source z-yaml">
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">a_param</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-quoted z-double z-yaml"><span class="z-punctuation z-definition z-string z-begin z-yaml">&quot;</span>value<span class="z-punctuation z-definition z-string z-end z-yaml">&quot;</span></span>
+</span><span class="z-source z-yaml">
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">bindings</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">machine_id</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); ToHashedUUID() -&gt; java.util.UUID</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">message</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">Discard(); TextOfFile(&#39;data/cql-starter-message.txt&#39;);</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup_message</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ToString();</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">time</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); Mul(1000); ToJavaInstant();</span>
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ts</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); Mul(1000);</span>
+</span><span class="z-source z-yaml">
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">blocks</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> 
+</span><span class="z-source z-yaml"> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">prepared</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-constant z-language z-boolean z-yaml">false</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">create-keyspace</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       create keyspace if not exists &lt;&lt;keyspace:starter&gt;&gt;
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       WITH replication = {&#39;class&#39;: &#39;SimpleStrategy&#39;, &#39;replication_factor&#39;: &#39;&lt;&lt;rf:1&gt;&gt;&#39;}
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       AND durable_writes = true;
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span>     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">create-table</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       create table if not exists &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt; (
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       machine_id UUID, 
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       message text,   
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       time timestamp,         
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       PRIMARY KEY ((machine_id), time)
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       ) WITH CLUSTERING ORDER BY (time DESC);
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema-astra</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">prepared</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-constant z-language z-boolean z-yaml">false</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">create-table-astra</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       create table if not exists &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt; (
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       machine_id UUID,
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       message text,
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       time timestamp,
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       PRIMARY KEY ((machine_id), time)
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       ) WITH CLUSTERING ORDER BY (time DESC);
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">cl</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">&lt;&lt;write_cl:LOCAL_QUORUM&gt;&gt;</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">idempotent</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-constant z-language z-boolean z-yaml">true</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">insert-rampup</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       insert into  &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt; (machine_id, message, time)
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       values ({machine_id}, {rampup_message}, {time}) using timestamp {ts};
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampdown</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">truncate-table</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       truncate table &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt;;
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">main-read</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ratio</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">&lt;&lt;read_ratio:1&gt;&gt;</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">cl</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">&lt;&lt;read_cl:LOCAL_QUORUM&gt;&gt;</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">select-read</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       select * from &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt;
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       where machine_id={machine_id};
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml"></span> <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">main-write</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">params</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ratio</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">&lt;&lt;write_ratio:9&gt;&gt;</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">cl</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">&lt;&lt;write_cl:LOCAL_QUORUM&gt;&gt;</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">idempotent</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-constant z-language z-boolean z-yaml">true</span>
+</span><span class="z-source z-yaml">   <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ops</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">     <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">insert-main</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-keyword z-control z-flow z-block-scalar z-literal z-yaml">|</span>
+</span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       insert into &lt;&lt;keyspace:starter&gt;&gt;.&lt;&lt;table:cqlstarter&gt;&gt;
+</span></span><span class="z-source z-yaml"><span class="z-string z-unquoted z-block z-yaml">       (machine_id, message, time) values ({machine_id}, {message}, {time}) using timestamp {ts};
+</span></span></code></pre>
+<p>Before running NoSQLBench scenario, let’s take a look at the layout of the file.  Most of this
+will be the same layout structure used in all NB5 workload files so this helps to reveal a
+large amount of the basics. This is called a <em>workload template</em>.</p>
+<p>Starting from the top of the workload template, the primary sections include:</p>
+<ul>
+<li>Description - A way to describe what the workload does.</li>
+<li>Scenarios - A set of named scenarios for detailing the intent of the workload and defines that for various blocks (e.g. schema, rampup, main, etc.).</li>
+<li>Params - Optional parameters of interest to reference for applying values.</li>
+<li>Bindings - Named recipes for generated data.  These are referenced in block operations.</li>
+<li>Blocks - Where the labeled operations reside (e.g. schema, rampup, and main).
+<ul>
+<li>Schema - A block section where the schema is actually defined and created.</li>
+<li>Rampup - A block section for data setup that becomes the backdrop for testing; it’s the density of data outside the metrics collected in the main block.</li>
+<li>Main - A block section that is the target of metrics collection activities.</li>
+</ul>
+</li>
+</ul>
+<p>This may look overwhelming at first glance, but the magic of what can be done for load testing target resources becomes more apparent as settings are tweaked for various test cases.</p>
+<h3 id="basic-operations">Basic Operations</h3>
+<p>The workload operations in the cql-starter are quite basic, and this is on purpose.  The intent
+is to focus on a simple set of read and write operations to understand how to work with
+NoSQLBench and Cassandra using basic, direct CQL.</p>
+<h3 id="table-and-keyspace">Table and Keyspace</h3>
+<p>For the default scenario workload, a simple table named ‘cqlstarter’ will be created with a keyspace
+named ‘starter’.  There will be three fields for our table:</p>
+<ul>
+<li>machine_id</li>
+<li>message</li>
+<li>time</li>
+</ul>
+<p>The machine_id is a unique identifier type, the message field is a text type, and the time is a
+timestamp type.</p>
+<p>Since the example is designed to be run locally, the Cassandra keyspace replication is defined
+using a SimpleStrategy with a replication factor of one.</p>
+<pre class="z-code"><code><span class="z-text z-plain">WITH replication = {&#39;class&#39;: &#39;SimpleStrategy&#39;, &#39;replication_factor&#39;: &#39;&lt;&lt;rf:1&gt;&gt;&#39;}
+</span></code></pre>
+<h3 id="default-scenario">Default scenario</h3>
+<p>For this session, the ‘default’ scenario is being used.</p>
+<pre data-lang="yaml" class="language-yaml z-code"><code class="language-yaml" data-lang="yaml"><span class="z-source z-yaml">    
+</span><span class="z-source z-yaml">    <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">scenarios</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">default</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">        <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:schema …</span>
+</span><span class="z-source z-yaml">        <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:rampup …</span>
+</span><span class="z-source z-yaml">        <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">main</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:&quot;main.*&quot; …</span>
+</span></code></pre>
+<p>One may notice there is an ‘astra’ scenario included in the file with its own set of activities
+defined (e.g. <code>-astra</code>).  References to <code>astra</code> are simply there to show how additional
+scenarios can be defined in a single workload file.</p>
+<pre data-lang="yaml" class="language-yaml z-code"><code class="language-yaml" data-lang="yaml"><span class="z-source z-yaml">    
+</span><span class="z-source z-yaml">    <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">astra</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">schema</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">run driver=cql tags==block:schema-astra threads==1 cycles==UNDEF</span>      
+</span></code></pre>
+<p>This illustrates how flexible and customizable the workload file can become.  The words are
+customizable and can be tailored for understanding the test case for any business or technical domain.</p>
+<h3 id="bindings">Bindings</h3>
+<p>Values for our three fields during insert, will come from the bindings section of the file.<br />
+Basic examples are included in the cql-starter, but this illustrates how bindings supply
+values to be used by operations.  Again, these are basic, just to illustrate how binding
+functions can be utilized.</p>
+<pre data-lang="yaml" class="language-yaml z-code"><code class="language-yaml" data-lang="yaml"><span class="z-source z-yaml">
+</span><span class="z-source z-yaml">    
+</span><span class="z-source z-yaml">    <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">bindings</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">machine_id</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); ToHashedUUID() -&gt; java.util.UUID</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">message</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">Discard(); TextOfFile(&#39;data/cql-starter-message.txt&#39;);</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">rampup_message</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ToString();</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">time</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); Mul(1000); ToJavaInstant();</span>
+</span><span class="z-source z-yaml">      <span class="z-string z-unquoted z-plain z-out z-yaml"><span class="z-entity z-name z-tag z-yaml">ts</span></span><span class="z-punctuation z-separator z-key-value z-mapping z-yaml">:</span> <span class="z-string z-unquoted z-plain z-out z-yaml">ElapsedNanoTime(); Mul(1000);</span>
+</span></code></pre>
+<p>Notice how we can reference text from a file to be used for our message value.  Nothing fancy,
+but illustrates how tests can leverage external information from files for decoupling input
+from the workload file itself.  Think of this for things like secret token references, etc.
+that need to be referenced.</p>
+<pre class="z-code"><code><span class="z-text z-plain">Discard(); TextOfFile(&#39;data/cql-starter-message.txt&#39;)
+</span></code></pre>
+<p>Note: The Discard() function is used to indicate a no-op as the initial message value.  This
+may change in the future, but for now it is a necessity due to the nature of bindings
+defaulting to Long values.  This is why the <code>rampup_message</code> was included for illustration as it uses a
+<code>ToString();</code> function assigning a string value.  By default, the binding's value is 0L.</p>
+<h2 id="hands-on">Hands on</h2>
+<p>Let’s run the cql-starter.</p>
+<h4 id="running">Running</h4>
+<p>Using the nb5 binary, issue the following command</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 activities/baselines/cql-starter.yaml default hosts=localhost localdc=datacenter1
+</span></code></pre>
+<p>This command identifies that the default scenario workload is used with the key-value args passed along
+for use by the cqld4 adapter.</p>
+<h4 id="examine-the-results">Examine the results</h4>
+<p>After the workload has been run, let’s take a look at the results from Cassandra itself using cqlsh.</p>
+<pre class="z-code"><code><span class="z-text z-plain">docker container exec -it cass4 sh
+</span><span class="z-text z-plain">cqlsh
+</span><span class="z-text z-plain">select * from starter.cqlstarter;
+</span></code></pre>
+<p>You should see the single rampup entry along main operation entries in the Cassandra table.</p>
+<h4 id="customize">Customize</h4>
+<p>Now, let’s customize the cql-starter to make it a bit more your own.</p>
+<h4 id="save-the-yaml-file-to-your-local-environment">Save the .yaml file to your local environment.</h4>
+<p>One easy way, is to utilize the nb5 --copy command.</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 --copy cql-starter
+</span></code></pre>
+<p>This provides a fresh workload file for you for cql-starter.</p>
+<p>Edit the file and uncomment under the default scenario the following entry:</p>
+<pre class="z-code"><code><span class="z-text z-plain"># rampdown: run driver=cql tags==block:rampdown threads==1 cycles==UNDEF
+</span></code></pre>
+<p>When you want to customize the cql-starter, you can simply target the file outside the
+NB5 distribution using:</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 adapter-cqld4/&lt;rel-path-to-customized-file&gt;.yaml default hosts=localhost localdc=datacenter1
+</span></code></pre>
+<p>Also, if you would like to see more details in the output, add (-v, -vv, or -vvv) to the command.</p>
+<pre class="z-code"><code><span class="z-text z-plain">./nb5 adapter-cqld4/&lt;rel-path-to-customized-file&gt;.yaml default hosts=localhost localdc=datacenter1 -v
+</span></code></pre>
+<p>When the workload is run after uncommenting the rampdown, selecting the content again using
+cqlsh, returns a table that has been truncated.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Checkout the NoSQLBench <a href="https://builddocs.nosqlbench.io/getting-started/">getting started</a> section and details for its
+capabilities for your next testing initiative. This includes a number of
+<a href="https://builddocs.nosqlbench.io/getting-started/02-scenarios/">built-in workloads</a> that you can start from for more
+advanced scenarios.</p>
+<h1 id="want-to-contribute">Want to contribute?</h1>
+<p>It’s worth mentioning, NoSQLBench is open source and we are looking for contributions to expand
+its features!  Head on over to the <a rel="noopener" target="_blank" href="https://docs.nosqlbench.io/contributing">contributions</a>
+page to find out more.</p>
+<p>We will continue to have more Quick Bytes for NoSQLBench in the near future.</p>
+<p>Stay tuned, and thank you for reading!</p>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>CQL Starter</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#cql-starter">CQL-Starter</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#introduction"><small>- Introduction</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#setup"><small>- Setup</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#running-the-scenario">Running the scenario</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#locate-nb5"><small>- Locate NB5</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#verify"><small>- Verify</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#optional-step"><small>- Optional step</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#cql-workload-template"><small>- CQL workload template</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#hands-on"><small>- Hands on</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#next-steps"><small>- Next Steps</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/blog/cql-starter/quickstart-cql/#want-to-contribute">Want to contribute?</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

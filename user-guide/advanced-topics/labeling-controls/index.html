@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Labeling Controls | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Labeling Controls | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Labeling Controls | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;user-guide&#x2F;">User Guide► </a></span><span title="thorough explanation of selected advanced topics"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;"><strong>Advanced Topics▼</strong> </a></span><span title="[current page]"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;"><strong>Labeling Controls 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: user-guide&#x2F;advanced-topics&#x2F;labeling_controls.md -->
+<!-- active_section: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+
+<!-- lower_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+<!-- >upper_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Advanced Topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;advanced-topics&#x2F;"title="detailed explanation of all available configuration methods in nb5">Advanced Topics</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;">Labeling Results</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;"><strong>Labeling Controls</strong></a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;timing-terms&#x2F;">Timing Terms Explained</a></div><div class="toc-item"title="Detailed examples of different ways to configure nb5"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;configuration-techniques&#x2F;">►Config Methods</a></div><div class="toc-item"title="NoSQLBench comes with a fully scriptable runtime for advanced testing scenarios"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;scenario-scripting&#x2F;">►Scenario Scripting</a></div><div class="toc-item"title="Concepts and Methods for advanced performance analysis"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;">►Performance Factoring</a></div><div class="toc-item"title="A deeper dive into frequent topics of discussion around scale testing."><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;testing-at-scale&#x2F;">►Testing at Scale</a></div></div>
+</div>
+
+<article>
+
+  <p>👉 NOTE: The labeling control features are new within NoSQLBench and are subject to changes.</p>
+<h2 id="labeling-standards">Labeling Standards</h2>
+<p>In order to make sure that your metrics and annotations have the necessary labels
+so that the data is traceable, identifiable, and contextual, you may want to set
+some label validation rules. These rules simply say which label names are required
+and which are not allowed. If you have a shared system of record for your metrics with
+other engineers or teams, then some discipline about how these metrics are reported is
+always required, but not often adhered to, even if there is a shared idea of what the
+metrics should look like. The net effect is that some of your most useful data gets lost
+among and indistinguishable from a trove of other metrics data which is extraneous,
+or worse, your data has this effect on others'.</p>
+<p>It is recommended that you have a labeling standard, and that is is somewhere that is easy
+to share, verify, and enforce. For lack of this, NoSQLBench provides a client-side
+mechanism to make this possible in practice, although it is opt-in and not enforced from
+any consuming system. It is expected that NoSQLBench will support loading any provided labeling
+standards from consuming system automatically in the future.</p>
+<p>Some specific examples for why this is important:</p>
+<ul>
+<li>You want to look the results of a test which were run 6 months ago, there are 37 other sets of
+metrics data from the same time frame. Either your data is labeled so you can distinguish the
+studies, or you're just out of luck. You could have simply required a single label with a
+unique identifier in your standard to avoid this.</li>
+<li>You want to aggregate results across a set of nodes. Either your data is distinguished by node,
+or you have bad data. You could simply require a node label to be provided, within the context
+of your other labels. The validity of your aggregating metrics depends directly on this being
+stable and distinctly addressable.</li>
+</ul>
+<h3 id="filtering-and-validation">Filtering and Validation</h3>
+<p>example label:</p>
+<pre class="z-code"><code><span class="z-text z-plain">alpha=one,beta=two,gamma=three,delta=four
+</span></code></pre>
+<h4 id="labeling-specifications">Labeling Specifications</h4>
+<p>There are two ways to ensure that labels you send are valid:</p>
+<ol>
+<li>Adjust the provided labels to conform to the standard before sending.</li>
+<li>Validate that the labels provided already conform to the standard before sending.</li>
+</ol>
+<p>These two are distinct methods which are complimentary, and thus NB does both. This is because
+there are label sets which can be aligned to a standard simply by filtering, and there are other
+cases where this is not possible due to missing data.</p>
+<h3 id="label-specs">Label Specs</h3>
+<p>These two method are combined in practice into one configuration parameter (for now at least),
+since the expression of validation and pre-filtering for that validation is effectively one and the
+same. This is known as the <code>labelspec</code>, and it is simply a one-line pattern which specifies which
+labels are required, which labels are disallowed, and so on.</p>
+<h3 id="label-filtering">Label Filtering</h3>
+<ul>
+<li>Included labels are indicated as <code>+&lt;labelname&gt;</code> or simply <code>&lt;labelname&gt;</code>.</li>
+<li>Excluded labels are indicated as <code>-&lt;labelname&gt;</code>.</li>
+<li>The labelname can be any valid regular expression, and is always treated as such. Bare words
+are simply literal expressions.</li>
+<li>If a provided label set includes label names which are not indicated as either, then they are
+Included by default.</li>
+</ul>
+<p>So why would you have a bare label name in lieu of <code>+</code> or vice-versa if they mean the same thing?
+The reason is that the labelname filter operates as a tri-state filter, going from left to right
+over the labelspec. You can include, or exclude any label name, and you can also use <em>wildcard</em>
+patterns simply by using regular expressions. Thus, a spec of <code>lioness,-lion.*</code> indicates that you
+want to allow <code>lioness</code> labels but disallow any other labels which start with <code>lion</code>. However,
+this does not say that you <em>require</em> a <code>lioness</code> label, which looks like this <code>+lioness,-lion.*</code>.
+In both cases, any label which is not mentioned will pass through the filter unchanged. If you
+wanted to reject all others, you can always end the labelspec with a <code>-.*</code>, such as <code>+lioness, -lion.*,-.*</code>, which is also duplicitous and can simply be reduced to <code>+lioness,-.*</code>.</p>
+<h4 id="label-filtering-effects">Label Filtering Effects</h4>
+<p>The label filter is applied at the point of label usage on outbound signals. Metrics and
+Annotations both have the filter applied. The underlying label sources are not affected.
+When a label set is passed through the label filter, some fields may be removed. Otherwise label
+filtering is entirely passive. The order of labels is preserved if they came from an ordered map.</p>
+<h3 id="label-validation">Label Validation</h3>
+<p>Label validation occurs on a label set immediately after filtering. The specification is identical,
+although it weighs a little more heavily in terms of side-effects for validation.</p>
+<ul>
+<li>Required label names are indicated with <code>+&lt;labelname&gt;</code></li>
+<li>Disallowed label names are indicated with <code>-&lt;labelname&gt;</code></li>
+<li>Bare words are disregarded by validation.</li>
+<li>Patterns are still applied with the expected behavior.</li>
+</ul>
+<h4 id="label-validation-effects">Label Validation Effects</h4>
+<p>Label validation occurs immediately after label filtering, and will throw an error in your test,
+with an error that indicates why the label set could not be validated.</p>
+<p>This is because invalid labels will cause pain downstream. In most cases, this will manifest
+early in a test so that you don't have any wasted bake time. It is recommended that you always run
+a full end-to-end functional validation of all your test workflows before running the more
+intensive versions. This helps you shake out any issues with late-validation, such as a bad
+label set in a later stage of testing.</p>
+<h2 id="tbd-conditional-validation">TBD: conditional validation</h2>
+<p>There is a very clear need to make the validation work a bit more reasonably with regard to
+labeling context. For example, requiring an <code>activity</code> label at the top level does not work well
+for the session annotation, nor does requiring and <code>activity</code> label when the <code>scenario</code> label is
+not present. There are some simple forms which can support these coherently and these will be
+added shortly.</p>
+<h3 id="sketch-on-conditional-validation">sketch on conditional validation</h3>
+<pre class="z-code"><code><span class="z-text z-plain">+appname,+instance:\w+,+session,+node,activity-&gt;k,activity-&gt;dataset,activity-&gt;dimensions
+</span></code></pre>
+<ol>
+<li>appname is a required label name</li>
+<li>instance is a required label name and its value must match regex pattern <code>\w+</code>, word chars only</li>
+<li>session is a required label</li>
+<li>node is a required label</li>
+<li>given activity is present as a label name, then k must also be present</li>
+<li>given activity is present as a label name, then dataset must also be present</li>
+<li>given activity is present as a label name, then dimension must also be present</li>
+</ol>
+<p>if a then b
+a -&gt; b
+if b then c
+b -&gt; c
+if a then b and c
+a -&gt; b -&gt; c
+A, thus b! and c!</p>
+<p>A! -&gt;b -&gt;c
+a-&gt;b-&gt;c
++a-&gt;b-&gt;c</p>
+<h2 id="special-cases">Special cases</h2>
+<ul>
+<li>assertions:</li>
+<li>conjunctions like tag filtering: none(), any(), all()</li>
+<li></li>
+<li>require a named label</li>
+<li>require a named label with a specific value</li>
+<li>require a named label with a pattern</li>
+<li>require a pattern matching label name with a pattern matching value pattern</li>
+<li>conditional</li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Labeling Controls</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#labeling-standards">Labeling Standards</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#filtering-and-validation"><small>- Filtering and Validation</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#label-specs"><small>- Label Specs</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#label-filtering"><small>- Label Filtering</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#label-validation"><small>- Label Validation</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#tbd-conditional-validation">TBD: conditional validation</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#sketch-on-conditional-validation"><small>- sketch on conditional validation</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-controls/#special-cases">Special cases</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

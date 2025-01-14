@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>DoubleVectorPadLeft | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="DoubleVectorPadLeft | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="DoubleVectorPadLeft | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;reference&#x2F;">Reference Section► </a></span><span title="Binding functions are the core of the procedural data generation capabilities of NoSQLBench. They bind generated data to operations in a determinstic way."><a href="&#x2F;reference&#x2F;bindings&#x2F;"><strong>Binding Functions▼</strong> </a></span><span title="[current page]"><a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-vectors&#x2F;"><strong>DoubleVectorPadLeft 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: reference&#x2F;bindings&#x2F;funcref_vectors.md -->
+<!-- active_section: reference&#x2F;bindings&#x2F;_index.md -->
+
+
+<!-- lower_root: reference&#x2F;_index.md -->
+<!-- >upper_root: reference&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Binding Functions</h4>--><div class="toc-sticky"><div class="toc-item"title="This section is a specification of the standard workload format."><a href="&#x2F;reference&#x2F;workload_definition&#x2F;">►Workload Specification</a></div><div class="toc-item"title="DriverAdapters allow native drivers or other logic to be plugged into the nb5 engine."><a href="&#x2F;reference&#x2F;drivers&#x2F;">►Drivers</a></div><div class="toc-item"title="Binding functions are the core of the procedural data generation capabilities of NoSQLBench. They bind generated data to operations in a determinstic way."><strong>▼Binding Functions</strong></div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-nulls&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-nulls&#x2F;">null functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-combinitoric&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-combinitoric&#x2F;">Combiner</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-general&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-general&#x2F;">general functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-readers&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-readers&#x2F;">FVecReader</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-experimental&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-experimental&#x2F;">DNN_angular1_neighbors</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-state&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-state&#x2F;">state functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;binding-concepts&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;binding-concepts&#x2F;">Binding Concepts</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-datetime&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-datetime&#x2F;">datetime functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-collections&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-collections&#x2F;">collection functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-conversion&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-conversion&#x2F;">conversion functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-hof&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-hof&#x2F;">CqlVector</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-premade&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-premade&#x2F;">pre-made functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-periodic&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-periodic&#x2F;">Sin</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-diagnostics&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-diagnostics&#x2F;">diagnostic functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-statistics&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-statistics&#x2F;">LongStats</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-functional&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-functional&#x2F;">flow functions</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-vectors&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-vectors&#x2F;"><strong>DoubleVectorPadLeft</strong></a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-objects&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-objects&#x2F;">Distance</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;bindings&#x2F;funcref-distributions&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;bindings&#x2F;funcref-distributions&#x2F;">distribution functions</a>
+    </div><div class="toc-item"title="Documentation for bundled applications within NB5."><a href="&#x2F;reference&#x2F;apps&#x2F;">►Bundled Apps</a></div><div class="toc-item"title="Version data for the bundled and imported docs content"><a href="&#x2F;reference&#x2F;versions&#x2F;">►Version Info</a></div></div>
+</div>
+
+<article>
+
+  <h2 id="doublevectorpadleft">DoubleVectorPadLeft</h2>
+<p>Prefix the incoming array with an empty double[] so that it is sized up to at least the given size. If it is already at least that size, pass it through as-is.</p>
+<ul>
+<li><code>double[] -&gt; DoubleVectorPadLeft(int: size) -&gt; double[]</code></li>
+</ul>
+<h2 id="doublevectorpadright">DoubleVectorPadRight</h2>
+<p>Suffix the incoming array with an empty double[] so that it is sized up to at least the given size. If it is already at least that size, pass it through as-is.</p>
+<ul>
+<li><code>double[] -&gt; DoubleVectorPadRight(int: size) -&gt; double[]</code></li>
+</ul>
+<h2 id="doublevectorprefix">DoubleVectorPrefix</h2>
+<p>Prefix the incoming array with an empty double[] of the given size.</p>
+<ul>
+<li><code>double[] -&gt; DoubleVectorPrefix(int: size) -&gt; double[]</code></li>
+</ul>
+<h2 id="doublevectorsuffix">DoubleVectorSuffix</h2>
+<p>Suffix the incoming array with an empty double[] of the given size.</p>
+<ul>
+<li><code>double[] -&gt; DoubleVectorSuffix(int: size) -&gt; double[]</code></li>
+</ul>
+<h2 id="floatvectorpadleft">FloatVectorPadLeft</h2>
+<p>Prefix the incoming array with an empty float[] so that it is sized up to at least the given size. If it is already at least that size, pass it through as-is.</p>
+<ul>
+<li><code>float[] -&gt; FloatVectorPadLeft(int: size) -&gt; float[]</code></li>
+</ul>
+<h2 id="floatvectorpadright">FloatVectorPadRight</h2>
+<p>Suffix the incoming array with an empty float[] so that it is sized up to at least the given size. If it is already at least that size, pass it through as-is.</p>
+<ul>
+<li><code>float[] -&gt; FloatVectorPadRight(int: size) -&gt; float[]</code></li>
+</ul>
+<h2 id="floatvectorprefix">FloatVectorPrefix</h2>
+<p>Prefix the incoming array with an empty float[] of the given size.</p>
+<ul>
+<li><code>float[] -&gt; FloatVectorPrefix(int: size) -&gt; float[]</code></li>
+</ul>
+<h2 id="floatvectorsuffix">FloatVectorSuffix</h2>
+<p>Suffix the incoming array with an empty double[] of the given size.</p>
+<ul>
+<li><code>float[] -&gt; FloatVectorSuffix(int: size) -&gt; float[]</code></li>
+</ul>
+<h2 id="floatvectors">FloatVectors</h2>
+<p>This is the float version of the DoubleVector function. To facilitate a direct relationship between the double values from that function and the float values from this, this one defers to the double version for primary data. This function essentially wraps and converts the results from the DoubleVector function.</p>
+<ul>
+<li><code>long -&gt; FloatVectors(String: spec) -&gt; float[]</code></li>
+</ul>
+<h2 id="hasheddoublevectors">HashedDoubleVectors</h2>
+<p>Construct an arbitrarily large vector with hashes. The initial value is assumed to be non-hashed, and is thus hashed on input to ensure that inputs are non-contiguous. Once the starting value is hashed, the sequence of long values is walked and each value added to the vector is hashed from the values in that sequence.</p>
+<ul>
+<li>
+<p><code>long -&gt; HashedDoubleVectors(Object: sizer, Object: valueFunc) -&gt; double[]</code></p>
+<ul>
+<li><em>notes:</em> Build a double[] generator with a given size value or size function, and the given long-&gt;double function.
+@param sizer Either a numeric type which sets a fixed dimension, or a long-&gt;int function to derive it uniquely for each input
+@param valueFunc A long-&gt;double function</li>
+</ul>
+</li>
+<li>
+<p><code>long -&gt; HashedDoubleVectors(Object: sizer, double: min, double: max) -&gt; double[]</code></p>
+</li>
+<li>
+<p><code>long -&gt; HashedDoubleVectors(Object: sizer) -&gt; double[]</code></p>
+</li>
+</ul>
+<h2 id="hashedfloatvectors">HashedFloatVectors</h2>
+<p>Construct an arbitrarily large float vector with hashes. The initial value is assumed to be non-hashed, and is thus hashed on input to ensure that inputs are non-contiguous. Once the starting value is hashed, the sequence of long values is walked and each value added to the vector is hashed from the values in that sequence.</p>
+<ul>
+<li>
+<p><code>long -&gt; HashedFloatVectors(Object: sizer, Object: valueFunc) -&gt; float[]</code></p>
+<ul>
+<li><em>notes:</em> Build a double[] generator with a given size value or size function, and the given long-&gt;double function.
+@param sizer Either a numeric type which sets a fixed dimension, or a long-&gt;int function to derive it uniquely for each input
+@param valueFunc A long-&gt;double function</li>
+</ul>
+</li>
+<li>
+<p><code>long -&gt; HashedFloatVectors(Object: sizer, double: min, double: max) -&gt; float[]</code></p>
+</li>
+<li>
+<p><code>long -&gt; HashedFloatVectors(Object: sizer) -&gt; float[]</code></p>
+</li>
+</ul>
+<h2 id="tofloatvector">ToFloatVector</h2>
+<ul>
+<li><code>double[] -&gt; ToFloatVector() -&gt; float[]</code></li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>DoubleVectorPadLeft</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#doublevectorpadleft">DoubleVectorPadLeft</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#doublevectorpadright">DoubleVectorPadRight</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#doublevectorprefix">DoubleVectorPrefix</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#doublevectorsuffix">DoubleVectorSuffix</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#floatvectorpadleft">FloatVectorPadLeft</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#floatvectorpadright">FloatVectorPadRight</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#floatvectorprefix">FloatVectorPrefix</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#floatvectorsuffix">FloatVectorSuffix</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#floatvectors">FloatVectors</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#hasheddoublevectors">HashedDoubleVectors</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#hashedfloatvectors">HashedFloatVectors</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/bindings/funcref-vectors/#tofloatvector">ToFloatVector</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

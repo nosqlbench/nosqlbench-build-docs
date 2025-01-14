@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /></header>
+  <main>
+<div title="tera_context" style="border: solid 1px;">
+  <span>tera_context:</span>
+  <link rel="stylesheet" href="/jsonpath-picker.min.css" />
+  <script type="text/javascript" src="/jsonpath-picker.min.js"></script>
+  
+
+  <div id="dests" type="text"></div>
+  <div id="treeview">
+    <input class="path" type="text">
+    <pre id="json-renderer"></pre>
+  </div>
+
+  <script type="text/javascript">
+      let data = {
+  "config": {
+    "base_url": "https://builddocs.nosqlbench.io",
+    "mode": "build",
+    "title": "NoSQLBench Project (BUILD)",
+    "description": "NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System.",
+    "languages": {},
+    "default_language": "en",
+    "generate_feed": false,
+    "generate_feeds": false,
+    "feed_filenames": [
+      "atom.xml"
+    ],
+    "taxonomies": [
+      {
+        "name": "categories",
+        "slug": "categories",
+        "paginate_by": null,
+        "paginate_path": null,
+        "render": true,
+        "feed": true
+      },
+      {
+        "name": "tags",
+        "slug": "tags",
+        "paginate_by": null,
+        "paginate_path": null,
+        "render": true,
+        "feed": true
+      },
+      {
+        "name": "authors",
+        "slug": "authors",
+        "paginate_by": null,
+        "paginate_path": null,
+        "render": true,
+        "feed": true
+      }
+    ],
+    "author": null,
+    "build_search_index": true,
+    "extra": {
+      "supress_titles": false,
+      "title_addition": "Fast & Lightweight Zola Theme",
+      "stylesheets": [
+        "abridge-switcher.css"
+      ],
+      "banner": "nb5banner.png",
+      "js_search_facade": false,
+      "js_switcher": true,
+      "seo": true,
+      "title_size_index": "s85",
+      "recent": false,
+      "copyright_start_year": 2023,
+      "favicon_mask": "safari-pinned-tab.svg",
+      "twitter": "your-user-name",
+      "icon_adjust": "svgs adjust",
+      "js_search_index": "search_index.en.js",
+      "js_codecopy": "codecopy.js",
+      "js_theme": "theme.min.js",
+      "footer_size": "s90",
+      "fontawesome": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css",
+      "favicon_theme_color": "#333333",
+      "keywords": "Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight",
+      "mathtex_js": "mathtex-script-type.min.js",
+      "js_prestyle": "prestyle.js",
+      "toc": true,
+      "logo": {
+        "alt": "NoSQLBench5 (build)",
+        "file": "nb5logo.png",
+        "height": "32",
+        "text": " NoSQLBench v5 (BUILD)",
+        "width": "32"
+      },
+      "search_library": "elasticlunr",
+      "integrity": true,
+      "favicon180": "apple-touch-icon.png",
+      "js_themeButton": "theme_button.js",
+      "footer_credit": false,
+      "title_separator": "|",
+      "sitedesc": false,
+      "js_email": "email.js",
+      "uglyurls": false,
+      "math_auto_render": false,
+      "math": false,
+      "katex_options": "katexoptions.js",
+      "icon_search": "svgs search",
+      "favicon_ms_color": "#333333",
+      "js_bundle": true,
+      "favicon16": "favicon-16x16.png",
+      "menu": [
+        {
+          "blank": false,
+          "name": "Blog",
+          "slash": true,
+          "url": "/blog/"
+        },
+        {
+          "blank": false,
+          "name": "Getting Started",
+          "slash": true,
+          "url": "/getting-started/"
+        },
+        {
+          "blank": false,
+          "name": "Release Notes",
+          "slash": true,
+          "url": "/release-notes/"
+        }
+      ],
+      "icon_prev": "svgs svgh angl",
+      "icon_next": "svgs svgh angr",
+      "foothr": true,
+      "recent_items": 9,
+      "meta_index": {
+        "author": false,
+        "categories_tags": true,
+        "date": true,
+        "divider": " ",
+        "position": "bottom",
+        "readstring": "min",
+        "readtime": false,
+        "size": "s90"
+      },
+      "icon_top": "svgs svgh angu",
+      "icon_author": "svgs fa-solid fa-pen-fancy",
+      "social": {},
+      "footer_credit_override": "",
+      "list": [
+        {
+          "content": "<a href=\"https://discord.gg/dBHRakusMN\"><img src=\"Discord-Logo-Wordmark-Color.png\" style=\"width:117px;height:32px;\"></img></a>",
+          "title": "Join our Community"
+        },
+        {
+          "content": "<a href=\"docs/nosqlbench/showcase\">Why NoSQLBench was created?</a>",
+          "title": "WHY NoSQLBench?"
+        },
+        {
+          "content": "<a href=\"docs/nosqlbench/core-concepts\">What are the high-level building blocks?</a>",
+          "title": "Concepts"
+        },
+        {
+          "content": "<a href=\"docs/workloads_101/00-designing-workloads\">How can I build a custom workload?</a>",
+          "title": "Workloads 101"
+        },
+        {
+          "content": "<a href=\"docs/drivers/\">What drivers are available for NoSQLBench?</a>",
+          "title": "NoSQLBench Drivers"
+        },
+        {
+          "content": "<a href=\"docs/nosqlbench/community\">How can I contribute to NoSQLBench?</a>",
+          "title": "Contributing"
+        }
+      ],
+      "katex_bundle": "katexbundle.min.js",
+      "meta_post": {
+        "author": true,
+        "categories_tags": true,
+        "date": true,
+        "divider": " ",
+        "position": "top",
+        "readstring": "min read",
+        "readtime": false,
+        "size": "s95"
+      },
+      "favicon32": "favicon-32x32.png",
+      "language_code": "en-US",
+      "icon_last": "svgs svgh angrr",
+      "katex_css": "katex.min.css",
+      "katex_autorender_js": "auto-render.min.js",
+      "katex_js": "katex.min.js",
+      "favicon_mask_color": "#ff9900",
+      "favicon_webmanifest": "site.webmanifest",
+      "icon_first": "svgs svgh angll",
+      "headhr": true
+    },
+    "markdown": {
+      "highlight_code": true,
+      "highlight_theme": "css",
+      "highlight_themes_css": [],
+      "render_emoji": true,
+      "external_links_target_blank": true,
+      "external_links_no_follow": false,
+      "external_links_no_referrer": false,
+      "smart_punctuation": false,
+      "bottom_footnotes": false,
+      "extra_syntaxes_and_themes": [],
+      "lazy_async_image": false
+    },
+    "search": {
+      "index_format": "elasticlunr_javascript"
+    },
+    "generate_sitemap": true,
+    "generate_robots_txt": true
+  },
+  "current_path": "/test/",
+  "current_url": "https://builddocs.nosqlbench.io/test/",
+  "lang": "en",
+  "page": {
+    "relative_path": "test.md",
+    "colocated_path": null,
+    "content": "",
+    "permalink": "https://builddocs.nosqlbench.io/test/",
+    "slug": "test",
+    "ancestors": [
+      "_index.md"
+    ],
+    "title": "test",
+    "description": null,
+    "updated": null,
+    "date": null,
+    "year": null,
+    "month": null,
+    "day": null,
+    "taxonomies": {},
+    "authors": [],
+    "extra": {
+      "inmenu": false
+    },
+    "path": "/test/",
+    "components": [
+      "test"
+    ],
+    "summary": null,
+    "toc": [],
+    "word_count": 0,
+    "reading_time": 0,
+    "assets": [],
+    "draft": false,
+    "lang": "en",
+    "lower": null,
+    "higher": null,
+    "translations": [],
+    "backlinks": []
+  },
+  "title_separator": " | "
+};
+      source = document.querySelector('#json-renderer');
+      dest = document.querySelectorAll('.path');
+      JPPicker.render(source, data, dest, {outputCollapsed:true});
+      document.querySelector("div#treeview a").click();
+  </script>
+</div>
+
+<div title="tera_context" style="border: solid 1px;">
+
+  <span>special_variables:</span>
+  <link rel="stylesheet" href="/jsonpath-picker.min.css" />
+  <script type="text/javascript" src="/jsonpath-picker.min.js"></script>
+
+  <div id="dests2" type="text"></div>
+  <div id="treeview2">
+    <input class="path2" type="text">
+    <pre id="json-renderer2"></pre>
+  </div><script type="text/javascript">
+      let data2 = {
+          'this_page' : {
+  "relative_path": "test.md",
+  "colocated_path": null,
+  "content": "",
+  "permalink": "https://builddocs.nosqlbench.io/test/",
+  "slug": "test",
+  "ancestors": [
+    "_index.md"
+  ],
+  "title": "test",
+  "description": null,
+  "updated": null,
+  "date": null,
+  "year": null,
+  "month": null,
+  "day": null,
+  "taxonomies": {},
+  "authors": [],
+  "extra": {
+    "inmenu": false
+  },
+  "path": "/test/",
+  "components": [
+    "test"
+  ],
+  "summary": null,
+  "toc": [],
+  "word_count": 0,
+  "reading_time": 0,
+  "assets": [],
+  "draft": false,
+  "lang": "en",
+  "lower": null,
+  "higher": null,
+  "translations": [],
+  "backlinks": []
+},
+      'this_section' : {
+  "relative_path": "_index.md",
+  "colocated_path": null,
+  "content": "",
+  "permalink": "https://builddocs.nosqlbench.io/",
+  "draft": false,
+  "ancestors": [],
+  "title": "NB5 Docs",
+  "description": null,
+  "extra": {},
+  "path": "/",
+  "components": [],
+  "toc": [],
+  "word_count": 0,
+  "reading_time": 0,
+  "lang": "en",
+  "assets": [],
+  "pages": [
+    {
+      "relative_path": "test.md",
+      "colocated_path": null,
+      "content": "",
+      "permalink": "https://builddocs.nosqlbench.io/test/",
+      "slug": "test",
+      "ancestors": [
+        "_index.md"
+      ],
+      "title": "test",
+      "description": null,
+      "updated": null,
+      "date": null,
+      "year": null,
+      "month": null,
+      "day": null,
+      "taxonomies": {},
+      "authors": [],
+      "extra": {
+        "inmenu": false
+      },
+      "path": "/test/",
+      "components": [
+        "test"
+      ],
+      "summary": null,
+      "toc": [],
+      "word_count": 0,
+      "reading_time": 0,
+      "assets": [],
+      "draft": false,
+      "lang": "en",
+      "lower": null,
+      "higher": null,
+      "translations": [],
+      "backlinks": []
+    }
+  ],
+  "subsections": [
+    "release-notes/_index.md",
+    "introduction/_index.md",
+    "getting-started/_index.md",
+    "workloads-101/_index.md",
+    "user-guide/_index.md",
+    "dev-guide/_index.md",
+    "reference/_index.md",
+    "blog/_index.md"
+  ],
+  "translations": [],
+  "backlinks": [],
+  "generate_feeds": false,
+  "transparent": false
+},
+
+      };
+      source = document.querySelector('#json-renderer2');
+      dest = document.querySelectorAll('.path2');
+      JPPicker.render(source, data2, dest, {outputCollapsed:true});
+  </script>
+</div>
+
+
+
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

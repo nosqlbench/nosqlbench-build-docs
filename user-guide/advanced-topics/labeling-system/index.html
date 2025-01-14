@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Labeling Results | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Labeling Results | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Labeling Results | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;user-guide&#x2F;">User Guide► </a></span><span title="thorough explanation of selected advanced topics"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;"><strong>Advanced Topics▼</strong> </a></span><span title="[current page]"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;"><strong>Labeling Results 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: user-guide&#x2F;advanced-topics&#x2F;labeling_system.md -->
+<!-- active_section: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+
+<!-- lower_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+<!-- >upper_root: user-guide&#x2F;advanced-topics&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Advanced Topics</h4>--><div class="toc-sticky"><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;advanced-topics&#x2F;"title="detailed explanation of all available configuration methods in nb5">Advanced Topics</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-system&#x2F;"><strong>Labeling Results</strong></a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;labeling-controls&#x2F;">Labeling Controls</a></div><div class="toc-item"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;timing-terms&#x2F;">Timing Terms Explained</a></div><div class="toc-item"title="Detailed examples of different ways to configure nb5"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;configuration-techniques&#x2F;">►Config Methods</a></div><div class="toc-item"title="NoSQLBench comes with a fully scriptable runtime for advanced testing scenarios"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;scenario-scripting&#x2F;">►Scenario Scripting</a></div><div class="toc-item"title="Concepts and Methods for advanced performance analysis"><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;performance-factoring&#x2F;">►Performance Factoring</a></div><div class="toc-item"title="A deeper dive into frequent topics of discussion around scale testing."><a href="&#x2F;user-guide&#x2F;advanced-topics&#x2F;testing-at-scale&#x2F;">►Testing at Scale</a></div></div>
+</div>
+
+<article>
+
+  <p>👉 This provides an intro and overview of the built-in labeling system in NoSQLBench 5.21.</p>
+<h2 id="what-are-labels">What are Labels?</h2>
+<p>NoSQLBench allows for your metrics and accompanying annotations to be organized in a
+self-consistent way with a set of labels and tags. The labeling facility is built-in to
+NoSQLBench -- Labeling is not something you add to existing tests results after using it.
+Labels are innate, self-consistent, and easily leveraged to apply appropriate metadata to your
+results so that they are well-defined and easily repurposed in other systems.</p>
+<p>For example, when you name your activity, you are setting a label, even if you didn't know it
+already. You are setting a label of <code>activity=myactivityname</code>. This builds on top of the <em>name
+everything</em> strategy so that everything from your session down to your op level has a name and
+accompanying label. This system is implemented efficiently as well, with all labeling
+mechanisms being applied explicitly during initialization phases, rather than lazily during an
+activity.</p>
+<p>Labels are defensive in nature. If you try to define another value for a label which has already
+been provided for a given runtime scope, an error will be thrown. This ensures that labeling
+semantics are protected and that users are informed when there would be a labeling conflict. This
+helps avoid structural or logical errors in their test setup.</p>
+<p>Labels represent a implied hierarchic structure, and this is how they are assembled. The
+tree-like structure of components in the runtime allows for labels to be established from
+the trunk to the branches, with each label attaching to a specific component in the tree.
+However, when presented for a given component, they are simply a map, including all labels which
+are <em>inherited</em> from the parent components above. They are retained in the ordered map form
+where possible for the sake of easy configuration and usage.</p>
+<h2 id="label-sources">Label Sources</h2>
+<p>Labels are assigned from multiple sources.</p>
+<h3 id="automatic-labels">Automatic Labels</h3>
+<p>Labels which are part of the runtime scaffolding of NoSQLBench are provided for you, as
+<em>automatic labels</em>. The examples below show standard labels, and an implied nesting of values.
+Nesting relationships here imply runtime component relationships and lifecycles. For example,
+you may expect multiple distinct session labels per node label by default, but session
+uniqueness is only guaranteed within that node label scope.</p>
+<p>Examples:</p>
+<ul>
+<li><code>jobname:nosqlbench</code> The top level name of the metrics bucket for downstream systems. This
+label is always set, but you can override it as explained below, although generally, it should
+not be changed.
+<ul>
+<li><code>instance:default</code> The sub-bucket used for downstream systems. This should be set when you want
+to isolate your results from others, particularly when doing specialized testing which
+should not co-mingle results with others.
+<ul>
+<li><code>node:1.2.3.4</code> The ip address of the first publicly-routable interface. When combined with
+the session identifier, this tuple is usually sufficient as a proxy for a GUID. If your
+needs for session identification are finer-grained, then generate a GUID and provide it
+with <code>--add-labels</code> for each run.
+<ul>
+<li><code>session:nEXHI88</code> An identifier for each session, basically each time you run
+NoSQLBench. This identifier is a compact version of the millisecond epoch timestamp.
+As a user, you can override this value if you need to change from "multiple sessions per
+node", to "multiple nodes per session" for the purposes of coherent metrics aggregation.
+<ul>
+<li><code>container:smoketest</code> The name of the container within which any commands are run.
+Every command in nb runs within a container. For named scenarios, the container name
+is taken automatically as the step name.</li>
+<li><code>workload:myworkload</code> <strong>IFF using named scenarios</strong>, the name of your workload template.</li>
+<li><code>scenario:myscenario</code> <strong>IFF using named scenarios</strong>, the name of the scenario.</li>
+<li><code>step:rampup</code> <strong>IFF using named scenarios</strong>, the step name.
+<ul>
+<li><code>activity:rampup</code> The name of your activity, derived by default from the step name
+for named scenarios, or set directly with the alias activity param.
+<ul>
+<li>[<code>op:anopname</code>] <strong>ONLY for op-specific metrics, as opposed to activity or session
+level metrics</strong>. The name of your operation, only provided for metrics which are
+tied to
+a specific op template, such as when using the op field <code>instrument:true</code>.
+<ul>
+<li><code>name:metricname</code> provided directly for each metric which is registered at runtime.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Notice that some automatic labels are not always included, such as <code>workload</code>, <code>scenario</code>, and
+<code>step</code>. This is because these labels are only meaningful in the case that you are using named
+scenarios. It is strongly recommended that in any downstream views you use and require these labels,
+and encourage your users to use named scenarios as a rule. Ad-hoc activity construction often
+leads to inconsistency and ambiguity in testing flows, and named scenarios provide a good
+template format to avoid this.</p>
+<p>Metrics, annotations, and logging details can be emitted for any level of labeling, but the
+labels up to and including <code>session</code> should be considered the minimum set.</p>
+<h3 id="user-provided">User-Provided</h3>
+<p>Some top-level</p>
+<p>Users can inject additional labels in different places:</p>
+<ul>
+<li>Session labels are added with the <code>--add-labels ...</code> option. Multiple of these can be provided
+in the form of <code>--add-labels name:value,...</code>.</li>
+<li>Activity labels are added with the <code>labels</code> activity parameter.</li>
+<li>Op template labels are added with the core <code>labels</code> op field.</li>
+<li>Additional labels are added with scripting extensions supporting labels.</li>
+</ul>
+<h2 id="label-structure">Label Structure</h2>
+<p>For an op-specific metrics, the example label set above would be created at runtime as a simple map
+(shown as JSON for illustration purposes):</p>
+<pre data-lang="json" class="language-json z-code"><code class="language-json" data-lang="json"><span class="z-source z-json"><span class="z-meta z-mapping z-json"><span class="z-punctuation z-section z-mapping z-begin z-json">{</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>jobname<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>nosqlbench<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>instance<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>default<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>node<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>1.2.3.4<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>session<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>nEXHI88<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>container<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>smoketest<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>workload<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>myworkload<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>scenario<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>myscenario<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>step<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>rampup<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>activity<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>rampup<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>op<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>anopname<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>name<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>metricname<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-section z-mapping z-end z-json">}</span></span>
+</span></code></pre>
+<p>It would be rendered (serialized) in whatever form is idiomatic where it is used.</p>
+<p><strong>examples for metric family name and label set in openmetrics</strong></p>
+<pre class="z-code"><code><span class="z-text z-plain">metricname{jobname=&quot;nosqlbench&quot;,node=&quot;1.2.3.4&quot;,session=&quot;nEXHI88&quot;,container=&quot;smoketest&quot;,workload=&quot;myworkload&quot;,scenario=&quot;myscenario&quot;,step=&quot;rampup&quot;,activity=&quot;rampup&quot;,op=&quot;anopname&quot;}
+</span></code></pre>
+<p>OR</p>
+<pre class="z-code"><code><span class="z-text z-plain">{__name__=&quot;metricname&quot;,jobname=&quot;nosqlbench&quot;,node=&quot;1.2.3.4&quot;,session=&quot;nEXHI88&quot;,container=&quot;smoketest&quot;,workload=&quot;myworkload&quot;,scenario=&quot;myscenario&quot;,step=&quot;rampup&quot;,activity=&quot;rampup&quot;,op=&quot;anopname&quot;}
+</span></code></pre>
+<p><strong>example labels as tags in a grafana annotations API call for an activity:</strong></p>
+<pre data-lang="json" class="language-json z-code"><code class="language-json" data-lang="json"><span class="z-source z-json"><span class="z-meta z-mapping z-json"><span class="z-punctuation z-section z-mapping z-begin z-json">{</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>dashboardUID<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>...<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>panelId<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-constant z-numeric z-integer z-decimal z-json">1</span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>time<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-constant z-numeric z-integer z-decimal z-json">12345</span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>timeEnd<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-constant z-numeric z-integer z-decimal z-json">678910</span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>tags<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json"><span class="z-punctuation z-section z-sequence z-begin z-json">[</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>jobname:nosqlbench<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>instance:default<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>node:1.2.3.4<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>session:nEXHI88<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>container:smoketest<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>workload:myworkload<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>scenario:myscenario<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>step:rampup<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-sequence z-json">,</span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">    <span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>activity:rampup<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span>
+</span></span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-meta z-sequence z-json">  <span class="z-punctuation z-section z-sequence z-end z-json">]</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>text<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span></span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>Annotation Description<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-section z-mapping z-end z-json">}</span></span>
+</span></code></pre>
+<h2 id="where-are-label-used">Where are label used?</h2>
+<h3 id="metrics">Metrics</h3>
+<p>All metrics are labeled according to the label set provided. This supports metric systems which use the <a rel="noopener" target="_blank" href="https://github.com/OpenObservability/OpenMetrics/blob/main/specification/OpenMetrics.md">Open Metrics</a>
+exposition format. The recently added push reporter builds this format out of the labels provided
+where metrics are instanced.</p>
+<p>As of 5.21 and newer versions, graphite support is deprecated. This is a necessary change
+because of the limitations in the graphite metrics naming scheme which directly conflict with
+modern and more manageable practices for metrics warehousing. Dimensional metrics labels are
+simply more robust, more expressive, and a more correct way of describing the source of
+telemetry and logging data.</p>
+<h3 id="annotations">Annotations</h3>
+<p>Annotations are built-in to NoSQLBench, with the most prominent form being the Grafana-specific
+annotator. When using grafana with another metrics store like
+<a rel="noopener" target="_blank" href="https://prometheus.io/">Prometheus</a>
+, or
+<a rel="noopener" target="_blank" href="https://victoriametrics.com/">Victoria Metrics</a>
+, you can have NoSQLBench send metrics
+to the metrics collector and concurrently send annotations directly to Grafana. This allows
+populations of metrics data to have markers for each session, scenario, and activity. These
+annotations embed execution details, timelines, and labeling data so that the metrics from those
+lifetimes are directly addressable using the self-same label sets.</p>
+<p>Grafana annotations have a set of tags which uniquely identify each annotation for lookup. (NOT
+to be confused with op tags, which allow control of your workload variations.) The labels are
+provided as values in these tags in conjugate form, such as 'scenario:myscenario234', whereas
+simple annotation tags would just have a value like 'scenario'. This may cause you to pollute
+your grafana annotation tag space. For now, we are allowing it to work as-is, to see if
+time-based filtering and recent views are sufficient to limit the user-facing noise and
+server-side response.</p>
+<h3 id="logging">Logging</h3>
+<p>Logging events sometimes use the labels to identify errors, unique measurements, or
+configuration details. Even when the label isn't shown as such, there is a direct relationship
+between a labeled element and it's name. For example, a named scenario "scenario234" would be
+logged as such, and also annotated with an explicit label set that includes
+'scenario=scenario234' via the annotator system.</p>
+<h3 id="apis">APIs</h3>
+<p>Labels are inventory addressing systems for runtime scripting. More details on this TBD.</p>
+<h2 id="labeling-standards">Labeling Standards</h2>
+<p>In order to make sure that your metrics and annotations have the necessary labels
+so that the data is traceable, identifiable, and contextual, you may want to set
+some label validation rules. These rules simply say which label names are required
+and which are not allowed. If you have a shared system of record for your metrics with
+other engineers or teams, then some discipline about how these metrics are reported is
+always required, but not often adhered to, even if there is a shared idea of what the
+metrics should look like. The net effect is that some of your most useful data gets lost
+among and indistinguishable from a trove of other metrics data which is extraneous,
+or worse, your data has this effect on others'.</p>
+<p>It is recommended that you have a labeling standard, and that is is somewhere that is easy
+to share, verify, and enforce. For lack of this, NoSQLBench provides a client-side
+mechanism to make this possible in practice, although it is opt-in and not enforced from
+any consuming system. It is expected that NoSQLBench will support loading any provided labeling
+standards from consuming system automatically in the future.</p>
+<p>Some specific examples for why this is important:</p>
+<ul>
+<li>You want to look the results of a test which were run 6 months ago, there are 37 other sets of
+metrics data from the same time frame. Either your data is labeled so you can distinguish the
+studies, or you're just out of luck. You could have simply required a single label with a
+unique identifier in your standard to avoid this.</li>
+<li>You want to aggregate results across a set of nodes. Either your data is distinguished by node,
+or you have bad data. You could simply require a node label to be provided, within the context
+of your other labels. The validity of your aggregating metrics depends directly on this being
+stable and distinctly addressable.</li>
+</ul>
+<h3 id="filtering-and-validation">Filtering and Validation</h3>
+<p>example label:</p>
+<pre class="z-code"><code><span class="z-text z-plain">alpha=one,beta=two,gamma=three,delta=four
+</span></code></pre>
+<h4 id="labeling-specifications">Labeling Specifications</h4>
+<p>There are two ways to ensure that labels you send are valid:</p>
+<ol>
+<li>Adjust the provided labels to conform to the standard before sending.</li>
+<li>Validate that the labels provided already conform to the standard before sending.</li>
+</ol>
+<p>These two are distinct methods which are complimentary, and thus NB does both. This is because
+there are label sets which can be aligned to a standard simply by filtering, and there are other
+cases where this is not possible due to missing data.</p>
+<h3 id="label-specs">Label Specs</h3>
+<p>These two method are combined in practice into one configuration parameter (for now at least),
+since the expression of validation and pre-filtering for that validation is effectively one and the
+same. This is known as the <code>labelspec</code>, and it is simply a one-line pattern which specifies which
+labels are required, which labels are disallowed, and so on.</p>
+<h3 id="label-filtering">Label Filtering</h3>
+<ul>
+<li>Included labels are indicated as <code>+&lt;labelname&gt;</code> or simply <code>&lt;labelname&gt;</code>.</li>
+<li>Excluded labels are indicated as <code>-&lt;labelname&gt;</code>.</li>
+<li>The labelname can be any valid regular expression, and is always treated as such. Bare words
+are simply literal expressions.</li>
+<li>If a provided label set includes label names which are not indicated as either, then they are
+Included by default.</li>
+</ul>
+<p>So why would you have a bare label name in lieu of <code>+</code> or vice-versa if they mean the same thing?
+The reason is that the labelname filter operates as a tri-state filter, going from left to right
+over the labelspec. You can include, or exclude any label name, and you can also use <em>wildcard</em>
+patterns simply by using regular expressions. Thus, a spec of <code>lioness,-lion.*</code> indicates that you
+want to allow <code>lioness</code> labels but disallow any other labels which start with <code>lion</code>. However,
+this does not say that you <em>require</em> a <code>lioness</code> label, which looks like this <code>+lioness,-lion.*</code>.
+In both cases, any label which is not mentioned will pass through the filter unchanged. If you
+wanted to reject all others, you can always end the labelspec with a <code>-.*</code>, such as <code>+lioness, -lion.*,-.*</code>, which is also duplicitous and can simply be reduced to <code>+lioness,-.*</code>.</p>
+<h4 id="label-filtering-effects">Label Filtering Effects</h4>
+<p>The label filter is applied at the point of label usage on outbound signals. Metrics and
+Annotations both have the filter applied. The underlying label sources are not affected.
+When a label set is passed through the label filter, some fields may be removed. Otherwise label
+filtering is entirely passive. The order of labels is preserved if they came from an ordered map.</p>
+<h3 id="label-validation">Label Validation</h3>
+<p>Label validation occurs on a label set immediately after filtering. The specification is identical,
+although it weighs a little more heavily in terms of side-effects for validation.</p>
+<ul>
+<li>Required label names are indicated with <code>+&lt;labelname&gt;</code></li>
+<li>Disallowed label names are indicated with <code>-&lt;labelname&gt;</code></li>
+<li>Bare words are disregarded by validation.</li>
+<li>Patterns are still applied with the expected behavior.</li>
+</ul>
+<h4 id="label-validation-effects">Label Validation Effects</h4>
+<p>Label validation occurs immediately after label filtering, and will throw an error in your test,
+with an error that indicates why the label set could not be validated.</p>
+<p>This is because invalid labels will cause pain downstream. In most cases, this will manifest
+early in a test so that you don't have any wasted bake time. It is recommended that you always run
+a full end-to-end functional validation of all your test workflows before running the more
+intensive versions. This helps you shake out any issues with late-validation, such as a bad
+label set in a later stage of testing.</p>
+<h2 id="tbd-conditional-validation">TBD: conditional validation</h2>
+<p>There is a very clear need to make the validation work a bit more reasonably with regard to
+labeling context. For example, requiring an <code>activity</code> label at the top level does not work well
+for the session annotation, nor does requiring and <code>activity</code> label when the <code>scenario</code> label is
+not present. There are some simple forms which can support these coherently and these will be
+added shortly.</p>
+<h3 id="sketch-on-conditional-validation">sketch on conditional validation</h3>
+<pre class="z-code"><code><span class="z-text z-plain">+appname,+instance:\w+,+session,+node,activity-&gt;k,activity-&gt;dataset,activity-&gt;dimensions
+</span></code></pre>
+<ol>
+<li>appname is a required label name</li>
+<li>instance is a required label name and its value must match regex pattern <code>\w+</code>, word chars only</li>
+<li>session is a required label</li>
+<li>node is a required label</li>
+<li>given activity is present as a label name, then k must also be present</li>
+<li>given activity is present as a label name, then dataset must also be present</li>
+<li>given activity is present as a label name, then dimension must also be present</li>
+</ol>
+<p>if a then b
+a -&gt; b
+if b then c
+b -&gt; c
+if a then b and c
+a -&gt; b -&gt; c
+A, thus b! and c!</p>
+<p>A! -&gt;b -&gt;c
+a-&gt;b-&gt;c
++a-&gt;b-&gt;c</p>
+<h2 id="special-cases">Special cases</h2>
+<ul>
+<li>assertions:</li>
+<li>conjunctions like tag filtering: none(), any(), all()</li>
+<li></li>
+<li>require a named label</li>
+<li>require a named label with a specific value</li>
+<li>require a named label with a pattern</li>
+<li>require a pattern matching label name with a pattern matching value pattern</li>
+<li>conditional</li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Labeling Results</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#what-are-labels">What are Labels?</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#label-sources">Label Sources</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#automatic-labels"><small>- Automatic Labels</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#user-provided"><small>- User-Provided</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#label-structure">Label Structure</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#where-are-label-used">Where are label used?</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#metrics"><small>- Metrics</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#annotations"><small>- Annotations</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#logging"><small>- Logging</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#apis"><small>- APIs</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#labeling-standards">Labeling Standards</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#filtering-and-validation"><small>- Filtering and Validation</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#label-specs"><small>- Label Specs</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#label-filtering"><small>- Label Filtering</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#label-validation"><small>- Label Validation</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#tbd-conditional-validation">TBD: conditional validation</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#sketch-on-conditional-validation"><small>- sketch on conditional validation</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/user-guide/advanced-topics/labeling-system/#special-cases">Special cases</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

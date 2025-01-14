@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>AMQP | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/reference/drivers/amqp/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/reference/drivers/amqp/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="AMQP | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="AMQP | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;reference&#x2F;">Reference Section► </a></span><span title="DriverAdapters allow native drivers or other logic to be plugged into the nb5 engine."><a href="&#x2F;reference&#x2F;drivers&#x2F;"><strong>Drivers▼</strong> </a></span><span title="[current page]"><a href="&#x2F;reference&#x2F;drivers&#x2F;amqp&#x2F;"><strong>AMQP 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: reference&#x2F;drivers&#x2F;amqp.md -->
+<!-- active_section: reference&#x2F;drivers&#x2F;_index.md -->
+
+
+<!-- lower_root: reference&#x2F;_index.md -->
+<!-- >upper_root: reference&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Drivers</h4>--><div class="toc-sticky"><div class="toc-item"title="This section is a specification of the standard workload format."><a href="&#x2F;reference&#x2F;workload_definition&#x2F;">►Workload Specification</a></div><div class="toc-item"title="DriverAdapters allow native drivers or other logic to be plugged into the nb5 engine."><strong>▼Drivers</strong></div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;s4j&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;s4j&#x2F;">S4J</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;dynamodb&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;dynamodb&#x2F;">dynamodb</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;driver-discovery&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;driver-discovery&#x2F;">Built-In Adapters</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;weaviate&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;weaviate&#x2F;">Weaviate driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;kafka&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;kafka&#x2F;">Kafka</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;mongodb&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;mongodb&#x2F;">MongoDB</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;amqp&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;amqp&#x2F;"><strong>AMQP</strong></a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;tcpserver&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;tcpserver&#x2F;">tcpserver</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;qdrant&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;qdrant&#x2F;">qdrant driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;http&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;http&#x2F;">http</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;example&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;example&#x2F;">Example</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;tcpclient&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;tcpclient&#x2F;">tcpclient</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;neo4j&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;neo4j&#x2F;">neo4j driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;cqld4&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;cqld4&#x2F;">cqld4</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;stdout&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;stdout&#x2F;">stdout</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;diag&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;diag&#x2F;">diag</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;pulsar&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;pulsar&#x2F;">Pulsar</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;dataapi&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;dataapi&#x2F;">Data API</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;spanner&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;spanner&#x2F;">Google Spanner driver adapter</a>
+    </div><div class="toc-item"title="Binding functions are the core of the procedural data generation capabilities of NoSQLBench. They bind generated data to operations in a determinstic way."><a href="&#x2F;reference&#x2F;bindings&#x2F;">►Binding Functions</a></div><div class="toc-item"title="Documentation for bundled applications within NB5."><a href="&#x2F;reference&#x2F;apps&#x2F;">►Bundled Apps</a></div><div class="toc-item"title="Version data for the bundled and imported docs content"><a href="&#x2F;reference&#x2F;versions&#x2F;">►Version Info</a></div></div>
+</div>
+
+<article>
+
+  <ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#1-overview">1. Overview</a></li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#2-nb-amqp-usage">2. NB AMQP Usage</a>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#21-workload-definition">2.1. Workload Definition</a>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#211-named-scenarios">2.1.1. Named Scenarios</a></li>
+</ul>
+</li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#22-cli-parameters">2.2. CLI parameters</a></li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#23-configuration-properties">2.3. Configuration Properties</a>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#231-global-properties-file">2.3.1. Global Properties File</a></li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#232-scenario-document-level-properties">2.3.2. Scenario Document Level Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="1-overview">1. Overview</h1>
+<p>The NB AMQP adapter allows sending messages to or receiving messages from</p>
+<ul>
+<li>an AMQP 0-9-1 based server (e.g. RabbitMQ), or</li>
+<li>a Pulsar cluster with <a rel="noopener" target="_blank" href="https://github.com/datastax/starlight-for-rabbitmq">S4R</a> AMQP (0-9-1) Protocol handler for Pulsar.</li>
+</ul>
+<p>At high level, this adapter supports the following AMQP 0-9-1 functionalities</p>
+<ul>
+<li>Creating AMQP connections and channels</li>
+<li>Declaring AMQP exchanges
+<ul>
+<li>The following exchange types are supported: <code>direct</code>, <code>fanout</code>, <code>topic</code>, and <code>headers</code></li>
+</ul>
+</li>
+<li>Sending messages to AMQP exchanges with sync. or async. publisher confirms
+<ul>
+<li>For sync confirms, it supports both single and batch confirms</li>
+<li>Supports message-send based on routing keys</li>
+</ul>
+</li>
+<li>Declaring and binding AMQP queues
+<ul>
+<li>Supports message-receive based on binding keys</li>
+</ul>
+</li>
+<li>Receiving messages from AMQP queues with async. consumer acks</li>
+</ul>
+<h1 id="2-nb-amqp-usage">2. NB AMQP Usage</h1>
+<h2 id="21-workload-definition">2.1. Workload Definition</h2>
+<p>There are two main types of workloads supported by this adapter:</p>
+<ul>
+<li>Message sender workload (see <a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/scenarios/amqp_msg_sender.yaml">amqp_msg_sender.yaml</a>)</li>
+<li>Message receiver workload (see <a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/scenarios/amqp_msg_receiver.yaml">amqp_msg_receiver.yaml</a>)</li>
+</ul>
+<p>Below are examples of running the message sender and receiver workloads separately.</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> run driver=amqp<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>vv</span> cycles=200 strict_msg_error_handling=0 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  threads=8 num_conn=1 num_channel=2 num_exchange=2 num_msg_clnt=2 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  workload=/path/to/amqp_msg_sender.yaml <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  config=/path/to/amqp_config.properties</span>
+</span></code></pre>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> run driver=amqp<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>vv</span> cycles=200 strict_msg_error_handling=0 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  threads=8 num_conn=1 num_channel=2 num_exchange=2 num_queue=2 num_msg_clnt=2 <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  workload=/path/to/amqp_msg_receiver.yaml <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">  config=/path/to/amqp_config.properties</span>
+</span></code></pre>
+<h3 id="211-named-scenarios">2.1.1. Named Scenarios</h3>
+<p>For workload execution convenience, NB engine has the concept of <strong>named scenario</strong> (<a rel="noopener" target="_blank" href="https://docs.nosqlbench.io/workloads-101/11-named-scenarios/">doc</a>).</p>
+<p>For NB AMQP adapter, the following yaml file is used to define the named scenarios: <a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/scenarios/nbamqp_msg_proc_named.yaml">nbamqp_msg_proc_named.yaml</a></p>
+<p>The CLI command to execute the named scenarios is as simple as below:</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> for message sender workload</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> nbamqp_msg_proc_named msg_send</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> for message receiver workload</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> nbamqp_msg_proc_named msg_recv</span>
+</span></code></pre>
+<h2 id="22-cli-parameters">2.2. CLI parameters</h2>
+<p>The following CLI parameters are unique to this adapter:</p>
+<ul>
+<li><code>num_conn</code>: the number of AMQP connections to create</li>
+<li><code>num_channel</code>: the number of AMQP channels to create for each connection</li>
+<li><code>num_exchange</code>: the number of AMQP exchanges to create for each channel</li>
+<li><code>num_queue</code>: the number of AMQP queues to create for each channel (only relevant for message receiver workload)</li>
+<li><code>num_msg_client</code>: the number of message clients to create for each channel
+<ul>
+<li>for message sender workload, it is the number of message publishers for each exchange</li>
+<li>for message receiver workload, it is the number of message consumers for each queue</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-configuration-properties">2.3. Configuration Properties</h2>
+<h3 id="231-global-properties-file">2.3.1. Global Properties File</h3>
+<p>A global AMQP properties file can be specified via the <code>config</code> CLI parameter. It includes the following required properties:</p>
+<ul>
+<li><code>amqpSrvHost</code>: AMQP server host (e.g. An Astra Streaming cluster with S4R enabled)</li>
+<li><code>amqpSrvPort</code>: AMQP server port (for S4R enabled Astra Streaming, it is 5671)</li>
+<li><code>virtualHost</code>: AMQP server virtual host (for S4R enabled Astra Streaming, it is "<tenant>/rabbitmq")</li>
+<li><code>amqpUser</code>: AMQP user (for S4R enabled Astra Streaming, it is an empty string)</li>
+<li><code>amqpPassword</code>: AMQP password (for S4R enabled Astra Streaming, it is the JWT token file path)</li>
+<li><code>useTls</code>: whether to use TLS (for S4R enabled Astra Streaming, it is true)</li>
+<li><code>exchangeType</code>: AMQP exchange type (e.g. <code>direct</code>, <code>fanout</code>, <code>topic</code>, or <code>headers</code>)</li>
+</ul>
+<p>An example of this file can be found from: <a href="https://builddocs.nosqlbench.io/reference/drivers/amqp/conf/amqp_config.properties">amqp_config.properties</a></p>
+<h3 id="232-scenario-document-level-properties">2.3.2. Scenario Document Level Properties</h3>
+<p>For message sender workload, the following Document level configuration parameters are supported in the YAML file:</p>
+<ul>
+<li><code>publisher_confirm</code>: whether to use publisher confirms</li>
+<li><code>confirm_mode</code>: When <code>publisher_confirm</code> is true, the following 3 confirm modes are supported:
+<ul>
+<li><code>individual</code>: wait for confirm individually</li>
+<li><code>batch</code>: wait for confirm in batch</li>
+<li><code>async</code>: [default] no wait for confirm</li>
+</ul>
+</li>
+<li><code>confirm_batch_num</code>: batch size for waiting for <strong>sync</strong> publisher confirms
+<ul>
+<li>Only relevant when <code>publisher_confirm</code> is true and <code>confirm_mode</code> is "batch"</li>
+</ul>
+</li>
+<li><code>dft_confirm_timeout_ms</code>: default timeout in milliseconds for waiting publisher confirms
+<ul>
+<li>Only relevant when <code>publisher_confirm</code> is true and <code>confirm_mode</code> is "individual" or "batch"</li>
+</ul>
+</li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>AMQP</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#1-overview">1. Overview</a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#2-nb-amqp-usage">2. NB AMQP Usage</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#21-workload-definition"><small>- 2.1. Workload Definition</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#22-cli-parameters"><small>- 2.2. CLI parameters</small></a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/amqp/#23-configuration-properties"><small>- 2.3. Configuration Properties</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>

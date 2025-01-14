@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://builddocs.nosqlbench.io/theme.min.js" integrity="sha384-IpIaa84kOKgkF5EJ0fD/kBe2wtIIsIB60ANGmuJxeA0dz5bSRfwBwp2/QybtQpU2"></script>
+  <link rel="stylesheet" href="https://builddocs.nosqlbench.io/abridge-switcher.css?h=4238d999f44a7bb130d5" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="preload" as="style" class="preStyle" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" crossorigin="anonymous" />
+  <script defer src="https://builddocs.nosqlbench.io/search_index.en.js?h=09733a45b4109560553b" integrity="sha384-srzRLxr2eY1BqN1FKMUnkXeyiLGClSzqaj5qhMqZn1JPDk3CrHSilkOWx/QLpeGF"></script>
+  <script defer src="https://builddocs.nosqlbench.io/abridge-bundle-nofacade.min.js?h=9bcf621a2fcab7336017" integrity="sha384-u8AROOUG6n2Xjk2+7pvkkfeSIqinjI1tmqeBpZRlZtc5KFO/8DyFfEir6fAE2wcq"></script>
+  <meta name="base" content="https://builddocs.nosqlbench.io" />
+<meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Kafka | NoSQLBench Project (BUILD)</title>
+  <meta name="copyright" content="NoSQLBench Project (BUILD)" />
+  <meta name="description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <link rel="canonical" href="https://builddocs.nosqlbench.io/reference/drivers/kafka/" />
+  <meta name="keywords" content="Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta property="og:url" content="https://builddocs.nosqlbench.io/reference/drivers/kafka/" />
+  <meta name="twitter:url" content="https://builddocs.nosqlbench.io/reference/drivers/kafka/" />
+  <meta property="og:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta name="twitter:description" content="NoSQLBench is an Open Source, Multi-Protocol, Pluggable, Scriptable, NoSQL (and more) Testing System." />
+  <meta property="og:title" content="Kafka | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:title" content="Kafka | NoSQLBench Project (BUILD)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:image" content="https://builddocs.nosqlbench.io/nb5banner.png" />
+  <meta property="og:site_name" content="NoSQLBench Project (BUILD)" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://builddocs.nosqlbench.io/site.webmanifest" />
+  <link rel="mask-icon" href="https://builddocs.nosqlbench.io/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://builddocs.nosqlbench.io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://builddocs.nosqlbench.io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://builddocs.nosqlbench.io/favicon-16x16.png" />
+  <noscript><link rel="stylesheet" href="https://builddocs.nosqlbench.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://builddocs.nosqlbench.io/"><img src="https://builddocs.nosqlbench.io/nb5logo.png" alt="NoSQLBench5 (build)" width="32" height="32" /> NoSQLBench v5 (BUILD)</a></h1></div><div>
+        <ul><li> <h2><a href="https://builddocs.nosqlbench.io/blog/">Blog</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/getting-started/">Getting Started</a></h2> </li><li> <h2><a href="https://builddocs.nosqlbench.io/release-notes/">Release Notes</a></h2> </li><li class="js"><i type="reset" id="mode" class="svgs adjust"></i></li></ul>
+      </div>
+      <div>
+        <form autocomplete=off class="js" name="goSearch" id="searchbox">
+          <div class="searchd">
+            <input id="searchinput" type="text" placeholder="Search" title="Search" />
+            <button type="submit" title="Search"><i class="svgs search"></i></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+
+      <a href="http://github.com/nosqlbench/nosqlbench-build-docs" title="This doc site's project repo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="http://nosqlbench.io" title="NoSQLBench Project Site">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 18"
+             fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+          <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
+    <hr /><div style="position:sticky"><span><a href="&#x2F;">NB5 Docs► </a></span><span><a href="&#x2F;reference&#x2F;">Reference Section► </a></span><span title="DriverAdapters allow native drivers or other logic to be plugged into the nb5 engine."><a href="&#x2F;reference&#x2F;drivers&#x2F;"><strong>Drivers▼</strong> </a></span><span title="[current page]"><a href="&#x2F;reference&#x2F;drivers&#x2F;kafka&#x2F;"><strong>Kafka 🖺</strong></a></span>
+</div></header>
+  <main><!-- active_page: reference&#x2F;drivers&#x2F;kafka.md -->
+<!-- active_section: reference&#x2F;drivers&#x2F;_index.md -->
+
+
+<!-- lower_root: reference&#x2F;_index.md -->
+<!-- >upper_root: reference&#x2F;_index.md -->
+
+<div class="toc" aria-hidden="true" id="">
+<!--  <h4>Drivers</h4>--><div class="toc-sticky"><div class="toc-item"title="This section is a specification of the standard workload format."><a href="&#x2F;reference&#x2F;workload_definition&#x2F;">►Workload Specification</a></div><div class="toc-item"title="DriverAdapters allow native drivers or other logic to be plugged into the nb5 engine."><strong>▼Drivers</strong></div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;s4j&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;s4j&#x2F;">S4J</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;dynamodb&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;dynamodb&#x2F;">dynamodb</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;driver-discovery&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;driver-discovery&#x2F;">Built-In Adapters</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;weaviate&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;weaviate&#x2F;">Weaviate driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;kafka&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;kafka&#x2F;"><strong>Kafka</strong></a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;mongodb&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;mongodb&#x2F;">MongoDB</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;amqp&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;amqp&#x2F;">AMQP</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;tcpserver&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;tcpserver&#x2F;">tcpserver</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;qdrant&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;qdrant&#x2F;">qdrant driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;http&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;http&#x2F;">http</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;example&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;example&#x2F;">Example</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;tcpclient&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;tcpclient&#x2F;">tcpclient</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;neo4j&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;neo4j&#x2F;">neo4j driver adapter</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;cqld4&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;cqld4&#x2F;">cqld4</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;stdout&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;stdout&#x2F;">stdout</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;diag&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;diag&#x2F;">diag</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;pulsar&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;pulsar&#x2F;">Pulsar</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;dataapi&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;dataapi&#x2F;">Data API</a>
+    </div><!-- subsection_page_path: &#x2F;reference&#x2F;drivers&#x2F;spanner&#x2F; -->
+    <div class="toc-item-child">
+      <a href="&#x2F;reference&#x2F;drivers&#x2F;spanner&#x2F;">Google Spanner driver adapter</a>
+    </div><div class="toc-item"title="Binding functions are the core of the procedural data generation capabilities of NoSQLBench. They bind generated data to operations in a determinstic way."><a href="&#x2F;reference&#x2F;bindings&#x2F;">►Binding Functions</a></div><div class="toc-item"title="Documentation for bundled applications within NB5."><a href="&#x2F;reference&#x2F;apps&#x2F;">►Bundled Apps</a></div><div class="toc-item"title="Version data for the bundled and imported docs content"><a href="&#x2F;reference&#x2F;versions&#x2F;">►Version Info</a></div></div>
+</div>
+
+<article>
+
+  <ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#1-overview">1. Overview</a>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#11-example-nb-yaml">1.1. Example NB Yaml</a></li>
+</ul>
+</li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#2-usage">2. Usage</a>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#21-nb-kafka-adapter-specific-cli-parameters">2.1. NB Kafka adapter specific CLI parameters</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="1-overview">1. Overview</h1>
+<p>The NB Kafka adapter allows publishing messages to or consuming messages from</p>
+<ul>
+<li>a Kafka cluster, or</li>
+<li>a Pulsar cluster with <a rel="noopener" target="_blank" href="https://github.com/datastax/starlight-for-kafka">S4K</a> or <a rel="noopener" target="_blank" href="https://github.com/streamnative/kop">KoP</a> Kafka Protocol handler for Pulsar.</li>
+</ul>
+<p>At high level, this adapter supports the following Kafka functionalities</p>
+<ul>
+<li>Publishing messages to one Kafka topic with sync. or async. message-send acknowledgements (from brokers)</li>
+<li>Subscribing messages from one or multiple Kafka topics with sync. or async. message-recv acknowledgements (to brokers) (aka, message commits)
+<ul>
+<li>auto message commit</li>
+<li>manual message commit with a configurable number of message commits in one batch</li>
+</ul>
+</li>
+<li>Kafka Transaction support</li>
+</ul>
+<h2 id="11-example-nb-yaml">1.1. Example NB Yaml</h2>
+<ul>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/scenarios/kafka_producer.yaml">kafka_producer.yaml</a></li>
+<li></li>
+<li><a href="https://builddocs.nosqlbench.io/reference/drivers/kafka/scenarios/kafka_consumer.yaml">kafka_consumer.yaml</a></li>
+</ul>
+<h1 id="2-usage">2. Usage</h1>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"># Kafka Producer</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> run driver=kafka<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>vv</span> cycles=100 threads=2 num_clnt=2 yaml=kafka_producer.yaml config=kafka_config.properties bootstrap_server=PLAINTEXT://localhost:9092</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"># Kafka Consumer</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">$</span></span><span class="z-meta z-function-call z-arguments z-shell"> <span class="z-keyword z-operator z-assignment z-redirection z-shell">&lt;</span>nb_cmd<span class="z-keyword z-operator z-assignment z-redirection z-shell">&gt;</span> run driver=kafka<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>vv</span> cycles=100 threads=4 num_clnt=2 num_cons_grp=2 yaml=kafka_producer.yaml config=kafka_config.properties bootstrap_server=PLAINTEXT://localhost:9092</span>
+</span></code></pre>
+<h2 id="21-nb-kafka-adapter-specific-cli-parameters">2.1. NB Kafka adapter specific CLI parameters</h2>
+<ul>
+<li>
+<p><code>num_clnt</code>: the number of Kafka clients to publish messages to or to receive messages from</p>
+<ul>
+<li>For producer workload, this is the number of the producer threads to publish messages to the same topic
+<ul>
+<li>Can have multiple producer threads for one topic/partition (<code>KafkaProducer</code> is thread-safe)</li>
+<li><code>threads</code> and <code>num_clnt</code> values MUST be the same.</li>
+</ul>
+</li>
+<li>For consumer workload, this is the partition number of a topic
+<ul>
+<li>Consumer workload supports to subscribe from multiple topics. If so, it requires all topics having the same partition number.</li>
+<li>Only one consumer thread for one topic/partition (<code>KafkaConsumer</code> is NOT thread-safe)</li>
+<li><code>threads</code> MUST be equal to <code>num_clnt</code>*<code>num_cons_grp</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>num_cons_grp</code>: the number of consumer groups</p>
+<ul>
+<li>Only relevant for consumer workload</li>
+</ul>
+</li>
+</ul>
+<p>For the Kafka NB adapter, Document level parameters can only be statically bound; and currently, the following Document level configuration parameters are supported:</p>
+<ul>
+<li><code>async_api</code> (boolean):
+<ul>
+<li>When true, use async Kafka client API.</li>
+</ul>
+</li>
+<li><code>seq_tracking</code> (boolean):
+<ul>
+<li>When true, a sequence number is created as part of each message's properties</li>
+<li>This parameter is used in conjunction with the next one in order to simulate abnormal message processing errors and then be able to detect such errors successfully.</li>
+</ul>
+</li>
+<li><code>seqerr_simu</code>:
+<ul>
+<li>A list of error simulation types separated by comma (,)</li>
+<li>Valid error simulation types
+<ul>
+<li><code>out_of_order</code>: simulate message out of sequence</li>
+<li><code>msg_loss</code>: simulate message loss</li>
+<li><code>msg_dup</code>: simulate message duplication</li>
+</ul>
+</li>
+<li>This value should be used only for testing purposes. It is not recommended to use this parameter in actual testing environments.</li>
+</ul>
+</li>
+<li><code>e2e_starting_time_source</code>:
+<ul>
+<li>Starting timestamp for end-to-end operation. When specified, will update the <code>e2e_msg_latency</code> histogram with the calculated end-to-end latency. The latency is calculated by subtracting the starting time from the current time. The starting time is determined from a configured starting time source. The unit of the starting time is milliseconds since epoch.</li>
+<li>The possible values for <code>e2e_starting_time_source</code>:
+<ul>
+<li><code>message_publish_time</code> : uses the message publishing timestamp as the starting time. The message publishing time, in this case, <a rel="noopener" target="_blank" href="https://kafka.apache.org/34/javadoc/org/apache/kafka/clients/producer/ProducerRecord.html">is computed by the Kafka client on record generation</a>. This is the case, as <a rel="noopener" target="_blank" href="https://docs.confluent.io/platform/current/installation/configuration/topic-configs.html#message-timestamp-type"><code>CreateTime</code> is the default</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p><b><a href="#">Back to top</a></b></p>
+</article>
+<div class="toc" aria-hidden="true">
+  <div class="toc-sticky">
+    <h5>Kafka</h5>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#1-overview">1. Overview</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#11-example-nb-yaml"><small>- 1.1. Example NB Yaml</small></a>
+    </div>
+    <div class="toc-item">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#2-usage">2. Usage</a>
+    </div>
+    <div class="toc-item-child">
+      <a class="subtext" href="https://builddocs.nosqlbench.io/reference/drivers/kafka/#21-nb-kafka-adapter-specific-cli-parameters"><small>- 2.1. NB Kafka adapter specific CLI parameters</small></a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer>
+    <hr />
+    <div class="c">
+      <nav>
+        <ul></ul>
+      </nav>
+      <p class="s90">Copyright &copy; 2023-2025 NoSQLBench Project (BUILD)</p>
+    </div>
+  </footer>
+</body>
+</html>
