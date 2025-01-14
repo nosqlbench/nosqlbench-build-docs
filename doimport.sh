@@ -12,5 +12,5 @@
 
 #set -x
 unzip -l exported_docs.zip
-unzip exported_docs.zip -d site/content/reference/
+unzip exported_docs.zip -o -d site/content/reference/
 
